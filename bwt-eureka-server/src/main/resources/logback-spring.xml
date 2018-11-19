@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="1 seconds">
+	<conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+	<!-- 获取时间字符串  -->
+	<timestamp key="ByDate" datePattern="yyyyMMdd"/>
+	<property name="moduleCode" value="vms-eureka-server"/>
+	<property name="logName" value="eureka-server"/>
+
+	<springProperty scope="context" name="LOG_HOME" source="logback.basedir" defaultValue="../log"/>
+	<springProperty scope="context" name="LOG_LEVEL" source="logback.level" defaultValue="INFO"/>
+
+	<!-- 所有级别日志输出到控制台 -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(%-5level) %clr(${PID:- }){magenta} --- [%15.15thread] %clr(%-60.60logger{59}){cyan} || %msg%n</pattern>
+		</encoder>
+	</appender>
+	<!-- 按文件大小区分的滚动日志 生产环境输出INFO级别以上日志-->
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/${moduleCode}/${logName}-log.log</file>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level ${PID:- } --- [%15.15thread] %-60.60logger{59} || %msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/${moduleCode}/${logName}-log.log.%i-%d{yyyy-MM-dd}</fileNamePattern>
+			<maxHistory>15</maxHistory>
+			<cleanHistoryOnStart>true</cleanHistoryOnStart>
+			<timeBasedFileNamingAndTriggeringPolicy
+					class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+	<springProfile name="prod">
+		<logger name="com.yuancore.cms" level="${LOG_LEVEL}"/>
+		<root level="${LOG_LEVEL}">
+			<appender-ref ref="console"/>
+			<appender-ref ref="file"/>
+		</root>
+	</springProfile>
+
+	<springProfile name="war">
+		<logger name="com.yuancore.cms" level="${LOG_LEVEL}"/>
+		<root level="${LOG_LEVEL}">
+			<appender-ref ref="console"/>
+			<appender-ref ref="file"/>
+		</root>
+	</springProfile>
+</configuration>

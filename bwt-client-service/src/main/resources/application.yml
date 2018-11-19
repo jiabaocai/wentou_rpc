@@ -1,0 +1,56 @@
+#指定注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      #配置Swagger相关信息
+      instance:
+        prefer-ip-address: true
+        instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+        status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
+        # ${server.port}为该服务的端口号
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
+#    status-page-url: http://localhost:${server.port}/swagger-ui.html
+
+server:
+  port: 8680
+spring:
+  application:
+    name: billhand-service  #全部小写
+  http:
+    multipart:
+      max-file-size: 20Mb # Max file size，默认1M
+      max-request-size: 20Mb   # Max request size，默认10M
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.105.75.109:3306/wentou
+#    url: jdbc:mysql://10.40.2.90:3306/order_center
+    username: dev
+    password: Q9tBXVbI
+#  jpa:
+#    hibernate:
+#      #ddl-auto: create #ddl-auto:设为create表示每次都重新建表
+#      ddl-auto: update #ddl-auto:设为update表示每次都不会重新建表
+#    show-sql: true
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+#####################################################################################################
+# 打印日志
+logging:
+  level:
+    root: DEBUG
+    com.springms: DEBUG
+    com.netflix: debug
+#####################################################################################################
+##自定义配置  上传图片地址
+upload:
+  uploadDir: /Users/caijiabao/Downloads/vms-cloud-master/bwtzz-manage/log/
+

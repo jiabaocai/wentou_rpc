@@ -1,0 +1,23 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#关闭自我保护机制
+  server:
+    enable-self-preservation: false
+  #每10s检查一次心跳
+    eviction-interval-timer-in-ms: 10000
+
+
+spring:
+  application:
+    name: bwt-eureka-server
+  profiles:
+    active: dev
+
+
