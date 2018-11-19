@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableEurekaClient
 @MapperScan("com.bwtservice.mapper.**")
-public class BwtApplication {
+public class BwtApplication  {
 
     public static void main(String[] args) {
         SpringApplication.run(BwtApplication.class, args);

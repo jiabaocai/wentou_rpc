@@ -8,12 +8,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<modules>
-		<module>bwt-eureka-server</module>
-		<module>bwt-client-service</module>
-	</modules>
-
-
 
 	<name>bwt-cloud</name>
 	<description>bwt-cloud project for Spring Boot</description>
