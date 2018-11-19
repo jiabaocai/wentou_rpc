@@ -52,5 +52,6 @@ logging:
 #####################################################################################################
 ##自定义配置  上传图片地址
 upload:
-  uploadDir: /Users/caijiabao/Downloads/vms-cloud-master/bwtzz-manage/log/
+  uploadDir: /data/wwwroot/default/public/upload/
+#  uploadDir: /Users/caijiabao/Downloads/vms-cloud-master/bwtzz-manage/log/
 
