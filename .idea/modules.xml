@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/bwt-client-service/bwt-client-service.iml" filepath="$PROJECT_DIR$/bwt-client-service/bwt-client-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bwt-eureka-server/bwt-eureka-server.iml" filepath="$PROJECT_DIR$/bwt-eureka-server/bwt-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/vms-cloud.iml" filepath="$PROJECT_DIR$/vms-cloud.iml" />
     </modules>
   </component>
