@@ -6,123 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75ba47d8-2296-44e1-b000-f5aee6f98d38" name="Default" comment="修改结构">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/bwtzz_manage_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+    <list default="true" id="75ba47d8-2296-44e1-b000-f5aee6f98d38" name="Default" comment="修改配置文件，接口访问地址临时修改为：8080">
+      <change afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/WebConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/interceptor/IPInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/util/IPUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-client-service/remark.md" beforeDir="false" afterPath="$PROJECT_DIR$/remark.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/LOG_HOME_IS_UNDEFINED/vms-eureka-server/eureka-server-log.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/HdrHistogram-2.1.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/LatencyUtils-2.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/antlr-runtime-3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/aopalliance-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/bwt-eureka-server.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/classmate-1.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-codec-1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-collections-3.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-configuration-1.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-jxpath-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-lang-2.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-math-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/freemarker-2.3.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/gson-2.8.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/guice-4.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/hibernate-validator-6.0.13.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/httpclient-4.5.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/httpcore-4.4.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-core-2.9.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-databind-2.9.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-dataformat-xml-2.9.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-datatype-jdk8-2.9.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-datatype-jsr310-2.9.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-module-jaxb-annotations-2.9.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-module-parameter-names-2.9.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/javax.annotation-api-1.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/javax.inject-1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jersey-apache-client4-1.19.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jersey-client-1.19.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jersey-core-1.19.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jersey-server-1.19.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jersey-servlet-1.19.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jettison-1.3.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/joda-time-2.10.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jsr305-3.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jsr311-api-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jul-to-slf4j-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/log4j-api-2.11.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/log4j-to-slf4j-2.11.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/logback-classic-1.2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/logback-core-1.2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/micrometer-core-1.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/netflix-eventbus-0.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/netflix-infix-0.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/netflix-statistics-0.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-2.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-core-2.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-eureka-2.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-httpclient-2.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-loadbalancer-2.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-transport-2.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/rxjava-1.3.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/rxnetty-0.4.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/rxnetty-contexts-0.4.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/rxnetty-servo-0.4.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/slf4j-api-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/snakeyaml-1.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-aop-5.1.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-beans-5.1.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-actuator-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-actuator-autoconfigure-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-autoconfigure-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-actuator-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-freemarker-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-json-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-logging-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-tomcat-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-web-2.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-context-5.1.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-context-support-5.1.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-core-5.1.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-expression-5.1.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-jcl-5.1.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-security-crypto-5.1.1.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-web-5.1.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-webmvc-5.1.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/stax-api-1.0-2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/stax-api-1.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/stax2-api-3.1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/stringtemplate-3.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/tomcat-embed-core-9.0.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/tomcat-embed-el-9.0.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/tomcat-embed-websocket-9.0.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/validation-api-2.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/woodstox-core-5.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/woodstox-core-asl-4.4.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/xmlpull-1.1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/xpp3_min-1.1.4c.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/xstream-1.4.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/resources/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/resources/generator/generatorConfig.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -207,59 +97,59 @@
     <session id="-817887979">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4074" />
+          <entry key="java" value="4216" />
           <entry key="md" value="90" />
-          <entry key="txt" value="29" />
-          <entry key="xml" value="253" />
-          <entry key="yml" value="293" />
+          <entry key="txt" value="52" />
+          <entry key="xml" value="257" />
+          <entry key="yml" value="297" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4074" />
+          <entry key="JAVA" value="4216" />
           <entry key="Markdown" value="90" />
-          <entry key="PLAIN_TEXT" value="29" />
-          <entry key="XML" value="253" />
-          <entry key="YAML" value="293" />
+          <entry key="PLAIN_TEXT" value="52" />
+          <entry key="XML" value="257" />
+          <entry key="YAML" value="297" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="14" />
           <entry key="iml" value="1" />
-          <entry key="java" value="206" />
+          <entry key="java" value="216" />
           <entry key="log" value="5" />
           <entry key="md" value="6" />
           <entry key="out" value="1" />
           <entry key="patch" value="1" />
           <entry key="pom" value="2" />
           <entry key="properties" value="1" />
-          <entry key="xml" value="26" />
-          <entry key="yml" value="26" />
+          <entry key="xml" value="28" />
+          <entry key="yml" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="14" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="206" />
+          <entry key="JAVA" value="216" />
           <entry key="Log" value="5" />
           <entry key="Markdown" value="6" />
           <entry key="PATCH" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="28" />
-          <entry key="YAML" value="26" />
+          <entry key="XML" value="30" />
+          <entry key="YAML" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -276,77 +166,100 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-prod.yml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-eureka-server/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/java/com/bwtcloud/BwtEurekaServerApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="210">
               <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/remark.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="628">
-                <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/vms-eureka-server/eureka-server-log.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/util/IPUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/interceptor/IPInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/WebConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/WtIpFilterMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/WtIpFilterSqlProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideSqlProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1230">
+              <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1110">
+              <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+            <state relative-caret-position="270">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -440,12 +353,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/billhand-config/pom.xml" />
-        <option value="$PROJECT_DIR$/billhand-service/src/main/resources/generator/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/billhand-service/pom.xml" />
-        <option value="$PROJECT_DIR$/billhand-service/src/main/java/com/jd/billhandservice/service/LoanOrderService.java" />
-        <option value="$PROJECT_DIR$/billhand-service/src/main/java/com/jd/billhandservice/mapper/LoanOrderMapper.java" />
-        <option value="$PROJECT_DIR$/billhand-service/src/main/java/com/jd/billhandservice/service/impl/LoanOrderServiceimpl.java" />
         <option value="$PROJECT_DIR$/billhand-service/src/main/java/com/jd/billhandservice/controller/ProviderUserMysqlMybatisController.java" />
         <option value="$PROJECT_DIR$/bwt-eureka-server/src/main/java/com/beisun/vmscloud/VmsEurekaServerApplication.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BillhandServiceApplication.java" />
@@ -469,7 +376,6 @@
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/service/LoanOrderService.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/Excel/FileUtils.java" />
         <option value="$PROJECT_DIR$/remark.md" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/resources/generator/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Assetside.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/AssetsideProperty.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/AssetsidePropertyWithBLOBs.java" />
@@ -490,7 +396,14 @@
         <option value="$PROJECT_DIR$/bwt-client-service/pom.xml" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java" />
         <option value="$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/resources/generator/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/WtIpFilterSqlProvider.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/WtIpFilterMapper.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/config.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/interceptor/IPInterceptor.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/WebConfiguration.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/util/IPUtils.java" />
       </list>
     </option>
   </component>
@@ -510,6 +423,21 @@
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bwt-client-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bwt-client-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bwt-client-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="mybatis-generator" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="bwt-cloud" type="9519ce18:MavenProjectsStructure$ProjectNode" />
@@ -555,6 +483,9 @@
       <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -562,13 +493,93 @@
               <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
               <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bwtservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bwtservice" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bwtservice" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bwtservice" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bwtservice" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -581,7 +592,7 @@
     <property name="SearchEverywhereHistoryKey" value="AssetsideMapper&#9;FILE&#9;file:///Users/caijiabao/Downloads/vms-cloud-master/bwtzz-manage/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideMapper.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542613837527" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542618952675" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -623,7 +634,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BwtEurekaServerApplication">
+  <component name="RunManager" selected="Spring Boot.BwtApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -712,7 +723,8 @@
       <workItem from="1542368404920" duration="14024000" />
       <workItem from="1542423899905" duration="24970000" />
       <workItem from="1542607089729" duration="2833000" />
-      <workItem from="1542610010059" duration="2304000" />
+      <workItem from="1542610010059" duration="4911000" />
+      <workItem from="1542619030187" duration="364000" />
     </task>
     <task id="LOCAL-00001" summary="新项目">
       <created>1542593474921</created>
@@ -735,11 +747,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542607993605</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改配置文件，接口访问地址临时修改为：8080">
+      <created>1542613880831</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1542613880831</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186891000" />
+    <option name="totallyTimeSpent" value="189862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1440" extended-state="0" />
@@ -757,12 +776,12 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3814002" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3377877" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.30586487" />
+      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.3051225" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32962137" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32962137" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3266518" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
@@ -831,7 +850,8 @@
     <MESSAGE value="新项目" />
     <MESSAGE value="修改上传图片地址" />
     <MESSAGE value="修改结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改结构" />
+    <MESSAGE value="修改配置文件，接口访问地址临时修改为：8080" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改配置文件，接口访问地址临时修改为：8080" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -848,6 +868,12 @@
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/interceptor/IPInterceptor.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -859,37 +885,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Assetside.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/generator/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="87" column="83" selection-start-line="87" selection-start-column="83" selection-end-line="87" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/AssetsideWithBLOBs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.4.0/mapper-3.4.0-sources.jar!/tk/mybatis/mapper/common/example/SelectByExampleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/LoanOrderSqlProvider.java" />
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/MyBatisMapperScannerConfig.java" />
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/service/impl/LoanOrderServiceimpl.java" />
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/service/LoanOrderService.java" />
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/LoanOrderMapper.java" />
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ProviderUserMysqlMybatisController.java">
@@ -1039,20 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideSqlProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1935">
-          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/service/impl/AssetsideServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -1093,6 +1074,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bwt-eureka-server/target/maven-archiver/pom.properties" />
     <entry file="file://$PROJECT_DIR$/bwt-eureka-server/log/vms-eureka-server/eureka-server-log.log" />
+    <entry file="file://$PROJECT_DIR$/nohup.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/vms-eureka-server/eureka-server-log.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remark.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="628">
+            <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/java/com/bwtcloud/BwtEurekaServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-prod.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/generator/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="70" column="55" lean-forward="true" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/WtIpFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1110,68 +1163,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/WtIpFilterSqlProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="750">
+          <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-prod.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml">
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideSqlProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="1230">
+          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/pom.xml">
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/vms-eureka-server/eureka-server-log.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/java/com/bwtcloud/BwtEurekaServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/remark.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="628">
-            <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nohup.out">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="1110">
+          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        <state relative-caret-position="270">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/interceptor/IPInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/WebConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/WtIpFilterMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/util/IPUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
         </state>
       </provider>
     </entry>
