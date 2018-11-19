@@ -1,14 +1,7 @@
 package com.bwtservice.mapper;
 
 import com.bwtservice.entity.Client;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.InsertProvider;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
-import org.apache.ibatis.annotations.UpdateProvider;
+import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 
 public interface ClientMapper {
@@ -27,13 +20,14 @@ public interface ClientMapper {
     int insert(Client record);
 
     @InsertProvider(type=ClientSqlProvider.class, method="insertSelective")
+    @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
     int insertSelective(Client record);
 
     @Select({
         "select",
         "id, name, idnumber, mobile, report",
         "from client",
-        "where id = #{id,jdbcType=INTEGER}"
+        "where idnumber = #{idnumber,jdbcType=VARCHAR}"
     })
     @Results({
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -42,7 +36,7 @@ public interface ClientMapper {
         @Result(column="mobile", property="mobile", jdbcType=JdbcType.CHAR),
         @Result(column="report", property="report", jdbcType=JdbcType.LONGVARCHAR)
     })
-    Client selectByPrimaryKey(Integer id);
+    Client selectByPrimaryByIdNumber(String idnumber);
 
     @UpdateProvider(type=ClientSqlProvider.class, method="updateByPrimaryKeySelective")
     int updateByPrimaryKeySelective(Client record);
