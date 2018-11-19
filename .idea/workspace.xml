@@ -1,180 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="bwtzz-manage:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="75ba47d8-2296-44e1-b000-f5aee6f98d38" name="Default" comment="修改上传图片地址">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/bwt_client_service_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/bwt_client_service_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_andrewoma_dexx_dexx_collections_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_vlsi_compactmap_compactmap_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_javaewah_JavaEWAH_1_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jzlib_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_eureka_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_19_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_19_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_35.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_60.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_60.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_4_11_0_201803080745_r.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_http_apache_4_11_0_201803080745_r.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_7_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_1_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_server_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_core_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_core_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_server_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_eureka_1_4_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_server_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_1_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bwt-eureka-server/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="75ba47d8-2296-44e1-b000-f5aee6f98d38" name="Default" comment="修改结构">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/bwtzz_manage_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-client-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-eureka-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/src/main/java/com/bwtcloud/BwtEurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-eureka-server/src/main/java/com/bwtcloud/BwtEurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-client-service/remark.md" beforeDir="false" afterPath="$PROJECT_DIR$/remark.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/LOG_HOME_IS_UNDEFINED/vms-eureka-server/eureka-server-log.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/HdrHistogram-2.1.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/LatencyUtils-2.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/antlr-runtime-3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/bwt-eureka-server.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/classmate-1.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-codec-1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-collections-3.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-configuration-1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-jxpath-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-lang-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/commons-math-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/freemarker-2.3.28.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/gson-2.8.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/guice-4.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/hibernate-validator-6.0.13.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/httpclient-4.5.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/httpcore-4.4.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-annotations-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-core-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-databind-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-dataformat-xml-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-datatype-jdk8-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-datatype-jsr310-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-module-jaxb-annotations-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jackson-module-parameter-names-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/javax.annotation-api-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/javax.inject-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jersey-apache-client4-1.19.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jersey-client-1.19.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jersey-core-1.19.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jersey-server-1.19.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jersey-servlet-1.19.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jettison-1.3.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/joda-time-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jsr305-3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jsr311-api-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/jul-to-slf4j-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/log4j-api-2.11.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/log4j-to-slf4j-2.11.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/logback-classic-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/logback-core-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/micrometer-core-1.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/netflix-eventbus-0.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/netflix-infix-0.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/netflix-statistics-0.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-2.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-core-2.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-eureka-2.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-httpclient-2.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-loadbalancer-2.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/ribbon-transport-2.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/rxjava-1.3.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/rxnetty-0.4.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/rxnetty-contexts-0.4.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/rxnetty-servo-0.4.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/slf4j-api-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/snakeyaml-1.23.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-aop-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-beans-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-actuator-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-actuator-autoconfigure-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-autoconfigure-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-actuator-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-freemarker-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-json-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-logging-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-tomcat-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-boot-starter-web-2.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-context-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-context-support-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-core-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-expression-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-jcl-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-security-crypto-5.1.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-web-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/spring-webmvc-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/stax-api-1.0-2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/stax-api-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/stax2-api-3.1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/stringtemplate-3.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/tomcat-embed-core-9.0.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/tomcat-embed-el-9.0.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/tomcat-embed-websocket-9.0.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/validation-api-2.0.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/woodstox-core-5.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/woodstox-core-asl-4.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/xmlpull-1.1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/xpp3_min-1.1.4c.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/classes/artifacts/bwt_eureka_server_jar/xstream-1.4.10.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-eureka-server/src/test/java/com/bwtcloud/VmsEurekaServerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -259,30 +207,30 @@
     <session id="-817887979">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="4074" />
           <entry key="md" value="90" />
-          <entry key="txt" value="24" />
+          <entry key="txt" value="29" />
           <entry key="xml" value="253" />
-          <entry key="yml" value="283" />
+          <entry key="yml" value="293" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="4074" />
           <entry key="Markdown" value="90" />
-          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="PLAIN_TEXT" value="29" />
           <entry key="XML" value="253" />
-          <entry key="YAML" value="283" />
+          <entry key="YAML" value="293" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -290,10 +238,14 @@
           <entry key="class" value="14" />
           <entry key="iml" value="1" />
           <entry key="java" value="206" />
-          <entry key="md" value="5" />
+          <entry key="log" value="5" />
+          <entry key="md" value="6" />
+          <entry key="out" value="1" />
+          <entry key="patch" value="1" />
           <entry key="pom" value="2" />
-          <entry key="xml" value="25" />
-          <entry key="yml" value="25" />
+          <entry key="properties" value="1" />
+          <entry key="xml" value="26" />
+          <entry key="yml" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -301,9 +253,13 @@
           <entry key="CLASS" value="14" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="206" />
-          <entry key="Markdown" value="5" />
-          <entry key="XML" value="27" />
-          <entry key="YAML" value="25" />
+          <entry key="Log" value="5" />
+          <entry key="Markdown" value="6" />
+          <entry key="PATCH" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="1" />
+          <entry key="XML" value="28" />
+          <entry key="YAML" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -319,29 +275,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3210">
-              <caret line="214" selection-start-line="214" selection-end-line="214" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-prod.yml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -357,8 +301,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bwt-eureka-server/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -373,19 +317,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        <entry file="file://$PROJECT_DIR$/remark.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="628">
+                <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log/vms-eureka-server/eureka-server-log.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+            <state relative-caret-position="405">
+              <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -474,6 +435,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -488,7 +450,6 @@
         <option value="$PROJECT_DIR$/bwt-eureka-server/src/main/java/com/beisun/vmscloud/VmsEurekaServerApplication.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BillhandServiceApplication.java" />
         <option value="$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/LoanOrder.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/resources/common.yml" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/MyYmlPropertyFactory.java" />
@@ -523,12 +484,13 @@
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsidePropertyMapper.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/service/impl/AssetsideServiceImpl.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/AssetsideController.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/bwt-eureka-server/src/main/java/com/bwtcloud/BwtEurekaServerApplication.java" />
         <option value="$PROJECT_DIR$/bwt-eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/bwt-client-service/pom.xml" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java" />
+        <option value="$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -547,7 +509,12 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bwt-cloud" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -595,91 +562,13 @@
               <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
               <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bwtservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-eureka-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bwtcloud" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bwtzz-manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bwtzz-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -692,7 +581,7 @@
     <property name="SearchEverywhereHistoryKey" value="AssetsideMapper&#9;FILE&#9;file:///Users/caijiabao/Downloads/vms-cloud-master/bwtzz-manage/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideMapper.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542607916796" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542613837527" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -701,8 +590,18 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/bwt-client-service" />
+      <recent name="$PROJECT_DIR$/vms-billcheck-service/src/main/java/com/common" />
+      <recent name="E:\code\vms-cloud\vms-eureka-server\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.beisun.vmscloud" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.beisun.vmscloud.service.impl" />
+      <recent name="com.beisun.vmscloud.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -710,15 +609,6 @@
       <recent name="$PROJECT_DIR$/vms-billcheck-service/src/main/java/com/jd/common" />
       <recent name="$PROJECT_DIR$/vms-billcheck-service/src/main/resources" />
       <recent name="E:\vms\vms-cloud\vms-jhk-service\src\main\resources\config\spring" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.beisun.vmscloud.service.impl" />
-      <recent name="com.beisun.vmscloud.service" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bwt-client-service" />
-      <recent name="$PROJECT_DIR$/vms-billcheck-service/src/main/java/com/common" />
-      <recent name="E:\code\vms-cloud\vms-eureka-server\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -733,7 +623,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BwtApplication">
+  <component name="RunManager" selected="Spring Boot.BwtEurekaServerApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -821,7 +711,8 @@
       <workItem from="1542352410544" duration="9008000" />
       <workItem from="1542368404920" duration="14024000" />
       <workItem from="1542423899905" duration="24970000" />
-      <workItem from="1542607089729" duration="782000" />
+      <workItem from="1542607089729" duration="2833000" />
+      <workItem from="1542610010059" duration="2304000" />
     </task>
     <task id="LOCAL-00001" summary="新项目">
       <created>1542593474921</created>
@@ -837,11 +728,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542593952262</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="修改结构">
+      <created>1542607993605</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542607993605</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182536000" />
+    <option name="totallyTimeSpent" value="186891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1440" extended-state="0" />
@@ -853,22 +751,22 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info x="698" y="46" width="283" height="957" id="Project" order="6" visible="true" weight="0.18506752" />
+      <window_info active="true" x="698" y="46" width="283" height="957" id="Project" order="6" visible="true" weight="0.18506752" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3814002" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3051225" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.28285077" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.3377877" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.30586487" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32962137" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32962137" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3291536" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32706374" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3266518" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.32962137" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32962137" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24980143" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -932,7 +830,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新项目" />
     <MESSAGE value="修改上传图片地址" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改上传图片地址" />
+    <MESSAGE value="修改结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改结构" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -960,55 +859,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/LoanOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/annotations/Mapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/annotations/Mapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.4.0/mapper-3.4.0.jar!/tk/mybatis/mapper/common/rowbounds/SelectByExampleRowBoundsMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.4.0/mapper-3.4.0.jar!/tk/mybatis/mapper/common/Mapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/session/RowBounds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.4.0/mapper-3.4.0-sources.jar!/tk/mybatis/mapper/common/rowbounds/SelectByExampleRowBoundsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="48" column="61" lean-forward="true" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Assetside.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1186,9 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="24" column="92" lean-forward="true" selection-start-line="24" selection-start-column="92" selection-end-line="24" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,16 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/remark.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="300">
-            <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vms-cloud.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1240,14 +1077,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        <state relative-caret-position="180">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/新项目.patch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/target/maven-archiver/pom.properties" />
+    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/log/vms-eureka-server/eureka-server-log.log" />
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-prod.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml">
@@ -1259,8 +1129,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bwt-eureka-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/vms-eureka-server/eureka-server-log.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1271,27 +1151,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+    <entry file="file://$PROJECT_DIR$/remark.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="628">
+            <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/pom.xml">
+    <entry file="file://$PROJECT_DIR$/nohup.out">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3210">
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java">
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="405">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1301,11 +1181,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>bwt-client-service:war</last-edited>
+          <last-edited>bwtzz-manage:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.39010358" />
                 <option value="0.5" />
               </list>
             </option>

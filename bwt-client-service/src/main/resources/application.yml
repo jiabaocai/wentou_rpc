@@ -16,7 +16,7 @@ eureka:
 #    status-page-url: http://localhost:${server.port}/swagger-ui.html
 
 server:
-  port: 8680
+  port: 8080
 spring:
   application:
     name: billhand-service  #全部小写
