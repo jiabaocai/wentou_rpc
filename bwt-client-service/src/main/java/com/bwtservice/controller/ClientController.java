@@ -65,7 +65,7 @@ public class ClientController {
     }
 
 
-    @ApiOperation("查询用户")
+    @ApiOperation("根据身份证查询用户")
     @GetMapping("/getClientByIdNumber")
     public BaseResult getClient(String idnumber) {
         Client client = new Client();

@@ -16,7 +16,7 @@ eureka:
 #    status-page-url: http://localhost:${server.port}/swagger-ui.html
 
 server:
-  port: 8680
+  port: 8080
 spring:
   application:
     name: billhand-service  #全部小写
@@ -55,3 +55,9 @@ upload:
   uploadDir: /data/wwwroot/default/public/upload/
 #  uploadDir: /Users/caijiabao/Downloads/vms-cloud-master/bwtzz-manage/log/
 
+appid:
+  priKey: MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKuJI5tzB4elxqY2g/IQNJ9Thewqwu6aUimn6JvpCi7nuQlcds0FAC/5Z2bcJVy7ZgK/ZOiYR9grflyhvXO6zXo5LE8/5ZEk75Qk2gJXuEWxT5sq5BD3qYTg3XdVj3o/73miw1SgHb0Q2HQQAoHbDU9AMPbEgVRn5hLbW9kswR0hAgMBAAECgYAhVcVVsEUGV3EDXBTINd4EGHcuLiEzvUm6TqclpWQVOXL8Hrv3m8EtkYpGswGPw9tPLWKu0OklWU51MflfRC4p/25DeNNNDwuHG25TyYOQ0wDNGhwws6tAmu17gUkPBVFBgjr2rFtDY/1wxnEd2G6KFmZmDkh8M87WLvXs5RgUAQJBAP7n7VY/pD6G3HypzMqJWfGU5jzMySYamZ3YwvgeNs/FwaUZalYdQ1yG7rPtF0A+9yyshCfwHlq9G32whoyG6F0CQQCsRZxNiDgb8eueG/auKT7p08pCKlwVLWLGmDF+zEW41z/2BBuraQDLdR+nTUpAgcAtjs92U0Bq2QGzneYFwWuVAkADydKfK4b3Xu279JIUmIH7syjQ0oJSzKZn0CblpR1PbTL5jy0jZn/vyhmWFvn3fHgT8+Rq64in9JOKBKubPw4JAkB5pw6hkbhNw6Dnnkes5WOQLAeAgflU2yANrhwFtqrlxNteF7iSaywsgSFBO8tbkkTr5xWKMXAkA+q3tKFjHxuhAkEA1bv0GJtJariX2QDa1NQTR7TIkMLp41w9imLGYC22ga4tgWNparCGxkqD4RC2iCOr63ctBkGwoYO5Z8thnRQhpA==
+  pubKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCriSObcweHpcamNoPyEDSfU4XsKsLumlIpp+ib6Qou57kJXHbNBQAv+Wdm3CVcu2YCv2TomEfYK35cob1zus16OSxPP+WRJO+UJNoCV7hFsU+bKuQQ96mE4N13VY96P+95osNUoB29ENh0EAKB2w1PQDD2xIFUZ+YS21vZLMEdIQIDAQAB
+
+environment:
+  active: dev

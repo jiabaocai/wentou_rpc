@@ -85,7 +85,7 @@
 
         <!--<table tableName="user" domainObjectName="User" enableCountByExample="false"-->
         <!--enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>-->
-        <table schema="goods_group" tableName="goods_group" domainObjectName="GoodsGroup"
+        <table schema="config" tableName="config" domainObjectName="Config"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
