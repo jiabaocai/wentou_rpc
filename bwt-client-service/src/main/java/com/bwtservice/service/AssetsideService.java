@@ -16,6 +16,7 @@ public interface AssetsideService {
     PageInfo<AssetsideWithBLOBs> getAssetsideByPage(AssetsideWithBLOBs assetsideWithBLOBs,int pageNum,int pageSize);
 
     AssetsidePropertyWithBLOBs getAssProByAssId(int assetsideId);
+    AssetsideWithBLOBs getAssByassId(Integer assId);
 
     int editAssetside(AssetsideWithBLOBs assetsideWithBLOBs);
 

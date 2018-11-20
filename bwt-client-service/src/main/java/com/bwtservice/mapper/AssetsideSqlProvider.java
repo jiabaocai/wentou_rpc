@@ -48,12 +48,12 @@ public class AssetsideSqlProvider {
             sql.VALUES("qualification", "#{qualification,jdbcType=VARCHAR}");
         }
         
-        if (record.getBackname() != null) {
-            sql.VALUES("backname", "#{backname,jdbcType=VARCHAR}");
+        if (record.getBankname() != null) {
+            sql.VALUES("bankname", "#{bankname,jdbcType=VARCHAR}");
         }
         
-        if (record.getBackaccount() != null) {
-            sql.VALUES("backaccount", "#{backaccount,jdbcType=VARCHAR}");
+        if (record.getBankaccount() != null) {
+            sql.VALUES("bankaccount", "#{bankaccount,jdbcType=VARCHAR}");
         }
         
         if (record.getCreatetime() != null) {
@@ -81,14 +81,13 @@ public class AssetsideSqlProvider {
 
     public String selectPersonLike(AssetsideWithBLOBs ass) {
         return new SQL() {{
-            SELECT("assetside_id, name, corp_name, corp_no, corp_img, reg_cap, foundingtime, legal_rep,address, qualification, backname, backaccount, createtime, status, partner,team, contactinfo");
+            SELECT("assetside_id, name, corp_name, corp_no, corp_img, reg_cap, foundingtime, legal_rep,address, qualification, bankname, bankaccount, createtime, status, partner,team, contactinfo");
             FROM("assetside");
             if (ass.getAssetside_id()!=null) {
                 WHERE("assetside_id = #{assetside_id}");
             }
             if (ass.getName() != null) {
                 WHERE("name like CONCAT('%',#{name},'%')");
-
             }
             if (ass.getCorp_name() != null) {
                 WHERE("corp_name like CONCAT('%',#{corp_name},'%')");
@@ -112,8 +111,8 @@ public class AssetsideSqlProvider {
             } if (ass.getQualification()!=null) {
                 WHERE("qualification = #{qualification}");
             }
-            if (ass.getBackname()!=null) {
-                WHERE("backname like CONCAT('%',#{backname},'%')");
+            if (ass.getBankname()!=null) {
+                WHERE("bankname like CONCAT('%',#{bankname},'%')");
             } if (ass.getCreatetime()!=null) {
                 WHERE("createtime = #{createtime}");
             } if (ass.getStatus()!=null) {
@@ -170,12 +169,12 @@ public class AssetsideSqlProvider {
             sql.SET("qualification = #{qualification,jdbcType=VARCHAR}");
         }
         
-        if (record.getBackname() != null) {
-            sql.SET("backname = #{backname,jdbcType=VARCHAR}");
+        if (record.getBankname() != null) {
+            sql.SET("bankname = #{bankname,jdbcType=VARCHAR}");
         }
         
-        if (record.getBackaccount() != null) {
-            sql.SET("backaccount = #{backaccount,jdbcType=VARCHAR}");
+        if (record.getBankaccount() != null) {
+            sql.SET("bankaccount = #{bankaccount,jdbcType=VARCHAR}");
         }
         
         if (record.getCreatetime() != null) {

@@ -27,9 +27,9 @@ public class Assetside implements Serializable {
 
     private String qualification;
 
-    private String backname;
+    private String bankname;
 
-    private String backaccount;
+    private String bankaccount;
 
     private Date createtime;
 

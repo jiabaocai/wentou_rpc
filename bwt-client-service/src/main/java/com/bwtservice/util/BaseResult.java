@@ -8,26 +8,26 @@ import lombok.Data;
  */
 @Data
 public class BaseResult<T> {
-    private int error_code;
-    private String reson;
+    private int code;
+    private String msg;
     private T data;
 
 
     public BaseResult(Integer status, String msg, T data) {
-        this.error_code = status;
-        this.reson = msg;
+        this.code = status;
+        this.msg = msg;
         this.data = data;
     }
 
     public BaseResult(T data) {
-        this.error_code = 1;
-        this.reson = "success";
+        this.code = 200;
+        this.msg = "success";
         this.data = data;
     }
 
     public BaseResult() {
-        this.error_code = 1;
-        this.reson = "success";
+        this.code = 200;
+        this.msg = "success";
         this.data = null;
     }
 

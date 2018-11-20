@@ -44,6 +44,12 @@ public class AssetsideController {
     @PostMapping("/addAssetsideProperty")
     public BaseResult<? extends Object> addAssetsideProperty(@RequestBody AssetsidePropertyWithBLOBs assetsidePropertyWithBLOBs) {
         try {
+            if(assetsidePropertyWithBLOBs.getAssetside_id()!=null){
+                AssetsidePropertyWithBLOBs a= assetsideService.getAssProByAssId(assetsidePropertyWithBLOBs.getAssetside_id());
+                if(a!=null){
+                    BaseResult.error("信息已存在");
+                }
+            }
             assetsideService.addAssetsideProperty(assetsidePropertyWithBLOBs);
         } catch (Exception e) {
             logger.error(e.getMessage());
@@ -55,7 +61,7 @@ public class AssetsideController {
 
     @ApiOperation(value = "资产端查询接口")
     @GetMapping("/getAssetside")
-    public BaseResult list(String name, int status, int pageNum, int pageSize) {
+    public BaseResult list(String name, Integer status, int pageNum, int pageSize) {
         PageInfo<AssetsideWithBLOBs> result;
         try {
             AssetsideWithBLOBs withBLOBs = new AssetsideWithBLOBs();
@@ -100,6 +106,19 @@ public class AssetsideController {
         AssetsidePropertyWithBLOBs result;
         try {
             result = assetsideService.getAssProByAssId(assetsideId);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
+        return BaseResult.success(result);
+    }
+
+    @ApiOperation(value = "根据id查询资产端信息")
+    @GetMapping("/getAssByAssId")
+    public BaseResult getAssByAssId(int assetsideId) {
+        AssetsideWithBLOBs result;
+        try {
+            result = assetsideService.getAssByassId(assetsideId);
         } catch (Exception e) {
             logger.error(e.getMessage());
             return BaseResult.error(e.getMessage());

@@ -48,6 +48,11 @@ public class AssetsideServiceImpl implements AssetsideService {
     }
 
     @Override
+    public AssetsideWithBLOBs getAssByassId(Integer assId) {
+        return assetsideMapper.selectByPrimaryKey(assId);
+    }
+
+    @Override
     public int editAssetside(AssetsideWithBLOBs assetsideWithBLOBs) {
         return assetsideMapper.updateByPrimaryKeySelective(assetsideWithBLOBs);
     }
