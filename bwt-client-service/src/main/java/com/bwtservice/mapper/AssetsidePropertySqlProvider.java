@@ -112,9 +112,9 @@ public class AssetsidePropertySqlProvider {
         SQL sql = new SQL();
         sql.UPDATE("assetside_property");
         
-        if (record.getAssetside_id() != null) {
-            sql.SET("assetside_id = #{assetside_id,jdbcType=INTEGER}");
-        }
+//        if (record.getAssetside_id() != null) {
+//            sql.SET("assetside_id = #{assetside_id,jdbcType=INTEGER}");
+//        }
         
         if (record.getBs_enddate() != null) {
             sql.SET("bs_enddate = #{bs_enddate,jdbcType=TIMESTAMP}");
@@ -204,7 +204,7 @@ public class AssetsidePropertySqlProvider {
             sql.SET("outer_list = #{outer_list,jdbcType=LONGVARCHAR}");
         }
         
-        sql.WHERE("id = #{id,jdbcType=INTEGER}");
+        sql.WHERE("assetside_id = #{assetside_id,jdbcType=INTEGER}");
         
         return sql.toString();
     }

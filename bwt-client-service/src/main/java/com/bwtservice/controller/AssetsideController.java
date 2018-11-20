@@ -91,7 +91,12 @@ public class AssetsideController {
     @PostMapping("/editAssetsidePropety")
     public BaseResult<Object> editAssetsideProprty(@RequestBody AssetsidePropertyWithBLOBs assetsidePropertyWithBLOBs) {
         try {
-            assetsideService.editAssetsidePropety(assetsidePropertyWithBLOBs);
+            AssetsidePropertyWithBLOBs a=assetsideService.getAssProByAssId(assetsidePropertyWithBLOBs.getAssetside_id());
+            if(a!=null){
+                assetsideService.editAssetsidePropety(assetsidePropertyWithBLOBs);
+            }else {
+                assetsideService.addAssetsideProperty(assetsidePropertyWithBLOBs);
+            }
         } catch (Exception e) {
             logger.error(e.getMessage());
             BaseResult.error(e.getMessage());
