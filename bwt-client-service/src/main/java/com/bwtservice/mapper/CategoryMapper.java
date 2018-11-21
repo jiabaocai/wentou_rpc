@@ -43,6 +43,34 @@ public interface CategoryMapper {
     })
     CategoryDto selectByPrimaryKey(Integer id);
 
+
+    @Select({
+            "select ",
+            "category.id, category.name, category.goods_group_id,goods_group.name goods_group_name ",
+            "from category left join goods_group on category.goods_group_id=goods_group.id "
+    })
+    @Results({
+            @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
+            @Result(column="name", property="name", jdbcType=JdbcType.VARCHAR),
+            @Result(column="goods_group_id", property="goods_group_id", jdbcType=JdbcType.INTEGER),
+            @Result(column="goods_group_name", property="goods_group_name", jdbcType=JdbcType.VARCHAR)
+    })
+    List<CategoryDto> selectByPrimaryAll();
+
+    @Select({
+            "select ",
+            "id,name, goods_group_id ",
+            "from category  ",
+            "where goods_group_id = #{goodsGroupId,jdbcType=INTEGER} "
+    })
+    @Results({
+            @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
+            @Result(column="name", property="name", jdbcType=JdbcType.VARCHAR),
+            @Result(column="goods_group_id", property="goods_group_id", jdbcType=JdbcType.INTEGER)
+    })
+    List<Category> selectByPrimaryBygoodsGroupId(Integer goodsGroupId);
+
+
     @UpdateProvider(type=CategorySqlProvider.class, method="updateByPrimaryKeySelective")
     int updateByPrimaryKeySelective(Category record);
 

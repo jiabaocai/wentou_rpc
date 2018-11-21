@@ -12,6 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 @Api(value = "类目controller", description = "类目接口", tags = {"类目接口"})
 @RestController()
@@ -54,6 +56,32 @@ public class CategoryController {
         CategoryDto category = new CategoryDto();
         try {
             category = categoryMapper.selectByPrimaryKey(id);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
+        return BaseResult.success(category);
+    }
+
+    @ApiOperation("根据GoodGroupID查询类目")
+    @GetMapping("/getCategoryByGoodId")
+    public BaseResult getCategoryByGoodId(int goodsGroupId) {
+        List<Category> category = new ArrayList<>();
+        try {
+            category = categoryMapper.selectByPrimaryBygoodsGroupId(goodsGroupId);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
+        return BaseResult.success(category);
+    }
+
+    @ApiOperation("查询所有类目包含GoodGroupName")
+    @GetMapping("/getCategoryAll")
+    public BaseResult getCategoryAll() {
+        List<CategoryDto> category = new ArrayList<>();
+        try {
+            category = categoryMapper.selectByPrimaryAll();
         } catch (Exception e) {
             logger.error(e.getMessage());
             return BaseResult.error(e.getMessage());
