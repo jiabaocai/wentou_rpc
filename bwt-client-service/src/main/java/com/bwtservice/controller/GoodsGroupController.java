@@ -11,6 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 @Api(value = "商品组controller", description = "商品组接口", tags = {"商品组接口"})
 @RestController()
@@ -58,5 +60,21 @@ public class GoodsGroupController {
         }
         return BaseResult.success(goodsGroup);
     }
+
+    @ApiOperation("根据商品组名称查询商品组")
+    @GetMapping("/getGroupByName")
+    public BaseResult getGroupByName(String name) {
+        List<GoodsGroup> goodsGroup = new ArrayList<>();
+        try {
+            GoodsGroup goodsGroup1=new GoodsGroup();
+            goodsGroup1.setName(name);
+            goodsGroup = goodsGroupMapper.selectByexample(goodsGroup1);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
+        return BaseResult.success(goodsGroup);
+    }
+
 
 }

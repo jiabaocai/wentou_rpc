@@ -2,6 +2,7 @@ package com.bwtservice.controller;
 
 
 import com.bwtservice.entity.Category;
+import com.bwtservice.entity.CategoryDto;
 import com.bwtservice.mapper.CategoryMapper;
 import com.bwtservice.util.BaseResult;
 import io.swagger.annotations.Api;
@@ -50,7 +51,7 @@ public class CategoryController {
     @ApiOperation("根据ID查询类目")
     @GetMapping("/getCategoryById")
     public BaseResult getCategoryById(int id) {
-        Category category = new Category();
+        CategoryDto category = new CategoryDto();
         try {
             category = categoryMapper.selectByPrimaryKey(id);
         } catch (Exception e) {

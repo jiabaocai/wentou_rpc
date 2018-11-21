@@ -1,14 +1,7 @@
 package com.bwtservice.mapper;
 
 import com.bwtservice.entity.GoodsGroup;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.InsertProvider;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
-import org.apache.ibatis.annotations.UpdateProvider;
+import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 
 import java.util.List;
@@ -29,6 +22,7 @@ public interface GoodsGroupMapper {
     int insert(GoodsGroup record);
 
     @InsertProvider(type=GoodsGroupSqlProvider.class, method="insertSelective")
+    @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
     int insertSelective(GoodsGroup record);
 
     @Select({
@@ -45,6 +39,10 @@ public interface GoodsGroupMapper {
 
     @UpdateProvider(type=GoodsGroupSqlProvider.class, method="updateByPrimaryKeySelective")
     int updateByPrimaryKeySelective(GoodsGroup record);
+
+
+    @SelectProvider(type=GoodsGroupSqlProvider.class, method="selectGoodsGroupLike")
+    List<GoodsGroup> selectByexample(GoodsGroup goodsGroup);
 
     @Update({
         "update goods_group",
