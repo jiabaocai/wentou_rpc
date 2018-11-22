@@ -78,10 +78,23 @@ public class CategoryController {
 
     @ApiOperation("查询所有类目包含GoodGroupName")
     @GetMapping("/getCategoryAll")
-    public BaseResult getCategoryAll() {
+    public BaseResult getCategoryAll(Integer goods_group_id, String name) {
         List<CategoryDto> category = new ArrayList<>();
         try {
-            category = categoryMapper.selectByPrimaryAll();
+
+            if (goods_group_id != null) {
+                if (name != null) {
+                    category = categoryMapper.selectByPrimaryAllByNameAndId(name, goods_group_id);
+                } else {
+                    category = categoryMapper.selectByPrimaryAllById(goods_group_id);
+                }
+            } else {
+                if (name != null) {
+                    category = categoryMapper.selectByPrimaryAllByName(name);
+                } else {
+                    category = categoryMapper.selectByPrimaryAll();
+                }
+            }
         } catch (Exception e) {
             logger.error(e.getMessage());
             return BaseResult.error(e.getMessage());
