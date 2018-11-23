@@ -78,11 +78,11 @@ public class ProductController {
 
     @ApiOperation(value = "根据条件查询产品详情")
     @PostMapping("/getProductByExample")
-    public BaseResult getProductByExample(Integer product_no, Integer rdg_id, Integer status, String createtime, String endDate, String assetside_name, String goods_group_name, Integer pageNum, Integer pageSize) {
+    public BaseResult getProductByExample(Integer product_no, Integer rdg_id, Integer status, String createtime, String endDate, String assetside_name, String goods_group_name,String product_name, Integer pageNum, Integer pageSize) {
         PageInfo<ProductDto> pageInfo = null;
         try {
             PageHelper.startPage(pageNum, pageSize);
-            List<ProductDto> list = productMapper.selectProductByExample(product_no, rdg_id, status, createtime, endDate, assetside_name, goods_group_name);
+            List<ProductDto> list = productMapper.selectProductByExample(product_no, rdg_id, status, createtime, endDate, assetside_name, goods_group_name,product_name);
             pageInfo = new PageInfo(list);
         } catch (Exception e) {
             logger.error(e.getMessage());

@@ -22,7 +22,7 @@ public interface ProductMapper {
             "ffr, lineup, linedown, ",
             "total, warning_line, ",
             "disposal_plan, contact_id, ",
-            "createtime, status)",
+            "createtime, status,product_name)",
             "values (#{id,jdbcType=INTEGER}, #{product_no,jdbcType=CHAR}, ",
             "#{assetside_id,jdbcType=INTEGER}, #{rdg_id,jdbcType=INTEGER}, ",
             "#{goods_group_id,jdbcType=INTEGER}, #{contract_id,jdbcType=INTEGER}, ",
@@ -30,7 +30,7 @@ public interface ProductMapper {
             "#{ffr,jdbcType=DECIMAL}, #{lineup,jdbcType=DECIMAL}, #{linedown,jdbcType=DECIMAL}, ",
             "#{total,jdbcType=INTEGER}, #{warning_line,jdbcType=DECIMAL}, ",
             "#{disposal_plan,jdbcType=TINYINT}, #{contact_id,jdbcType=VARCHAR}, ",
-            "#{createtime,jdbcType=TIMESTAMP}, #{status,jdbcType=TINYINT})"
+            "#{createtime,jdbcType=TIMESTAMP}, #{status,jdbcType=TINYINT},#{product_name,jdbcType=VARCHAR})"
     })
     int insert(Product record);
 
@@ -42,7 +42,7 @@ public interface ProductMapper {
             "select",
             "id, product_no, assetside_id, rdg_id, goods_group_id, contract_id, tc, ibm, ",
             "day_rate, ffr, lineup, linedown, total, warning_line, disposal_plan, contact_id, ",
-            "createtime, status",
+            "createtime, status ,product_name ",
             "from product",
             "where id = #{id,jdbcType=INTEGER}"
     })
@@ -64,6 +64,7 @@ public interface ProductMapper {
             @Result(column = "disposal_plan", property = "disposal_plan", jdbcType = JdbcType.TINYINT),
             @Result(column = "contact_id", property = "contact_id", jdbcType = JdbcType.VARCHAR),
             @Result(column = "createtime", property = "createtime", jdbcType = JdbcType.TIMESTAMP),
+            @Result(column = "product_name", property = "product_name", jdbcType = JdbcType.VARCHAR),
             @Result(column = "status", property = "status", jdbcType = JdbcType.TINYINT)
     })
     Product selectByPrimaryKey(Integer id);
@@ -72,7 +73,7 @@ public interface ProductMapper {
             "select",
             "a.id, a.product_no, a.assetside_id, a.rdg_id, a.goods_group_id, a.contract_id, a.tc, a.ibm, ",
             "a.day_rate, a.ffr, a.lineup, a.linedown, a.total, a.warning_line, a.disposal_plan, a.contact_id, ",
-            "a.createtime, a.status,b.name assetside_name ,c.name goods_group_name",
+            "a.createtime, a.status,b.name assetside_name ,c.name goods_group_name,a.product_name ",
             "from product a LEFT JOIN assetside  b on  a.assetside_id=b.assetside_id LEFT JOIN goods_group c on a.goods_group_id=c.id",
             "where a.id = #{id,jdbcType=INTEGER}"
     })
@@ -96,20 +97,24 @@ public interface ProductMapper {
             @Result(column = "createtime", property = "createtime", jdbcType = JdbcType.TIMESTAMP),
             @Result(column = "status", property = "status", jdbcType = JdbcType.TINYINT),
             @Result(column = "assetside_name", property = "assetside_name", jdbcType = JdbcType.VARCHAR),
-            @Result(column = "goods_group_name", property = "goods_group_name", jdbcType = JdbcType.VARCHAR)
+            @Result(column = "goods_group_name", property = "goods_group_name", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "product_name", property = "product_name", jdbcType = JdbcType.VARCHAR)
     })
     ProductDto selectProductById(@Param("id") Integer id);
 
     @Select({"<script> " +
             "SELECT a.id, a.product_no, a.assetside_id, a.rdg_id, a.goods_group_id, a.contract_id, a.tc, a.ibm, " +
             "a.day_rate, a.ffr, a.lineup, a.linedown, a.total, a.warning_line, a.disposal_plan, a.contact_id, ",
-            "a.createtime, a.status,b.name assetside_name ,c.name goods_group_name",
+            "a.createtime, a.status,b.name assetside_name ,c.name goods_group_name,a.product_name ",
             "from product a " +
                     "LEFT JOIN assetside  b on  a.assetside_id=b.assetside_id " +
                     "LEFT JOIN goods_group c on a.goods_group_id=c.id " +
                     "where 1=1 " +
                     "  <if test=\"product_no !=null and product_no !=''\">" +
                     "    AND a.product_no = #{product_no}" +
+                    "  </if> " +
+                    "  <if test=\"product_name !=null and product_name !=''\">" +
+                    "    AND a.product_name like CONCAT('%', #{product_name}, '%')" +
                     "  </if> " +
                     "  <if test=\"rdg_id !=null and rdg_id !=''\">" +
                     "    AND a.rdg_id = #{rdg_id}" +
@@ -148,9 +153,10 @@ public interface ProductMapper {
             @Result(column = "createtime", property = "createtime", jdbcType = JdbcType.TIMESTAMP),
             @Result(column = "status", property = "status", jdbcType = JdbcType.TINYINT),
             @Result(column = "assetside_name", property = "assetside_name", jdbcType = JdbcType.VARCHAR),
-            @Result(column = "goods_group_name", property = "goods_group_name", jdbcType = JdbcType.VARCHAR)
+            @Result(column = "goods_group_name", property = "goods_group_name", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "product_name", property = "product_name", jdbcType = JdbcType.VARCHAR)
     })
-    List<ProductDto> selectProductByExample(@Param("product_no") Integer product_no, @Param("rdg_id") Integer rdg_id, @Param("status") Integer status, @Param("createtime") String createtime, @Param("endDate") String endDate, @Param("assetside_name") String assetside_name, @Param("goods_group_name") String goods_group_name);
+    List<ProductDto> selectProductByExample(@Param("product_no") Integer product_no, @Param("rdg_id") Integer rdg_id, @Param("status") Integer status, @Param("createtime") String createtime, @Param("endDate") String endDate, @Param("assetside_name") String assetside_name, @Param("goods_group_name") String goods_group_name,@Param("product_name")String product_name);
 
 
     @UpdateProvider(type = ProductSqlProvider.class, method = "updateByPrimaryKeySelective")
@@ -175,6 +181,7 @@ public interface ProductMapper {
             "contact_id = #{contact_id,jdbcType=VARCHAR},",
             "createtime = #{createtime,jdbcType=TIMESTAMP},",
             "status = #{status,jdbcType=TINYINT}",
+            "product_name = #{product_name,jdbcType=VARCHAR}",
             "where id = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Product record);
