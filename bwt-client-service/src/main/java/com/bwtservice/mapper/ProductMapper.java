@@ -71,6 +71,37 @@ public interface ProductMapper {
 
     @Select({
             "select",
+            "id, product_no, assetside_id, rdg_id, goods_group_id, contract_id, tc, ibm, ",
+            "year_rate, ffr, lineup, linedown, total, warning_line, disposal_plan, contact_id, ",
+            "createtime, status ,product_name ",
+            "from product",
+            "where product_no = #{productNo,jdbcType=INTEGER}"
+    })
+    @Results({
+            @Result(column = "id", property = "id", jdbcType = JdbcType.INTEGER, id = true),
+            @Result(column = "product_no", property = "product_no", jdbcType = JdbcType.CHAR),
+            @Result(column = "assetside_id", property = "assetside_id", jdbcType = JdbcType.INTEGER),
+            @Result(column = "rdg_id", property = "rdg_id", jdbcType = JdbcType.INTEGER),
+            @Result(column = "goods_group_id", property = "goods_group_id", jdbcType = JdbcType.INTEGER),
+            @Result(column = "contract_id", property = "contract_id", jdbcType = JdbcType.INTEGER),
+            @Result(column = "tc", property = "tc", jdbcType = JdbcType.TINYINT),
+            @Result(column = "ibm", property = "ibm", jdbcType = JdbcType.TINYINT),
+            @Result(column = "year_rate", property = "year_rate", jdbcType = JdbcType.DECIMAL),
+            @Result(column = "ffr", property = "ffr", jdbcType = JdbcType.DECIMAL),
+            @Result(column = "lineup", property = "lineup", jdbcType = JdbcType.DECIMAL),
+            @Result(column = "linedown", property = "linedown", jdbcType = JdbcType.DECIMAL),
+            @Result(column = "total", property = "total", jdbcType = JdbcType.INTEGER),
+            @Result(column = "warning_line", property = "warning_line", jdbcType = JdbcType.DECIMAL),
+            @Result(column = "disposal_plan", property = "disposal_plan", jdbcType = JdbcType.TINYINT),
+            @Result(column = "contact_id", property = "contact_id", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "createtime", property = "createtime", jdbcType = JdbcType.TIMESTAMP),
+            @Result(column = "product_name", property = "product_name", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "status", property = "status", jdbcType = JdbcType.TINYINT)
+    })
+    Product selectByPrimaryByProductNo(@Param("productNo")Integer productNo);
+
+    @Select({
+            "select",
             "a.id, a.product_no, a.assetside_id, a.rdg_id, a.goods_group_id, a.contract_id, a.tc, a.ibm, ",
             "a.year_rate, a.ffr, a.lineup, a.linedown, a.total, a.warning_line, a.disposal_plan, a.contact_id, ",
             "a.createtime, a.status,b.name assetside_name ,c.name goods_group_name,a.product_name ",
