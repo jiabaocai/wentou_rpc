@@ -24,7 +24,7 @@ public class Product implements Serializable {
 
     private Byte ibm;
 
-    private BigDecimal day_rate;
+    private BigDecimal year_rate;
 
     private BigDecimal ffr;
 

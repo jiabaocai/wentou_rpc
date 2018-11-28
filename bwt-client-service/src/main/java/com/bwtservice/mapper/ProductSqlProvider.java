@@ -41,8 +41,8 @@ public class ProductSqlProvider {
             sql.VALUES("ibm", "#{ibm,jdbcType=TINYINT}");
         }
 
-        if (record.getDay_rate() != null) {
-            sql.VALUES("day_rate", "#{day_rate,jdbcType=DECIMAL}");
+        if (record.getYear_rate() != null) {
+            sql.VALUES("year_rate", "#{year_rate,jdbcType=DECIMAL}");
         }
 
         if (record.getFfr() != null) {
@@ -119,8 +119,8 @@ public class ProductSqlProvider {
             sql.SET("ibm = #{ibm,jdbcType=TINYINT}");
         }
 
-        if (record.getDay_rate() != null) {
-            sql.SET("day_rate = #{day_rate,jdbcType=DECIMAL}");
+        if (record.getYear_rate() != null) {
+            sql.SET("year_rate = #{year_rate,jdbcType=DECIMAL}");
         }
 
         if (record.getFfr() != null) {

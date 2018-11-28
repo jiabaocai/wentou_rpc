@@ -18,7 +18,7 @@ public interface ProductMapper {
             "insert into product (id, product_no, ",
             "assetside_id, rdg_id, ",
             "goods_group_id, contract_id, ",
-            "tc, ibm, day_rate, ",
+            "tc, ibm, year_rate, ",
             "ffr, lineup, linedown, ",
             "total, warning_line, ",
             "disposal_plan, contact_id, ",
@@ -26,7 +26,7 @@ public interface ProductMapper {
             "values (#{id,jdbcType=INTEGER}, #{product_no,jdbcType=CHAR}, ",
             "#{assetside_id,jdbcType=INTEGER}, #{rdg_id,jdbcType=INTEGER}, ",
             "#{goods_group_id,jdbcType=INTEGER}, #{contract_id,jdbcType=INTEGER}, ",
-            "#{tc,jdbcType=TINYINT}, #{ibm,jdbcType=TINYINT}, #{day_rate,jdbcType=DECIMAL}, ",
+            "#{tc,jdbcType=TINYINT}, #{ibm,jdbcType=TINYINT}, #{year_rate,jdbcType=DECIMAL}, ",
             "#{ffr,jdbcType=DECIMAL}, #{lineup,jdbcType=DECIMAL}, #{linedown,jdbcType=DECIMAL}, ",
             "#{total,jdbcType=INTEGER}, #{warning_line,jdbcType=DECIMAL}, ",
             "#{disposal_plan,jdbcType=TINYINT}, #{contact_id,jdbcType=VARCHAR}, ",
@@ -41,7 +41,7 @@ public interface ProductMapper {
     @Select({
             "select",
             "id, product_no, assetside_id, rdg_id, goods_group_id, contract_id, tc, ibm, ",
-            "day_rate, ffr, lineup, linedown, total, warning_line, disposal_plan, contact_id, ",
+            "year_rate, ffr, lineup, linedown, total, warning_line, disposal_plan, contact_id, ",
             "createtime, status ,product_name ",
             "from product",
             "where id = #{id,jdbcType=INTEGER}"
@@ -55,7 +55,7 @@ public interface ProductMapper {
             @Result(column = "contract_id", property = "contract_id", jdbcType = JdbcType.INTEGER),
             @Result(column = "tc", property = "tc", jdbcType = JdbcType.TINYINT),
             @Result(column = "ibm", property = "ibm", jdbcType = JdbcType.TINYINT),
-            @Result(column = "day_rate", property = "day_rate", jdbcType = JdbcType.DECIMAL),
+            @Result(column = "year_rate", property = "year_rate", jdbcType = JdbcType.DECIMAL),
             @Result(column = "ffr", property = "ffr", jdbcType = JdbcType.DECIMAL),
             @Result(column = "lineup", property = "lineup", jdbcType = JdbcType.DECIMAL),
             @Result(column = "linedown", property = "linedown", jdbcType = JdbcType.DECIMAL),
@@ -72,7 +72,7 @@ public interface ProductMapper {
     @Select({
             "select",
             "a.id, a.product_no, a.assetside_id, a.rdg_id, a.goods_group_id, a.contract_id, a.tc, a.ibm, ",
-            "a.day_rate, a.ffr, a.lineup, a.linedown, a.total, a.warning_line, a.disposal_plan, a.contact_id, ",
+            "a.year_rate, a.ffr, a.lineup, a.linedown, a.total, a.warning_line, a.disposal_plan, a.contact_id, ",
             "a.createtime, a.status,b.name assetside_name ,c.name goods_group_name,a.product_name ",
             "from product a LEFT JOIN assetside  b on  a.assetside_id=b.assetside_id LEFT JOIN goods_group c on a.goods_group_id=c.id",
             "where a.id = #{id,jdbcType=INTEGER}"
@@ -86,7 +86,7 @@ public interface ProductMapper {
             @Result(column = "contract_id", property = "contract_id", jdbcType = JdbcType.INTEGER),
             @Result(column = "tc", property = "tc", jdbcType = JdbcType.TINYINT),
             @Result(column = "ibm", property = "ibm", jdbcType = JdbcType.TINYINT),
-            @Result(column = "day_rate", property = "day_rate", jdbcType = JdbcType.DECIMAL),
+            @Result(column = "year_rate", property = "year_rate", jdbcType = JdbcType.DECIMAL),
             @Result(column = "ffr", property = "ffr", jdbcType = JdbcType.DECIMAL),
             @Result(column = "lineup", property = "lineup", jdbcType = JdbcType.DECIMAL),
             @Result(column = "linedown", property = "linedown", jdbcType = JdbcType.DECIMAL),
@@ -104,7 +104,7 @@ public interface ProductMapper {
 
     @Select({"<script> " +
             "SELECT a.id, a.product_no, a.assetside_id, a.rdg_id, a.goods_group_id, a.contract_id, a.tc, a.ibm, " +
-            "a.day_rate, a.ffr, a.lineup, a.linedown, a.total, a.warning_line, a.disposal_plan, a.contact_id, ",
+            "a.year_rate, a.ffr, a.lineup, a.linedown, a.total, a.warning_line, a.disposal_plan, a.contact_id, ",
             "a.createtime, a.status,b.name assetside_name ,c.name goods_group_name,a.product_name ",
             "from product a " +
                     "LEFT JOIN assetside  b on  a.assetside_id=b.assetside_id " +
@@ -142,7 +142,7 @@ public interface ProductMapper {
             @Result(column = "contract_id", property = "contract_id", jdbcType = JdbcType.INTEGER),
             @Result(column = "tc", property = "tc", jdbcType = JdbcType.TINYINT),
             @Result(column = "ibm", property = "ibm", jdbcType = JdbcType.TINYINT),
-            @Result(column = "day_rate", property = "day_rate", jdbcType = JdbcType.DECIMAL),
+            @Result(column = "year_rate", property = "year_rate", jdbcType = JdbcType.DECIMAL),
             @Result(column = "ffr", property = "ffr", jdbcType = JdbcType.DECIMAL),
             @Result(column = "lineup", property = "lineup", jdbcType = JdbcType.DECIMAL),
             @Result(column = "linedown", property = "linedown", jdbcType = JdbcType.DECIMAL),
@@ -171,7 +171,7 @@ public interface ProductMapper {
             "contract_id = #{contract_id,jdbcType=INTEGER},",
             "tc = #{tc,jdbcType=TINYINT},",
             "ibm = #{ibm,jdbcType=TINYINT},",
-            "day_rate = #{day_rate,jdbcType=DECIMAL},",
+            "year_rate = #{year_rate,jdbcType=DECIMAL},",
             "ffr = #{ffr,jdbcType=DECIMAL},",
             "lineup = #{lineup,jdbcType=DECIMAL},",
             "linedown = #{linedown,jdbcType=DECIMAL},",
