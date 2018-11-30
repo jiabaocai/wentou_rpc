@@ -4,6 +4,8 @@ import com.bwtservice.entity.Client;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 
+import java.util.List;
+
 public interface ClientMapper {
     @Delete({
         "delete from client",
@@ -40,6 +42,9 @@ public interface ClientMapper {
 
     @UpdateProvider(type=ClientSqlProvider.class, method="updateByPrimaryKeySelective")
     int updateByPrimaryKeySelective(Client record);
+
+    @SelectProvider(type=ClientSqlProvider.class, method="getClientByExample")
+    List<Client> getClientByExample(Client record);
 
     @Update({
         "update client",

@@ -153,7 +153,7 @@ public interface ProductMapper {
                     "  <if test=\"status !=null and status !=''\">" +
                     "    AND a.status = #{status}" +
                     "  </if> " +
-                    "            <if test=\"createtime != null and createtime != '' and endDate != null and endDate != ''\">" +
+                    "            <if test=\"startDate != null and startDate != '' and endDate != null and endDate != ''\">" +
                     "               AND a.createtime BETWEEN #{startDate} AND #{endDate} " +
                     "            </if> " +
                     "  <if test=\"assetside_name !=null and assetside_name !=''\">" +
@@ -187,7 +187,7 @@ public interface ProductMapper {
             @Result(column = "goods_group_name", property = "goods_group_name", jdbcType = JdbcType.VARCHAR),
             @Result(column = "product_name", property = "product_name", jdbcType = JdbcType.VARCHAR)
     })
-    List<ProductDto> selectProductByExample(@Param("product_no") Integer product_no, @Param("rdg_id") Integer rdg_id, @Param("status") Integer status, @Param("createtime") String createtime, @Param("endDate") String endDate, @Param("assetside_name") String assetside_name, @Param("goods_group_name") String goods_group_name,@Param("product_name")String product_name);
+    List<ProductDto> selectProductByExample(@Param("product_no") String product_no, @Param("rdg_id") Integer rdg_id, @Param("status") Integer status, @Param("startDate") String startDate, @Param("endDate") String endDate, @Param("assetside_name") String assetside_name, @Param("goods_group_name") String goods_group_name,@Param("product_name")String product_name);
 
 
     @UpdateProvider(type = ProductSqlProvider.class, method = "updateByPrimaryKeySelective")

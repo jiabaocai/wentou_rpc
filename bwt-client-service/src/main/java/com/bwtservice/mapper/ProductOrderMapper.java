@@ -1,8 +1,11 @@
 package com.bwtservice.mapper;
 
 import com.bwtservice.entity.ProductOrder;
+import com.bwtservice.entity.ProductOrderReq;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
+
+import java.util.List;
 
 public interface ProductOrderMapper {
     @Delete({
@@ -173,4 +176,14 @@ public interface ProductOrderMapper {
         "where id = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(ProductOrder record);
+
+
+    /**
+     * 模糊查询
+     *
+     * @param ass
+     * @return
+     */
+    @SelectProvider(type = ProductOrderSqlProvider.class, method = "selectProductOrderByExampleOrLike")
+    List<ProductOrder> selectProductOrderByExampleOrLike(ProductOrderReq ass);
 }

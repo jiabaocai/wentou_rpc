@@ -5,6 +5,8 @@ import com.bwtservice.entity.Client;
 import com.bwtservice.mapper.ClientMapper;
 import com.bwtservice.service.ClientService;
 import com.bwtservice.util.BaseResult;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -12,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 用户接口
@@ -55,7 +58,7 @@ public class ClientController {
                 client1.setId(client1.getId());
                 clientService.editClient(client);
             } else {
-              return  BaseResult.error("用户不存在");
+                return BaseResult.error("用户不存在");
             }
         } catch (Exception e) {
             logger.error(e.getMessage());
@@ -76,6 +79,31 @@ public class ClientController {
             return BaseResult.error(e.getMessage());
         }
         return BaseResult.success(client);
+    }
+
+
+    @ApiOperation("根据条件查询用户")
+    @GetMapping("/getClientByExample")
+    public BaseResult getClient(String idnumber, String name, String mobile, int pageNum, int pageSize) {
+        Client client = new Client();
+        try {
+            if (idnumber != null) {
+                client.setIdnumber(idnumber);
+            }
+            if (name != null) {
+                client.setName(name);
+            }
+            if (mobile != null) {
+                client.setMobile(mobile);
+            }
+            PageHelper.startPage(pageNum, pageSize);
+            List<Client> list = clientMapper.getClientByExample(client);
+            PageInfo<Client> pageInfo = new PageInfo<>(list);
+            return BaseResult.success(pageInfo);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
     }
 
 

@@ -2,19 +2,56 @@ package com.bwtservice.entity;
 
 import lombok.Data;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
-public class ProductOrder implements Serializable {
-    private Integer id;
+public class ContractDto  {
+    private Integer contract_id;
+
+    private String contract_no;
+
+    private Date contract_start;
+
+    private Date contract_end;
+
+    private Integer order_id;
+
+    private Date signdate;
+
+    private Integer assetside_id;
+
+    private String name;
+
+    private String corp_name;
+
+    private String corp_no;
+
+    private String corp_img;
+
+    private String reg_cap;
+
+    private Date foundingtime;
+
+    private String legal_rep;
+
+    private String address;
+
+    private String qualification;
+
+    private String bankname;
+
+    private String bankaccount;
+
+    private Date createtime;
+
+    private Integer assetside_status;
+
+    private Integer product_order_id;
 
     private Integer product_id;
 
     private String order_no;
-
-    private Integer assetside_id;
 
     private Date interest_start;
 
@@ -31,8 +68,6 @@ public class ProductOrder implements Serializable {
     private Integer received_status;
 
     private Integer overdue_day;
-
-    private Integer contract_id;
 
     private BigDecimal dp_sum;
 
@@ -62,7 +97,5 @@ public class ProductOrder implements Serializable {
 
     private String phone_storage;
 
-    private Integer status;
-
-
+    private Integer product_order_status;
 }
