@@ -93,7 +93,7 @@ public class ContractTplSqlProvider {
 
     public String selectContractTpl(ContractTplDto ass) {
         return new SQL() {{
-            SELECT(" tpl_id, tpl_name, remark, create_uid, update_uid, create_time, update_time,times, content");
+            SELECT(" tpl_id, tpl_name, remark, create_uid, update_uid, create_time, update_time,times, content,( SELECT b.real_name FROM `user` b WHERE id = create_uid )  create_user,( SELECT b.real_name FROM `user` b WHERE id = update_uid )  update_user");
             FROM("contract_tpl");
 
             if (ass.getTpl_name() != null) {

@@ -63,6 +63,7 @@ public class ProductOrder implements Serializable {
     private String phone_storage;
 
     private Integer status;
+    private String createtime;
 
 
 }

@@ -121,6 +121,9 @@ public class ProductOrderSqlProvider {
         if (record.getStatus() != null) {
             sql.VALUES("status", "#{status,jdbcType=TINYINT}");
         }
+ if (record.getCreatetime() != null) {
+            sql.VALUES("createtime", "#{createtime,jdbcType=VARCHAR}");
+        }
 
         return sql.toString();
     }
@@ -236,6 +239,9 @@ public class ProductOrderSqlProvider {
         if (record.getStatus() != null) {
             sql.SET("status = #{status,jdbcType=TINYINT}");
         }
+if (record.getCreatetime() != null) {
+            sql.SET("createtime = #{createtime,jdbcType=VARCHAR}");
+        }
 
         sql.WHERE("id = #{id,jdbcType=INTEGER}");
 
@@ -248,7 +254,7 @@ public class ProductOrderSqlProvider {
             SELECT(" id, product_id, order_no, assetside_id, interest_start, interst_end, loan_sum, " +
                     "contract_sum, total_period, received_period, received_status, overdue_day, contract_id, " +
                     "dp_sum, unique_code, express_no, client_id, client_name, client_mobile, client_idno, " +
-                    "client_address, phone_band, phone_model, phone_color, phone_memory, phone_size, phone_storage, status");
+                    "client_address, phone_band, phone_model, phone_color, phone_memory, phone_size, phone_storage, status,createtime");
             FROM("product_order");
             if (ass.getAssetside_id() != null) {
                 WHERE("assetside_id = #{assetside_id}");
@@ -261,7 +267,7 @@ public class ProductOrderSqlProvider {
             } else {
                 if (ass.getStartLoanSum() != null) {
                     WHERE("loan_sum >= #{startLoanSum}");
-                } else {
+                } else if(ass.getEndLoanSum()!=null) {
                     WHERE("loan_sum <= #{endLoanSum}");
                 }
             }

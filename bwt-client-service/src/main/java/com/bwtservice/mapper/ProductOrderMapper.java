@@ -14,6 +14,14 @@ public interface ProductOrderMapper {
     })
     int deleteByPrimaryKey(Integer id);
 
+    @Select("select sum(loan_sum) loan_sum from product_order where client_id = #{client_id,jdbcType=INTEGER}")
+    String getLoanSum(Integer client_id);
+
+    @Select("SELECT sum(loan_sum) from product_order WHERE client_id = #{client_id,jdbcType=INTEGER} and `status` not IN(1,2)")
+    String getapplySum(Integer client_id);
+
+
+
     @Insert({
         "insert into product_order (id, product_id, ",
         "order_no, assetside_id, ",
@@ -28,7 +36,7 @@ public interface ProductOrderMapper {
         "client_address, phone_band, ",
         "phone_model, phone_color, ",
         "phone_memory, phone_size, ",
-        "phone_storage, status)",
+        "phone_storage, status,createtime)",
         "values (#{id,jdbcType=INTEGER}, #{product_id,jdbcType=INTEGER}, ",
         "#{order_no,jdbcType=CHAR}, #{assetside_id,jdbcType=INTEGER}, ",
         "#{interest_start,jdbcType=TIMESTAMP}, #{interst_end,jdbcType=TIMESTAMP}, ",
@@ -42,7 +50,8 @@ public interface ProductOrderMapper {
         "#{client_address,jdbcType=VARCHAR}, #{phone_band,jdbcType=VARCHAR}, ",
         "#{phone_model,jdbcType=VARCHAR}, #{phone_color,jdbcType=VARCHAR}, ",
         "#{phone_memory,jdbcType=VARCHAR}, #{phone_size,jdbcType=VARCHAR}, ",
-        "#{phone_storage,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT})"
+        "#{phone_storage,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT})",
+        "#{createtime,jdbcType=VARCHAR}, #{createtime,jdbcType=TINYINT})"
     })
     int insert(ProductOrder record);
 
@@ -55,7 +64,7 @@ public interface ProductOrderMapper {
         "contract_sum, total_period, received_period, received_status, overdue_day, contract_id, ",
         "dp_sum, unique_code, express_no, client_id, client_name, client_mobile, client_idno, ",
         "client_address, phone_band, phone_model, phone_color, phone_memory, phone_size, ",
-        "phone_storage, status",
+        "phone_storage, status,createtime",
         "from product_order",
         "where id = #{id,jdbcType=INTEGER}"
     })
@@ -87,7 +96,8 @@ public interface ProductOrderMapper {
         @Result(column="phone_memory", property="phone_memory", jdbcType=JdbcType.VARCHAR),
         @Result(column="phone_size", property="phone_size", jdbcType=JdbcType.VARCHAR),
         @Result(column="phone_storage", property="phone_storage", jdbcType=JdbcType.VARCHAR),
-        @Result(column="status", property="status", jdbcType=JdbcType.TINYINT)
+        @Result(column="status", property="status", jdbcType=JdbcType.TINYINT),
+        @Result(column="createtime", property="createtime", jdbcType=JdbcType.VARCHAR)
     })
     ProductOrder selectByPrimaryKey(Integer id);
 
@@ -105,7 +115,7 @@ public interface ProductOrderMapper {
             "contract_sum, total_period, received_period, received_status, overdue_day, contract_id, ",
             "dp_sum, unique_code, express_no, client_id, client_name, client_mobile, client_idno, ",
             "client_address, phone_band, phone_model, phone_color, phone_memory, phone_size, ",
-            "phone_storage, status",
+            "phone_storage, status,createtime",
             "from product_order",
             "where order_no = #{orderNo,jdbcType=INTEGER} and product_id =#{productId,jdbcType=INTEGER} limit 1"
     })
@@ -137,7 +147,8 @@ public interface ProductOrderMapper {
             @Result(column="phone_memory", property="phone_memory", jdbcType=JdbcType.VARCHAR),
             @Result(column="phone_size", property="phone_size", jdbcType=JdbcType.VARCHAR),
             @Result(column="phone_storage", property="phone_storage", jdbcType=JdbcType.VARCHAR),
-            @Result(column="status", property="status", jdbcType=JdbcType.TINYINT)
+            @Result(column="status", property="status", jdbcType=JdbcType.TINYINT),
+            @Result(column="createtime", property="createtime", jdbcType=JdbcType.VARCHAR)
     })
     ProductOrder selectByPrimaryByOrderNoAndProductNo(@Param("orderNo")Integer orderNo,@Param("productId")Integer productId);
 
@@ -172,7 +183,8 @@ public interface ProductOrderMapper {
           "phone_memory = #{phone_memory,jdbcType=VARCHAR},",
           "phone_size = #{phone_size,jdbcType=VARCHAR},",
           "phone_storage = #{phone_storage,jdbcType=VARCHAR},",
-          "status = #{status,jdbcType=TINYINT}",
+          "status = #{status,jdbcType=TINYINT},",
+          "createtime = #{createtime,jdbcType=TINYINT}",
         "where id = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(ProductOrder record);

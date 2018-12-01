@@ -54,4 +54,15 @@ public class ContractController {
             return BaseResult.error(e.getMessage());
         }
     }
+
+    @ApiOperation(value = "根据ID进行查询")
+    @PostMapping("/getContractById")
+    public BaseResult getContractById(int id) {
+        try {
+            return BaseResult.success(contractMapper.selectByPrimaryKey(id));
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
+    }
 }

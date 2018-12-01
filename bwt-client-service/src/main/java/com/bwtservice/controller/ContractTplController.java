@@ -2,6 +2,7 @@ package com.bwtservice.controller;
 
 import com.bwtservice.entity.ContractTpl;
 import com.bwtservice.entity.ContractTplDto;
+import com.bwtservice.entity.ContractTplResp;
 import com.bwtservice.mapper.ContractTplMapper;
 import com.bwtservice.util.BaseResult;
 import com.github.pagehelper.PageHelper;
@@ -75,6 +76,17 @@ public class ContractTplController {
         }
     }
 
+    @ApiOperation(value = "根据ID进行查询")
+    @PostMapping("/getContractTplById")
+    public BaseResult getContractTplById(int tpl_id) {
+        try {
+            return BaseResult.success(contractTplMapper.selectByPrimaryKey(tpl_id));
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
+    }
+
     @ApiOperation(value = "查询合同模板")
     @PostMapping("/getContractTplByExample")
     public BaseResult getContractTplByExample(String startDate, String endDate, String tpl_name, int pageNum, int pageSize) {
@@ -90,8 +102,8 @@ public class ContractTplController {
         }
         try {
             PageHelper.startPage(pageNum, pageSize);
-            List<ContractTpl> list = contractTplMapper.getContractTplList(contractTplDto);
-            PageInfo<ContractTpl> pageInfo = new PageInfo<>(list);
+            List<ContractTplResp> list = contractTplMapper.getContractTplList(contractTplDto);
+            PageInfo<ContractTplResp> pageInfo = new PageInfo<>(list);
             return BaseResult.success(pageInfo);
         } catch (Exception e) {
             logger.error(e.getMessage());

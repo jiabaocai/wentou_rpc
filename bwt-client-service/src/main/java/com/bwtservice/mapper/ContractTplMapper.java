@@ -3,6 +3,7 @@ package com.bwtservice.mapper;
 import com.bwtservice.entity.ContractDto;
 import com.bwtservice.entity.ContractTpl;
 import com.bwtservice.entity.ContractTplDto;
+import com.bwtservice.entity.ContractTplResp;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 
@@ -84,5 +85,46 @@ public interface ContractTplMapper {
     int updateByPrimaryKey(ContractTpl record);
 
     @SelectProvider(type = ContractTplSqlProvider.class,method = "selectContractTpl")
-    List<ContractTpl> getContractTplList(ContractTplDto ass);
+//@Select({"<script> " +
+//        "SELECT " +
+//        "a.tpl_id, " +
+//        "a.tpl_name, " +
+//        "a.remark, " +
+//        "a.content, " +
+//        "a.create_uid, " +
+//        "a.update_uid, " +
+//        "a.create_time, " +
+//        "a.update_time, " +
+//        "a.times, " +
+//        "( SELECT b.real_name FROM `user` b WHERE id = create_uid )  create_user, " +
+//        "( SELECT b.real_name FROM `user` b WHERE id = update_uid )  update_user " +
+//        "FROM " +
+//        "contract_tpl a" +
+//        "where 1=1 " +
+//        "  <if test=\"tpl_name !=null and tpl_name !=''\">" +
+//        "    AND a.tpl_name like CONCAT('%', #{tpl_name}, '%')" +
+//        "  </if> " +
+//        "  <if test=\"startDate !=null and startDate !='' \">" +
+//        "  <if test=\"endDate !=null and endDate !=''\">" +
+//        "    AND a.create_time between  #{startDate} and #{endDate}" +
+//        "  </if> " +
+//        "    AND a.assetside_id = #{assetside_id}" +
+//        "  </if> " +
+//        "       ORDER BY a.id desc " +
+//        "</script>"})
+//
+////  if (ass.getTpl_name() != null) {
+////        WHERE("tpl_name like CONCAT('%',#{tpl_name},'%')");
+////    }
+////            if (ass.getStartDate() != null && ass.getEndDate() != null) {
+////        WHERE("create_time  between  #{startDate} and  #{endDate}");
+////    } else {
+////        if (ass.getStartDate() != null) {
+////            WHERE("create_time >= #{startDate}");
+////        } else if( ass.getEndDate() != null){
+////            WHERE("create_time <= #{endDate}");
+////        }
+////    }
+////    ORDER_BY("tpl_id desc");
+    List<ContractTplResp> getContractTplList(ContractTplDto ass);
 }

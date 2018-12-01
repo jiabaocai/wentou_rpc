@@ -1,6 +1,7 @@
 package com.bwtservice.mapper;
 
 import com.bwtservice.entity.Client;
+import com.bwtservice.entity.ClientDto;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 
@@ -44,7 +45,7 @@ public interface ClientMapper {
     int updateByPrimaryKeySelective(Client record);
 
     @SelectProvider(type=ClientSqlProvider.class, method="getClientByExample")
-    List<Client> getClientByExample(Client record);
+    List<ClientDto> getClientByExample(Client record);
 
     @Update({
         "update client",

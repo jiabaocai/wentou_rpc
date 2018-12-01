@@ -2,7 +2,9 @@ package com.bwtservice.controller;
 
 
 import com.bwtservice.entity.Client;
+import com.bwtservice.entity.ClientDto;
 import com.bwtservice.mapper.ClientMapper;
+import com.bwtservice.mapper.ProductOrderMapper;
 import com.bwtservice.service.ClientService;
 import com.bwtservice.util.BaseResult;
 import com.github.pagehelper.PageHelper;
@@ -14,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,6 +32,8 @@ public class ClientController {
     private ClientService clientService;
     @Resource
     private ClientMapper clientMapper;
+    @Resource
+    private ProductOrderMapper productOrderMapper;
 
     @ApiOperation(value = "新增用户")
     @PostMapping("/addClient")
@@ -97,8 +102,14 @@ public class ClientController {
                 client.setMobile(mobile);
             }
             PageHelper.startPage(pageNum, pageSize);
-            List<Client> list = clientMapper.getClientByExample(client);
-            PageInfo<Client> pageInfo = new PageInfo<>(list);
+            List<ClientDto> list = clientMapper.getClientByExample(client);
+            List<ClientDto> clientDtos = new ArrayList<>();
+            for (ClientDto clientDto : list) {
+                clientDto.setApply_sum(productOrderMapper.getapplySum(clientDto.getId()));
+                clientDto.setLoan_sum(productOrderMapper.getLoanSum(clientDto.getId()));
+                list.add(clientDto);
+            }
+            PageInfo<ClientDto> pageInfo = new PageInfo<>(clientDtos);
             return BaseResult.success(pageInfo);
         } catch (Exception e) {
             logger.error(e.getMessage());

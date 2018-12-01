@@ -61,18 +61,16 @@ public class ProductOrderController {
         }
     }
 
-    @ApiOperation(value = "模糊查询（分页）只根据client_id查询")
+    @ApiOperation(value = "模糊查询（不需要分页）只根据client_id查询")
     @GetMapping("getProductOrderByClientId")
-    public BaseResult getProductOrderByExample(Integer client_id, int pageNum, int pageSize) {
+    public BaseResult getProductOrderByExample(Integer client_id) {
         try {
             ProductOrderReq req = new ProductOrderReq();
             if (client_id != null) {
                 req.setClient_id(client_id);
             }
-            PageHelper.startPage(pageNum, pageSize);
             List<ProductOrder> list = productOrderMapper.selectProductOrderByExampleOrLike(req);
-            PageInfo<ProductOrder> productOrderPageInfo = new PageInfo<>(list);
-            return BaseResult.success(productOrderPageInfo);
+            return BaseResult.success(list);
         } catch (Exception e) {
             logger.error(e.getMessage());
             return BaseResult.error(e.getMessage());
