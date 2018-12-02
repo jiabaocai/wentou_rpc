@@ -90,9 +90,12 @@ public interface ContractMapper {
             "  <if test=\"order_no !=null and order_no !=''\">" +
             "    AND b.order_no = #{order_no}" +
             "  </if> " +
+            "  <if test=\"id !=null and id !=''\">" +
+            "    AND a.id = #{id}" +
+            "  </if> " +
             "       ORDER BY a.id desc " +
             "</script>"})
-    List<ContractDto> list(@Param("contract_no") String contract_no, @Param("contract_start") String contract_start, @Param("contract_end") String contract_end, @Param("assetside_id") Integer assetside_id, @Param("client_name") String client_name, @Param("order_no") Integer order_no);
+    List<ContractDto> list(@Param("contract_no") String contract_no, @Param("contract_start") String contract_start, @Param("contract_end") String contract_end, @Param("assetside_id") Integer assetside_id, @Param("client_name") String client_name, @Param("order_no") Integer order_no,@Param("id")Integer id);
 
 
     @Insert({

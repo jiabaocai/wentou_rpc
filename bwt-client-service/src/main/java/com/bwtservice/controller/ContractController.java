@@ -33,7 +33,7 @@ public class ContractController {
         Contract contract = new Contract();
         try {
             PageHelper.startPage(pageNum, pageSize);
-            List<ContractDto> list = contractMapper.list(contract_no, contract_start, contract_end, assetside_id, client_name, order_no);
+            List<ContractDto> list = contractMapper.list(contract_no, contract_start, contract_end, assetside_id, client_name, order_no, null);
             PageInfo<ContractDto> pageInfo = new PageInfo<>(list);
             return BaseResult.success(pageInfo);
         } catch (Exception e) {
@@ -59,7 +59,11 @@ public class ContractController {
     @PostMapping("/getContractById")
     public BaseResult getContractById(int id) {
         try {
-            return BaseResult.success(contractMapper.selectByPrimaryKey(id));
+            List<ContractDto> list = contractMapper.list(null, null, null, null, null, null, id);
+            if (list.size() > 0) {
+                return BaseResult.success(list.get(0));
+            }
+            return BaseResult.successNull();
         } catch (Exception e) {
             logger.error(e.getMessage());
             return BaseResult.error(e.getMessage());
