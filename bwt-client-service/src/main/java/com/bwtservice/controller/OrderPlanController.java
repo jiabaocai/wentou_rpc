@@ -84,7 +84,7 @@ public class OrderPlanController {
                 return BaseResult.error(product.getContact_id());
             } else {
                 Integer sum1 = orderPlanMapper.selectByPrimaryByOrderId(order_no);
-                if (sum1 >= 12) {
+                if (sum1 >= 13) {
                     return BaseResult.error("请勿重复插入");
                 }
                 for (OrderPlan orderPlan : orderPlanList) {

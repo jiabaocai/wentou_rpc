@@ -38,9 +38,10 @@ spring:
 
 pagehelper:
   helper-dialect: mysql
-  reasonable: true
+  reasonable: false
   support-methods-arguments: true
   params: count=countSql
+
 
 #####################################################################################################
 # 打印日志
