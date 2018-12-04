@@ -107,7 +107,7 @@ public class ClientController {
             for (ClientDto clientDto : list) {
                 clientDto.setApply_sum(productOrderMapper.getapplySum(clientDto.getId()));
                 clientDto.setLoan_sum(productOrderMapper.getLoanSum(clientDto.getId()));
-                list.add(clientDto);
+                clientDtos.add(clientDto);
             }
             PageInfo<ClientDto> pageInfo = new PageInfo<>(clientDtos);
             return BaseResult.success(pageInfo);
