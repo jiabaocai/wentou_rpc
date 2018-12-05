@@ -1,7 +1,11 @@
 package com.bwtservice.config.Excel;
 
+import com.bwtservice.entity.ContractDto;
+import com.bwtservice.entity.GoodsGroup;
+import com.bwtservice.entity.GoodsPhone;
 import com.bwtservice.entity.LoanOrder;
 import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.ss.formula.functions.T;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import sun.misc.BASE64Encoder;
 
@@ -81,7 +85,7 @@ public class FileUtils {
         return map;
     }
 
-    public static void byExcelExport(HttpServletResponse response, HttpServletRequest request,List<String> list1,List<String> list2,List<LoanOrder> list) throws IllegalAccessException {
+    public static void byExcelExport(HttpServletResponse response, HttpServletRequest request, List<String> list1, List<String> list2, List<GoodsPhone> list) throws IllegalAccessException {
 ////        List<String> list1 = new ArrayList<>();
 //        list1.add("第一行");
 //        list1.add("第二行");
@@ -120,7 +124,7 @@ public class FileUtils {
         }
         headRow.setRowStyle(cellStyle);
         // 将数据插入表中
-        for (LoanOrder customer : list) {
+        for (GoodsPhone customer : list) {
             HSSFRow dataRow = sheet.createRow(sheet.getLastRowNum() + 1);
             Map<String, Object> map = convertToMap(customer);
             for (int i = 0; i < list2.size(); i++) {
@@ -133,4 +137,82 @@ public class FileUtils {
         FileUtils.excelExport(response,request,hssfWorkbook,filename);
     }
 
+
+    public static void byExcelExport1(HttpServletResponse response, HttpServletRequest request, List<String> list1, List<String> list2, List<ContractDto> list) throws IllegalAccessException {
+        HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
+        HSSFSheet sheet = hssfWorkbook.createSheet("统计表");
+        // 用于格式化单元格的数据
+        // 设置字体
+        HSSFFont font = hssfWorkbook.createFont();
+        font.setFontHeightInPoints((short) 20); //字体高度
+        font.setColor(HSSFFont.COLOR_RED); //字体颜色
+        font.setFontName("黑体"); //字体
+        font.setItalic(true); //是否使用斜体
+        // 设置单元格类型
+        HSSFCellStyle cellStyle = hssfWorkbook.createCellStyle();
+        cellStyle.setFont(font);
+        cellStyle.setAlignment(HorizontalAlignment.CENTER); //水平布局：居中
+        cellStyle.setWrapText(true);
+        // 添加单元格注释
+        // 创建HSSFPatriarch对象,HSSFPatriarch是所有注释的容器.
+        HSSFPatriarch patr = sheet.createDrawingPatriarch();
+        // 定义注释的大小和位置,详见文档
+        // 生成表头
+        HSSFRow headRow = sheet.createRow(0);
+        for (int i = 0; i < list1.size(); i++) {
+            headRow.createCell(i).setCellValue(list1.get(i));
+        }
+        headRow.setRowStyle(cellStyle);
+        // 将数据插入表中
+        for (ContractDto customer : list) {
+            HSSFRow dataRow = sheet.createRow(sheet.getLastRowNum() + 1);
+            Map<String, Object> map = convertToMap(customer);
+            for (int i = 0; i < list2.size(); i++) {
+                dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString());
+                sheet.autoSizeColumn((short)i); //调整第n列宽度
+            }
+            dataRow.setRowStyle(cellStyle);
+        }
+        String filename = UUID.randomUUID()+".xls";
+        FileUtils.excelExport(response,request,hssfWorkbook,filename);
+    }
+
+    public static void byExcelExport2(HttpServletResponse response, HttpServletRequest request, List<String> list1, List<String> list2, List<ContractDto> list) throws IllegalAccessException {
+        HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
+        HSSFSheet sheet = hssfWorkbook.createSheet("统计表");
+        // 用于格式化单元格的数据
+        // 设置字体
+        HSSFFont font = hssfWorkbook.createFont();
+        font.setFontHeightInPoints((short) 20); //字体高度
+        font.setColor(HSSFFont.COLOR_RED); //字体颜色
+        font.setFontName("黑体"); //字体
+        font.setItalic(true); //是否使用斜体
+        // 设置单元格类型
+        HSSFCellStyle cellStyle = hssfWorkbook.createCellStyle();
+        cellStyle.setFont(font);
+        cellStyle.setAlignment(HorizontalAlignment.CENTER); //水平布局：居中
+        cellStyle.setWrapText(true);
+        // 添加单元格注释
+        // 创建HSSFPatriarch对象,HSSFPatriarch是所有注释的容器.
+        HSSFPatriarch patr = sheet.createDrawingPatriarch();
+        // 定义注释的大小和位置,详见文档
+        // 生成表头
+        HSSFRow headRow = sheet.createRow(0);
+        for (int i = 0; i < list1.size(); i++) {
+            headRow.createCell(i).setCellValue(list1.get(i));
+        }
+        headRow.setRowStyle(cellStyle);
+        // 将数据插入表中
+        for (ContractDto customer : list) {
+            HSSFRow dataRow = sheet.createRow(sheet.getLastRowNum() + 1);
+            Map<String, Object> map = convertToMap(customer);
+            for (int i = 0; i < list2.size(); i++) {
+                dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString());
+                sheet.autoSizeColumn((short)i); //调整第n列宽度
+            }
+            dataRow.setRowStyle(cellStyle);
+        }
+        String filename = UUID.randomUUID()+".xls";
+        FileUtils.excelExport(response,request,hssfWorkbook,filename);
+    }
 }

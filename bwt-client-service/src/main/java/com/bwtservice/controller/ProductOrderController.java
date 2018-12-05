@@ -77,4 +77,16 @@ public class ProductOrderController {
         }
     }
 
+    @ApiOperation(value = "通过ID查询订单信息")
+    @GetMapping("getProductOrderById")
+    public BaseResult getProductOrderById(Integer id) {
+        try {
+            ProductOrder productOrder = productOrderMapper.selectByPrimaryKey(id);
+            return BaseResult.success(productOrder);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
+    }
+
 }

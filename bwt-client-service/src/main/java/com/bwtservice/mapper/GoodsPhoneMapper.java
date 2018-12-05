@@ -3,6 +3,7 @@ package com.bwtservice.mapper;
 import com.bwtservice.entity.GoodsPhone;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
+import org.apache.poi.ss.formula.functions.T;
 
 import java.util.List;
 
@@ -50,6 +51,25 @@ public interface GoodsPhoneMapper {
             @Result(column = "order_id", property = "order_id", jdbcType = JdbcType.INTEGER)
     })
     GoodsPhone selectByPrimaryKey(Integer id);
+
+    @Select({
+            "select",
+            "id, category_id, band, model, color, memory, storage, size, unique_code, order_id",
+            "from goods_phone"
+    })
+    @Results({
+            @Result(column = "id", property = "id", jdbcType = JdbcType.INTEGER, id = true),
+            @Result(column = "category_id", property = "category_id", jdbcType = JdbcType.INTEGER),
+            @Result(column = "band", property = "band", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "model", property = "model", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "color", property = "color", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "memory", property = "memory", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "storage", property = "storage", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "size", property = "size", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "unique_code", property = "unique_code", jdbcType = JdbcType.VARCHAR),
+            @Result(column = "order_id", property = "order_id", jdbcType = JdbcType.INTEGER)
+    })
+    List<GoodsPhone> selectAll();
 
     @Select({"<script> " +
             " SELECT a.* from goods_phone a LEFT JOIN product_order b on a.order_id=b.id" +
