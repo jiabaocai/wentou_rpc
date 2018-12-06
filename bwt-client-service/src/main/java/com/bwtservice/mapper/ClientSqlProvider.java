@@ -28,6 +28,12 @@ public class ClientSqlProvider {
         if (record.getReport() != null) {
             sql.VALUES("report", "#{report,jdbcType=LONGVARCHAR}");
         }
+        if (record.getCredit_score() != null) {
+            sql.VALUES("credit_score", "#{credit_score,jdbcType=VARCHAR}");
+        }
+        if (record.getAssetside_score() != null) {
+            sql.VALUES("assetside_score", "#{assetside_score,jdbcType=VARCHAR}");
+        }
 
         return sql.toString();
     }
@@ -51,6 +57,12 @@ public class ClientSqlProvider {
         if (record.getReport() != null) {
             sql.SET("report = #{report,jdbcType=LONGVARCHAR}");
         }
+        if (record.getCredit_score() != null) {
+            sql.SET("credit_score = #{credit_score,jdbcType=VARCHAR}");
+        }
+        if (record.getAssetside_score() != null) {
+            sql.SET("assetside_score = #{assetside_score,jdbcType=VARCHAR}");
+        }
 
         sql.WHERE("id = #{id,jdbcType=INTEGER}");
 
@@ -59,7 +71,7 @@ public class ClientSqlProvider {
 
     public String getClientByExample(Client record) {
         return new SQL() {{
-            SELECT("id, name, idnumber, mobile, report");
+            SELECT("id, name, idnumber, mobile, report,credit_score,assetside_score ");
             FROM("client");
             if (record.getName() != null) {
                 WHERE("name like CONCAT('%',#{name},'%')");

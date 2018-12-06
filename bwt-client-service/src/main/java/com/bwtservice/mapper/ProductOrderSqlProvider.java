@@ -124,6 +124,12 @@ public class ProductOrderSqlProvider {
  if (record.getCreatetime() != null) {
             sql.VALUES("createtime", "#{createtime,jdbcType=VARCHAR}");
         }
+        if (record.getCredit_score() != null) {
+            sql.VALUES("credit_score", "#{credit_score,jdbcType=VARCHAR}");
+        }
+        if (record.getAssetside_score() != null) {
+            sql.VALUES("assetside_score", "#{assetside_score,jdbcType=VARCHAR}");
+        }
 
         return sql.toString();
     }
@@ -242,19 +248,25 @@ public class ProductOrderSqlProvider {
 if (record.getCreatetime() != null) {
             sql.SET("createtime = #{createtime,jdbcType=VARCHAR}");
         }
+        if (record.getAssetside_score() != null) {
+            sql.SET("assetside_score = #{assetside_score,jdbcType=VARCHAR}");
+        }
+        if (record.getCredit_score() != null) {
+            sql.SET("credit_score = #{credit_score,jdbcType=VARCHAR}");
+        }
 
         sql.WHERE("id = #{id,jdbcType=INTEGER}");
 
         return sql.toString();
     }
-
+//    credit_score,assetside_score
 
     public String selectProductOrderByExampleOrLike(ProductOrderReq ass) {
         return new SQL() {{
             SELECT(" id, product_id, order_no, assetside_id, interest_start, interst_end, loan_sum, " +
                     "contract_sum, total_period, received_period, received_status, overdue_day, contract_id, " +
                     "dp_sum, unique_code, express_no, client_id, client_name, client_mobile, client_idno, " +
-                    "client_address, phone_band, phone_model, phone_color, phone_memory, phone_size, phone_storage, status,createtime");
+                    "client_address, phone_band, phone_model, phone_color, phone_memory, phone_size, phone_storage, status,createtime,credit_score,assetside_score ");
             FROM("product_order");
             if (ass.getAssetside_id() != null) {
                 WHERE("assetside_id = #{assetside_id}");

@@ -1,8 +1,10 @@
 package com.bwtservice.controller;
 
 
+import com.bwtservice.config.Excel.FileUtils;
 import com.bwtservice.entity.Client;
 import com.bwtservice.entity.ClientDto;
+import com.bwtservice.entity.GoodsPhone;
 import com.bwtservice.mapper.ClientMapper;
 import com.bwtservice.mapper.ProductOrderMapper;
 import com.bwtservice.service.ClientService;
@@ -16,7 +18,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -115,6 +120,31 @@ public class ClientController {
             logger.error(e.getMessage());
             return BaseResult.error(e.getMessage());
         }
+    }
+
+    @ApiOperation(value = "excelDownloads")
+    @RequestMapping(value = "/excelDownloads", method = RequestMethod.GET)
+    public void downloadAllClassmate(HttpServletResponse response, HttpServletRequest request) throws IllegalAccessException {
+        String idnumber = request.getParameter("idnumber");
+        String name = request.getParameter("name");
+        String mobile = request.getParameter("mobile");
+        String headerList = request.getParameter("headerList");
+        String parameterList = request.getParameter("parameterList");
+//
+        Client client = new Client();
+        if (idnumber != null) {
+            client.setIdnumber(idnumber);
+        }
+        if (name != null) {
+            client.setName(name);
+        }
+        if (mobile != null) {
+            client.setMobile(mobile);
+        }
+        List<ClientDto> list = clientMapper.getClientByExample(client);
+        List<String> headers = Arrays.asList(headerList);
+        List<String> parameters = Arrays.asList(parameterList);
+        FileUtils.byExcelExport2(response, request, headers, parameters, list);
     }
 
 

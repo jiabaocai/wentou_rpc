@@ -16,9 +16,9 @@ public interface ClientMapper {
 
     @Insert({
         "insert into client (id, name, ",
-        "idnumber, mobile, report)",
+        "idnumber, mobile, report,credit_score,assetside_score)",
         "values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, ",
-        "#{idnumber,jdbcType=CHAR}, #{mobile,jdbcType=CHAR}, #{report,jdbcType=LONGVARCHAR})"
+        "#{idnumber,jdbcType=CHAR}, #{mobile,jdbcType=CHAR}, #{report,jdbcType=LONGVARCHAR}, #{credit_score,jdbcType=VARCHAR}, #{assetside_score,jdbcType=VARCHAR})"
     })
     int insert(Client record);
 
@@ -28,7 +28,7 @@ public interface ClientMapper {
 
     @Select({
         "select",
-        "id, name, idnumber, mobile, report",
+        "id, name, idnumber, mobile, report,credit_score,assetside_score",
         "from client",
         "where idnumber = #{idnumber,jdbcType=VARCHAR}"
     })
@@ -37,7 +37,9 @@ public interface ClientMapper {
         @Result(column="name", property="name", jdbcType=JdbcType.VARCHAR),
         @Result(column="idnumber", property="idnumber", jdbcType=JdbcType.CHAR),
         @Result(column="mobile", property="mobile", jdbcType=JdbcType.CHAR),
-        @Result(column="report", property="report", jdbcType=JdbcType.LONGVARCHAR)
+        @Result(column="report", property="report", jdbcType=JdbcType.LONGVARCHAR),
+        @Result(column="credit_score", property="credit_score", jdbcType=JdbcType.VARCHAR),
+        @Result(column="assetside_score", property="assetside_score", jdbcType=JdbcType.VARCHAR)
     })
     Client selectByPrimaryByIdNumber(String idnumber);
 
@@ -52,7 +54,9 @@ public interface ClientMapper {
         "set name = #{name,jdbcType=VARCHAR},",
           "idnumber = #{idnumber,jdbcType=CHAR},",
           "mobile = #{mobile,jdbcType=CHAR},",
-          "report = #{report,jdbcType=LONGVARCHAR}",
+          "report = #{report,jdbcType=LONGVARCHAR},",
+          "credit_score = #{credit_score,jdbcType=VARCHAR},",
+          "assetside_score = #{assetside_score,jdbcType=VARCHAR}",
         "where id = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKeyWithBLOBs(Client record);
@@ -61,7 +65,9 @@ public interface ClientMapper {
         "update client",
         "set name = #{name,jdbcType=VARCHAR},",
           "idnumber = #{idnumber,jdbcType=CHAR},",
-          "mobile = #{mobile,jdbcType=CHAR}",
+          "mobile = #{mobile,jdbcType=CHAR},",
+          "credit_score = #{credit_score,jdbcType=VARCHAR},",
+          "assetside_score = #{assetside_score,jdbcType=VARCHAR} ",
         "where id = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Client record);

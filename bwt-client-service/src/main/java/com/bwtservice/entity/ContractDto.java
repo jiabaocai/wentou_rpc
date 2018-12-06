@@ -7,6 +7,7 @@ import java.util.Date;
 
 @Data
 public class ContractDto  {
+
     private Integer contract_id;
 
     private String contract_no;
@@ -65,7 +66,7 @@ public class ContractDto  {
 
     private Integer received_period;
 
-    private Integer received_status;
+    private String received_status;
 
     private Integer overdue_day;
 
@@ -98,4 +99,14 @@ public class ContractDto  {
     private String phone_storage;
 
     private Integer product_order_status;
+
+    //新增字段
+    private String current_period;
+    private String current_period_amount;
+    private String current_period_capital;
+    private String current_period_interest;
+    private String assetside_score;
+    private String credit_score;
+    private String end;
+    private String start;
 }

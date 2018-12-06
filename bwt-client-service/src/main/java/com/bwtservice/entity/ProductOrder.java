@@ -64,6 +64,8 @@ public class ProductOrder implements Serializable {
 
     private Integer status;
     private String createtime;
+    private String credit_score;
+    private String assetside_score;
 
 
 }

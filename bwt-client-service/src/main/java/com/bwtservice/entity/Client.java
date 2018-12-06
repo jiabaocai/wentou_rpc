@@ -15,4 +15,6 @@ public class Client implements Serializable {
     private String mobile;
 
     private String report;
+    private String credit_score;
+    private String assetside_score;
 }

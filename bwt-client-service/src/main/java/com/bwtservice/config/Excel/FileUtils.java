@@ -1,9 +1,6 @@
 package com.bwtservice.config.Excel;
 
-import com.bwtservice.entity.ContractDto;
-import com.bwtservice.entity.GoodsGroup;
-import com.bwtservice.entity.GoodsPhone;
-import com.bwtservice.entity.LoanOrder;
+import com.bwtservice.entity.*;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.formula.functions.T;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
@@ -177,7 +174,7 @@ public class FileUtils {
         FileUtils.excelExport(response,request,hssfWorkbook,filename);
     }
 
-    public static void byExcelExport2(HttpServletResponse response, HttpServletRequest request, List<String> list1, List<String> list2, List<ContractDto> list) throws IllegalAccessException {
+    public static void byExcelExport2(HttpServletResponse response, HttpServletRequest request, List<String> list1, List<String> list2, List<ClientDto> list) throws IllegalAccessException {
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
         HSSFSheet sheet = hssfWorkbook.createSheet("统计表");
         // 用于格式化单元格的数据
@@ -203,7 +200,7 @@ public class FileUtils {
         }
         headRow.setRowStyle(cellStyle);
         // 将数据插入表中
-        for (ContractDto customer : list) {
+        for (ClientDto customer : list) {
             HSSFRow dataRow = sheet.createRow(sheet.getLastRowNum() + 1);
             Map<String, Object> map = convertToMap(customer);
             for (int i = 0; i < list2.size(); i++) {
