@@ -165,7 +165,11 @@ public class FileUtils {
             HSSFRow dataRow = sheet.createRow(sheet.getLastRowNum() + 1);
             Map<String, Object> map = convertToMap(customer);
             for (int i = 0; i < list2.size(); i++) {
-                dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString());
+                if(map.get(list2.get(i))!=null){
+                    dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString());
+                }else {
+                    dataRow.createCell(i).setCellValue("");
+                }
                 sheet.autoSizeColumn((short)i); //调整第n列宽度
             }
             dataRow.setRowStyle(cellStyle);

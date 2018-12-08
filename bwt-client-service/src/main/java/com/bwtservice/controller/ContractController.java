@@ -54,8 +54,8 @@ public class ContractController {
         String contract_no = request.getParameter("contract_no");
         String contract_start = request.getParameter("contract_start");
         String contract_end = request.getParameter("contract_end");
-        Integer assetside_id=0;
-        Integer order_no=0;
+        Integer assetside_id=null;
+        Integer order_no=null;
         if (request.getParameter("assetside_id") != null) {
             assetside_id = Integer.valueOf(request.getParameter("assetside_id"));
         }
