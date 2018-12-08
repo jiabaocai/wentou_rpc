@@ -141,7 +141,7 @@ public class ClientController {
         if (mobile != null) {
             client.setMobile(mobile);
         }
-        List<ClientDto> list = clientMapper.getClientByExample(client);
+        List<Client> list = clientMapper.getClientByExample1(client);
         List<String> headers = Arrays.asList(headerList.split(","));
         List<String> parameters = Arrays.asList(parameterList.split(","));
         FileUtils.byExcelExport2(response, request, headers, parameters, list);

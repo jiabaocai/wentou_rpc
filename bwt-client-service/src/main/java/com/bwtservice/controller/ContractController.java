@@ -54,9 +54,17 @@ public class ContractController {
         String contract_no = request.getParameter("contract_no");
         String contract_start = request.getParameter("contract_start");
         String contract_end = request.getParameter("contract_end");
-        Integer assetside_id = Integer.valueOf(request.getParameter("assetside_id"));
+        Integer assetside_id=0;
+        Integer order_no=0;
+        if (request.getParameter("assetside_id") != null) {
+            assetside_id = Integer.valueOf(request.getParameter("assetside_id"));
+        }
+//        Integer assetside_id = Integer.valueOf(request.getParameter("assetside_id"));
         String client_name = request.getParameter("client_name");
-        Integer order_no = Integer.valueOf(request.getParameter("order_no"));
+        if(request.getParameter("order_no")!=null){
+            order_no = Integer.valueOf(request.getParameter("order_no"));
+        }
+//        Integer order_no = Integer.valueOf(request.getParameter("order_no"));
         String headerList = request.getParameter("headerList");
         String parameterList = request.getParameter("dataList");
 //

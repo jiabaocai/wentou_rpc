@@ -174,7 +174,7 @@ public class FileUtils {
         FileUtils.excelExport(response,request,hssfWorkbook,filename);
     }
 
-    public static void byExcelExport2(HttpServletResponse response, HttpServletRequest request, List<String> list1, List<String> list2, List<ClientDto> list) throws IllegalAccessException {
+    public static void byExcelExport2(HttpServletResponse response, HttpServletRequest request, List<String> list1, List<String> list2, List<Client> list) throws IllegalAccessException {
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
         HSSFSheet sheet = hssfWorkbook.createSheet("统计表");
         // 用于格式化单元格的数据
@@ -200,7 +200,7 @@ public class FileUtils {
         }
         headRow.setRowStyle(cellStyle);
         // 将数据插入表中
-        for (ClientDto customer : list) {
+        for (Client customer : list) {
             HSSFRow dataRow = sheet.createRow(sheet.getLastRowNum() + 1);
             Map<String, Object> map = convertToMap(customer);
             for (int i = 0; i < list2.size(); i++) {

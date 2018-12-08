@@ -49,6 +49,9 @@ public interface ClientMapper {
     @SelectProvider(type=ClientSqlProvider.class, method="getClientByExample")
     List<ClientDto> getClientByExample(Client record);
 
+    @SelectProvider(type=ClientSqlProvider.class, method="getClientByExample")
+    List<Client> getClientByExample1(Client record);
+
     @Update({
         "update client",
         "set name = #{name,jdbcType=VARCHAR},",
