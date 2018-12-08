@@ -129,7 +129,7 @@ public class ClientController {
         String name = request.getParameter("name");
         String mobile = request.getParameter("mobile");
         String headerList = request.getParameter("headerList");
-        String parameterList = request.getParameter("parameterList");
+        String parameterList = request.getParameter("dataList");
 //
         Client client = new Client();
         if (idnumber != null) {
@@ -142,8 +142,8 @@ public class ClientController {
             client.setMobile(mobile);
         }
         List<ClientDto> list = clientMapper.getClientByExample(client);
-        List<String> headers = Arrays.asList(headerList);
-        List<String> parameters = Arrays.asList(parameterList);
+        List<String> headers = Arrays.asList(headerList.split(","));
+        List<String> parameters = Arrays.asList(parameterList.split(","));
         FileUtils.byExcelExport2(response, request, headers, parameters, list);
     }
 

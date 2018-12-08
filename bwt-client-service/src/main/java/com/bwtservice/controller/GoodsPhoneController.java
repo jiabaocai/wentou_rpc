@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -90,10 +91,17 @@ public class GoodsPhoneController {
         Integer assetside_id = Integer.valueOf(request.getParameter("assetside_id"));
         String unique_code = request.getParameter("unique_code");
         String headerList = request.getParameter("headerList");
-        String parameterList = request.getParameter("parameterList");
+        String parameterList = request.getParameter("dataList");
 //
-        List<String> headers = Arrays.asList(headerList);
-        List<String> parameters = Arrays.asList(parameterList);
+//        String str = "asdfghjkl";
+//        List<String> lis = Arrays.asList(headerList.split(","));
+//        for (String string : lis) {
+//            System.out.println(string);
+//        }
+
+        List<String> headers = Arrays.asList(headerList.split(","));
+
+        List<String> parameters = Arrays.asList(parameterList.split(","));
 //        List<String> list1 = new ArrayList<>();
 //        list1.add("编号");
 //        list1.add("品牌");
@@ -101,13 +109,14 @@ public class GoodsPhoneController {
 //        list1.add("颜色");
 //        list1.add("容量");
 //        list1.add("唯一识别码（IMEI）");
-//        List<String> list2 = new ArrayList<>();
-//        list2.add("id");
-//        list2.add("band");
-//        list2.add("model");
-//        list2.add("color");
-//        list2.add("storage");
-//        list2.add("unique_code");
+        List<String> list2 = new ArrayList<>();
+        list2.add("id");
+        list2.add("band");
+        list2.add("model");
+        list2.add("color");
+        list2.add("storage");
+        list2.add("unique_code");
+        System.out.println(list2);
 //        这个list使数据库生成的
         List<GoodsPhone> list = goodsPhoneMapper.getGoodsPhoneByAssetsideId(assetside_id, unique_code);
         FileUtils.byExcelExport(response, request, headers, parameters, list);

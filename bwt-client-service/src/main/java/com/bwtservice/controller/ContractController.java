@@ -58,10 +58,10 @@ public class ContractController {
         String client_name = request.getParameter("client_name");
         Integer order_no = Integer.valueOf(request.getParameter("order_no"));
         String headerList = request.getParameter("headerList");
-        String parameterList = request.getParameter("parameterList");
+        String parameterList = request.getParameter("dataList");
 //
-        List<String> headers = Arrays.asList(headerList);
-        List<String> parameters = Arrays.asList(parameterList);
+        List<String> headers = Arrays.asList(headerList.split(","));
+        List<String> parameters = Arrays.asList(parameterList.split(","));
 //        List<String> list1 = new ArrayList<>();
 //        list1.add("编号");
 //        list1.add("品牌");
