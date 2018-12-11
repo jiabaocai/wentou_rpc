@@ -93,7 +93,7 @@ public interface ContractMapper {
             "      WHERE  " +
             "       e.`start`  &lt;=  NOW() and NOW() &gt;=e.`end` "+
             "  <if test=\"contract_no !=null and contract_no !=''\">" +
-            "    AND e.contract_no = #{contract_no}" +
+            "    AND e.contract_no = like CONCAT('%', #{contract_no}, '%')" +
             "  </if> " +
             "  <if test=\"contract_start !=null and contract_start !=''\">" +
             "    AND e.contract_start = #{contract_start}" +
@@ -108,14 +108,53 @@ public interface ContractMapper {
             "    AND e.assetside_id = #{assetside_id}" +
             "  </if> " +
             "  <if test=\"order_no !=null and order_no !=''\">" +
-            "    AND e.order_no = #{order_no}" +
+            "    AND e.order_no =  = like CONCAT('%', #{order_no}, '%')" +
             "  </if> " +
             "  <if test=\"id !=null and id !=''\">" +
             "    AND e.id = #{id}" +
             "  </if> " +
+            "  <if test=\"client_address !=null and client_address !=''\">" +
+            "    AND b.client_address like CONCAT('%', #{client_address}, '%')" +
+            "  </if> " +
+            "  <if test=\"client_idno !=null and client_idno !=''\">" +
+            "    AND b.client_idno =#{client_idno}" +
+            "  </if> " +
+            "  <if test=\"client_mobile !=null and client_mobile !=''\">" +
+            "    AND b.client_mobile =#{client_mobile}" +
+            "  </if> " +
+            "  <if test=\"phone_band !=null and phone_band !=''\">" +
+            "    AND b.phone_band =#{phone_band}" +
+            "  </if> " +
+
+            "  <if test=\"phone_model !=null and phone_model !=''\">" +
+            "    AND b.phone_model =#{phone_model}" +
+            "  </if> " +
+            "  <if test=\"phone_color !=null and phone_color !=''\">" +
+            "    AND b.phone_color =#{phone_color}" +
+            "  </if> " +
+            "  <if test=\"phone_memory !=null and phone_memory !=''\">" +
+            "    AND b.phone_memory =#{phone_memory}" +
+            "  </if> " +
+            "  <if test=\"phone_size !=null and phone_size !=''\">" +
+            "    AND b.phone_size =#{phone_size}" +
+            "  </if> " +
+            "  <if test=\"phone_storage !=null and phone_storage !=''\">" +
+            "    AND b.phone_storage =#{phone_storage}" +
+            "  </if> " +
             "       ORDER BY e.id desc " +
             "</script>"})
-    List<ContractDto> list(@Param("contract_no") String contract_no, @Param("contract_start") String contract_start, @Param("contract_end") String contract_end, @Param("assetside_id") Integer assetside_id, @Param("client_name") String client_name, @Param("order_no") Integer order_no,@Param("id")Integer id);
+    List<ContractDto> list(@Param("contract_no") String contract_no, @Param("contract_start") String contract_start, @Param("contract_end") String contract_end,
+                           @Param("assetside_id") Integer assetside_id, @Param("client_name") String client_name, @Param("order_no") Integer order_no,
+                           @Param("id")Integer id,
+                           @Param("client_address")String client_address,
+                           @Param("client_idno")String client_idno,
+                           @Param("client_mobile")String client_mobile,
+                           @Param("phone_band")String phone_band,
+                           @Param("phone_model")String phone_model,
+                           @Param("phone_color")String phone_color,
+                           @Param("phone_memory")String phone_memory ,
+                           @Param("phone_size")String phone_size,
+                           @Param("phone_storage")String phone_storage);
 
 // @Select({"<script> " +
 //            "SELECT " +

@@ -33,11 +33,11 @@ public class ContractController {
 
     @ApiOperation(value = "模糊查询")
     @GetMapping("/getContractByExample")
-    public BaseResult getContractByExample(String contract_no, String contract_start, String contract_end, Integer assetside_id, String client_name, Integer order_no, int pageNum, int pageSize) {
+    public BaseResult getContractByExample(String client_address,String client_idno,String client_mobile,String phone_band,String phone_model,String phone_color,String phone_memory ,String phone_size,String phone_storage,String contract_no, String contract_start, String contract_end, Integer assetside_id, String client_name, Integer order_no, int pageNum, int pageSize) {
         Contract contract = new Contract();
         try {
             PageHelper.startPage(pageNum, pageSize);
-            List<ContractDto> list = contractMapper.list(contract_no, contract_start, contract_end, assetside_id, client_name, order_no, null);
+            List<ContractDto> list = contractMapper.list(contract_no, contract_start, contract_end, assetside_id, client_name, order_no, null,client_address,client_idno,client_mobile,phone_band,phone_model,phone_color,phone_memory,phone_size,phone_storage);
             PageInfo<ContractDto> pageInfo = new PageInfo<>(list);
             return BaseResult.success(pageInfo);
         } catch (Exception e) {
@@ -85,7 +85,7 @@ public class ContractController {
 //        list2.add("storage");
 //        list2.add("unique_code");
 //        这个list使数据库生成的
-        List<ContractDto> list = contractMapper.list(contract_no, contract_start, contract_end, assetside_id, client_name, order_no, null);
+        List<ContractDto> list = contractMapper.list(contract_no, contract_start, contract_end, assetside_id, client_name, order_no, null,null,null,null,null,null,null,null,null,null);
         FileUtils.byExcelExport1(response, request, headers, parameters, list);
     }
 
@@ -105,7 +105,7 @@ public class ContractController {
     @PostMapping("/getContractById")
     public BaseResult getContractById(int id) {
         try {
-            List<ContractDto> list = contractMapper.list(null, null, null, null, null, null, id);
+            List<ContractDto> list = contractMapper.list(null, null, null, null, null, null, id,null,null,null,null,null,null,null,null,null);
             if (list.size() > 0) {
                 return BaseResult.success(list.get(0));
             }
