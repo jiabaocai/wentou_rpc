@@ -1,5 +1,9 @@
 package com.bwtservice.controller;
 
+import cn.hutool.core.util.CharsetUtil;
+import cn.hutool.crypto.SecureUtil;
+import cn.hutool.crypto.asymmetric.KeyType;
+import cn.hutool.crypto.asymmetric.RSA;
 import com.bwtservice.entity.Category;
 import com.bwtservice.entity.GoodsGroup;
 import com.bwtservice.entity.GoodsPhone;
@@ -99,9 +103,9 @@ public class CommController {
             Map<String, Object> keyMap = RSAUtils.genKeyPair();
             publicKey = RSAUtils.getPublicKey(keyMap);
             privateKey = RSAUtils.getPrivateKey(keyMap);
-            Map<String,String> map=new HashMap<>();
-            map.put("pubKey",publicKey);
-            map.put("priKey",privateKey);
+            Map<String, String> map = new HashMap<>();
+            map.put("pubKey", publicKey);
+            map.put("priKey", privateKey);
             return BaseResult.success(map);
         } catch (Exception e) {
             logger.error(e.getMessage());
@@ -118,6 +122,23 @@ public class CommController {
         try {
             byte[] encodedData = RSAUtils.encryptByPublicKey(reqData.getBytes(), pubKey);
             return BaseResult.success(Base64.encodeBase64String(encodedData));
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation(value = "公钥加密兼容北头")
+    @GetMapping("/encryptByPublicKeyNew")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "reqData", value = "需要加密的内容", dataType = "string", paramType = "query"),
+            @ApiImplicitParam(name = "pubKey", value = "公钥", dataType = "string", paramType = "query")})
+    public BaseResult getpubEncodeNew(String reqData, String pubKey) {
+        try {
+            RSA rsa = SecureUtil.rsa(null, pubKey);
+            String encrypt = rsa.encryptStr(reqData, KeyType.PublicKey, CharsetUtil.CHARSET_UTF_8);
+            System.out.println("加密后的内容:" + encrypt);
+            return BaseResult.success(encrypt);
         } catch (Exception e) {
             logger.error(e.getMessage());
             return BaseResult.error(e.getMessage());

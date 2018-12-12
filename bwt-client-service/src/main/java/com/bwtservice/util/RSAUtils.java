@@ -1,6 +1,10 @@
 package com.bwtservice.util;
 
 
+import cn.hutool.core.util.CharsetUtil;
+import cn.hutool.crypto.SecureUtil;
+import cn.hutool.crypto.asymmetric.KeyType;
+import cn.hutool.crypto.asymmetric.RSA;
 import org.apache.commons.codec.binary.Base64;
 
 import javax.crypto.BadPaddingException;
@@ -351,31 +355,74 @@ public class RSAUtils {
     public static String getPublicKey(Map<String, Object> keyMap)
             throws Exception {
         Key key = (Key) keyMap.get(PUBLIC_KEY);
+
         return Base64Utils.encode(key.getEncoded());
     }
 
     public static void main(String[] args) throws Exception {
-         String publicKey;
-         String privateKey;
+//         String publicKey;
+//         String privateKey;
+//        System.out.println("aaaa:"+Base64Utils.decode("MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAILuIw+TGA317LGo biG2WnisQHya98CK3cVyZPUZ7cGKb6KXMzfmdtJ6lVFapMmhrj1VlRAZIuwP7O7A 6hhHxGslu7GYsgsGAtRP6hVAl8tNDRLCW9RagPAC2+NV/FSpjv1XYCYI3ZZnK4XY qqxZan9+rrSneyRAGX9JoHwu3oZzAgMBAAECgYAiLrXsnQSMsIXpJAYMuyUHmEEF xxejpx2bLPB6pRhTjSb0FfGDSKIA9YwCP14CXjm1PaC7ITTi2I2ND8SOLj5zMDHB oQ6TAD9PGz5wrCBuHDFTyxV+j4IqJN5dHNwAlXZCY6u/dfCXyCIb9v/HXmgriLYr PDAdKYzWfFffNt840QJBAOuYeVaGJp3Xb22vQi1kfIVCzgcOU6jYlRikuUhjq06f R5D2PXdfVncusNDSciIvbX/xEsFSg6njMeid3jMIJTUCQQCORREEE3ktRj7fNtiK 6PFofZLMGcygSnVxKkwWneBsZj3H4L/vqcsaa+idQlUdWnYjOPrjRAwjg2p6M24I yboHAkEAjyhces4TgxAYvo6jaM/JtnQsmy8CePP6TToy+CDQRHsW0qg+G15MPSma +ZkXD1zAbeEAI4bPSJksh4v+LAZEDQJAX0PIPR59Cd/7waQMJBgPbpSHc7vi1YKG WZylDo/w8yUTQYAxhd4AblTLkmIUdG9apANHnF64ch9RcTp299N8iQJAHmzlwcz+ hQAI3xu8A2OPKOuiF0axK8/TRhiGOGRwlsxAtK0kI2jMvm+3W6rDQ2I3626i5yK8 eh+Cy6sA4WzUUw=="));
+//
+//                Map<String, Object> keyMap = RSAUtils.genKeyPair();
+//                publicKey = RSAUtils.getPublicKey(keyMap);
+//                privateKey = RSAUtils.getPrivateKey(keyMap);
+//                System.err.println("公钥: \n\r" + publicKey);
+//                System.err.println("私钥： \n\r" + privateKey);
+//            System.err.println("公钥加密——私钥解密");
+//            String source = "*******************************JFASDKFJ";
+//            System.out.println("\r加密前文字：\r\n" + source);
+//            byte[] data = source.getBytes();
+//            byte[] encodedData = RSAUtils.encryptByPublicKey("1".getBytes(), "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAILuIw+TGA317LGo biG2WnisQHya98CK3cVyZPUZ7cGKb6KXMzfmdtJ6lVFapMmhrj1VlRAZIuwP7O7A 6hhHxGslu7GYsgsGAtRP6hVAl8tNDRLCW9RagPAC2+NV/FSpjv1XYCYI3ZZnK4XY qqxZan9+rrSneyRAGX9JoHwu3oZzAgMBAAECgYAiLrXsnQSMsIXpJAYMuyUHmEEF xxejpx2bLPB6pRhTjSb0FfGDSKIA9YwCP14CXjm1PaC7ITTi2I2ND8SOLj5zMDHB oQ6TAD9PGz5wrCBuHDFTyxV+j4IqJN5dHNwAlXZCY6u/dfCXyCIb9v/HXmgriLYr PDAdKYzWfFffNt840QJBAOuYeVaGJp3Xb22vQi1kfIVCzgcOU6jYlRikuUhjq06f R5D2PXdfVncusNDSciIvbX/xEsFSg6njMeid3jMIJTUCQQCORREEE3ktRj7fNtiK 6PFofZLMGcygSnVxKkwWneBsZj3H4L/vqcsaa+idQlUdWnYjOPrjRAwjg2p6M24I yboHAkEAjyhces4TgxAYvo6jaM/JtnQsmy8CePP6TToy+CDQRHsW0qg+G15MPSma +ZkXD1zAbeEAI4bPSJksh4v+LAZEDQJAX0PIPR59Cd/7waQMJBgPbpSHc7vi1YKG WZylDo/w8yUTQYAxhd4AblTLkmIUdG9apANHnF64ch9RcTp299N8iQJAHmzlwcz+ hQAI3xu8A2OPKOuiF0axK8/TRhiGOGRwlsxAtK0kI2jMvm+3W6rDQ2I3626i5yK8 eh+Cy6sA4WzUUw==");
+//            System.out.println("加密后文字：\r\n" + Base64.encodeBase64String(encodedData));
+//        System.out.println("aaa:"+encodedData);
+//            byte[] decodedData = RSAUtils.decryptByPrivateKey(Base64.decodeBase64(Base64.encodeBase64String(encodedData)), privateKey);
+//            String target = new String(decodedData);
+//            System.out.println("解密后文字: \r\n" + target);
 
-                Map<String, Object> keyMap = RSAUtils.genKeyPair();
-                publicKey = RSAUtils.getPublicKey(keyMap);
-                privateKey = RSAUtils.getPrivateKey(keyMap);
-                System.err.println("公钥: \n\r" + publicKey);
-                System.err.println("私钥： \n\r" + privateKey);
-            System.err.println("公钥加密——私钥解密");
-            String source = "*******************************JFASDKFJ";
-            System.out.println("\r加密前文字：\r\n" + source);
-            byte[] data = source.getBytes();
-            byte[] encodedData = RSAUtils.encryptByPublicKey("1".getBytes(), publicKey);
-            System.out.println("加密后文字：\r\n" + Base64.encodeBase64String(encodedData));
-        System.out.println("aaa:"+encodedData);
-            byte[] decodedData = RSAUtils.decryptByPrivateKey(Base64.decodeBase64(Base64.encodeBase64String(encodedData)), privateKey);
-            String target = new String(decodedData);
-            System.out.println("解密后文字: \r\n" + target);
 
+
+        System.out.println("================================= ========================");
+//        KeyPair keyPair = SecureUtil.generateKeyPair("RSA");
+//        PrivateKey privateKey = keyPair.getPrivate();
+//        PublicKey publicKey = keyPair.getPublic();
+//        System.out.println("=====================privateKey== ============================");
+//        System.out.println(Base64.encodeBase64String(privateKey.getEncoded()));
+//        System.out.println("===================privateKey =============================");
+//        System.out.println("===================publicKey===== ========================");
+//        System.out.println(Base64.encodeBase64String(publicKey.getEncoded()));
+//        System.out.println("======================publicKey ===================================");
+        RSA rsa = SecureUtil.rsa(null, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCQt4qXr4ydETzoH6WSffRmNR1bWc/lVVqXzPcheIYT6nQAaDKXkE3DMNV81MtP24MTHKd+skR4oNj5yi6LDoRRkATauMSkmuyWRuEVu6XHyY90MmsQahac1791FV7fVBtW6DE1vM2VrEZCGP4Xx7L5yytINbRe+EvAShBw9pBBGQIDAQAB");
+        String encrypt = rsa.encryptStr("{“productNo”:”1”,”amount”:”1”,”dataSource”:{},”sn”:”1”,”phone”:”1”,”bankCardNum”:”1”,”name”:”1”,”idCardNum”:”1”}", KeyType.PublicKey, CharsetUtil.CHARSET_UTF_8);
+        System.out.println("加密后的内容:"+encrypt);
+
+//        RSA rsa1 = new RSA("MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJC3ipevjJ0RPOgfpZJ99GY1HVtZz+VVWpfM9yF4hhPqdABoMpeQTcMw1XzUy0/bgxMcp36yRHig2PnKLosOhFGQBNq4xKSa7JZG4RW7pcfJj3QyaxBqFpzXv3UVXt9UG1boMTW8zZWsRkIY/hfHsvnLK0g1tF74S8BKEHD2kEEZAgMBAAECgYAn6+n4pD3XCm1R34EOY16rX1Wk4KbALgaav7kg652ZGuE7R4NFWlKJWQxbrlwTwIttF0eBZO4MlNqmNccXJz8Kz96lIJ+aA83zLOc1/gDtcNG7X3k7ueGSEjx6XbzT2M4yfaMVxdDLqcp1CSn1qSnYrAzbEix99wtzwgSoRs36AQJBAPNTM8GX8RnAGZlOfw+A94mUcMd1dqeamW/WiDXh5yIkutuzVvk/8CEoPPuTEOW14ErJgqZ8HwDRrbKAK9MzhNkCQQCYQWCD7fooWR6vfi905G97ykzK22MzBkXgQ0IOlPLKjTnhHHir0B8V0EFbdBPhRgMdqiDDmqHRwz2TS6Vri/ZBAkEAxYNOSeFaVnq2zNkJDr6zMLyL53yT+mzmDABqxMJA6lhCTcB/4wdhlqihB91TJAPEszBrm1S5neKWSoT8Dg6N0QJAU5pCdu7rl9Any1FMmbD9jkmtFQ6WT+Q35kbINN2Q26vkhjluAVnMV9v8p0z7xYz+FQHf78gu5tGANCsrb/xwgQJADCoZBZI9Wp5ljBWCafEyVmJXsLxoHrw4Vk/Kj/py+pE+4AExyDGgewbCXPen4c9WQCtFUPos5y1z/pVuJ6tvDQ==", "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCQt4qXr4ydETzoH6WSffRmNR1bWc/lVVqXzPcheIYT6nQAaDKXkE3DMNV81MtP24MTHKd+skR4oNj5yi6LDoRRkATauMSkmuyWRuEVu6XHyY90MmsQahac1791FV7fVBtW6DE1vM2VrEZCGP4Xx7L5yytINbRe+EvAShBw9pBBGQIDAQAB");
+//        String decrypt = rsa1.decryptStr(encrypt, KeyType.PrivateKey, CharsetUtil.CHARSET_UTF_8);
+//        System.out.println("asdasda:"+decrypt); System.out.println("================================ =========================");
 
     }
+
+//     @Test
+//    public void base64(){
+//         System.out.println("================================= ========================");
+//        KeyPair keyPair = SecureUtil.generateKeyPair("RSA");
+//        PrivateKey privateKey = keyPair.getPrivate();
+//        PublicKey publicKey = keyPair.getPublic();
+//         System.out.println("=====================privateKey== ============================");
+//         System.out.println(Base64.encode(privateKey.getEncoded()));
+//         System.out.println("===================privateKey =============================");
+//         System.out.println("===================publicKey===== ========================");
+//         System.out.println(Base64.encode(publicKey.getEncoded()));
+//         System.out.println("======================publicKey ===================================");
+//         RSA rsa =
+//        SecureUtil.rsa(privateKey.getEncoded(), publicKey.getEncoded());
+//         String encrypt = rsa.encryptStr("我是一段测试aaaa", KeyType.PublicKey, CharsetUtil.CHARSET_UTF_8);
+//        System.out.println(encrypt);
+//
+//        RSA rsa1 = new RSA(null, publicKey.getEncoded());
+//        String decrypt = rsa1.decryptStr(encrypt, KeyType.PrivateKey, CharsetUtil.CHARSET_UTF_8);
+//         System.out.println(decrypt); System.out.println("================================ =========================");
+//}
 
 }
 
