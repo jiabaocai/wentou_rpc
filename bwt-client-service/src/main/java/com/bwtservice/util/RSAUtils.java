@@ -1,6 +1,8 @@
 package com.bwtservice.util;
 
 
+import org.apache.commons.codec.binary.Base64;
+
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
@@ -365,9 +367,10 @@ public class RSAUtils {
             String source = "*******************************JFASDKFJ";
             System.out.println("\r加密前文字：\r\n" + source);
             byte[] data = source.getBytes();
-            byte[] encodedData = RSAUtils.encryptByPublicKey(data, publicKey);
-            System.out.println("加密后文字：\r\n" + new String(encodedData));
-            byte[] decodedData = RSAUtils.decryptByPrivateKey(encodedData, privateKey);
+            byte[] encodedData = RSAUtils.encryptByPublicKey("1".getBytes(), publicKey);
+            System.out.println("加密后文字：\r\n" + Base64.encodeBase64String(encodedData));
+        System.out.println("aaa:"+encodedData);
+            byte[] decodedData = RSAUtils.decryptByPrivateKey(Base64.decodeBase64(Base64.encodeBase64String(encodedData)), privateKey);
             String target = new String(decodedData);
             System.out.println("解密后文字: \r\n" + target);
 

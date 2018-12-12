@@ -12,7 +12,10 @@ import com.bwtservice.util.BaseResult;
 import com.bwtservice.util.MD5Util;
 import com.bwtservice.util.RSAUtils;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.apache.commons.codec.binary.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,7 +25,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 公用类查询（仅限查询 需要输入当前表名称全称）
@@ -85,11 +90,49 @@ public class CommController {
         }
     }
 
-    @ApiOperation(value = "公钥查询")
-    @GetMapping("/getpubKey")
+    @ApiOperation(value = "秘钥查询")
+    @GetMapping("/getRsaKey")
     public BaseResult getPublicKey() {
         try {
-            return BaseResult.success(pubKey);
+            String publicKey;
+            String privateKey;
+            Map<String, Object> keyMap = RSAUtils.genKeyPair();
+            publicKey = RSAUtils.getPublicKey(keyMap);
+            privateKey = RSAUtils.getPrivateKey(keyMap);
+            Map<String,String> map=new HashMap<>();
+            map.put("pubKey",publicKey);
+            map.put("priKey",privateKey);
+            return BaseResult.success(map);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation(value = "公钥加密")
+    @GetMapping("/encryptByPublicKey")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "reqData", value = "需要加密的内容", dataType = "string", paramType = "query"),
+            @ApiImplicitParam(name = "pubKey", value = "公钥", dataType = "string", paramType = "query")})
+    public BaseResult getpubEncode(String reqData, String pubKey) {
+        try {
+            byte[] encodedData = RSAUtils.encryptByPublicKey(reqData.getBytes(), pubKey);
+            return BaseResult.success(Base64.encodeBase64String(encodedData));
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return BaseResult.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation(value = "私钥解密")
+    @GetMapping("/decryptByPrivateKey")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "reqData", value = "需要解密的内容", dataType = "string", paramType = "query"),
+            @ApiImplicitParam(name = "priKey", value = "私钥", dataType = "string", paramType = "query")})
+    public BaseResult getPriDecrypt(String reqData, String priKey) {
+        try {
+            byte[] encodedData = RSAUtils.decryptByPrivateKey(Base64.decodeBase64(reqData), priKey);
+            return BaseResult.success(new String(encodedData));
         } catch (Exception e) {
             logger.error(e.getMessage());
             return BaseResult.error(e.getMessage());
