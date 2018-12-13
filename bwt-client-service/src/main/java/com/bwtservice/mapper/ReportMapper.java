@@ -17,7 +17,7 @@ import java.util.List;
 public interface ReportMapper {
 
     @Select({"<script>" +
-            " select * from (SELECT " +
+            " select * from (SELECT a.assetside_id ," +
             " a.name , " +
             " b.order_no , " +
             " b.createtime , " +
@@ -50,6 +50,17 @@ public interface ReportMapper {
             "  WHEN '2' THEN " +
             "  '已还款' ELSE '未知'  " +
             " END loan_status_name, d.loan_status," +
+            " CASE " +
+            "  b.received_status  " +
+            "  WHEN '1' THEN " +
+            "  '未放款'  " +
+            "  WHEN '2' THEN " +
+            "  '回款正常'  " +
+            "  WHEN '3' THEN " +
+            "  '逾期'  " +
+            "  WHEN '4' THEN " +
+            "  '结束' ELSE '未知'  " +
+            " END received_status_name, b.received_status," +
             " CASE " +
             "  d.rp_status  " +
             "  WHEN '1' THEN " +

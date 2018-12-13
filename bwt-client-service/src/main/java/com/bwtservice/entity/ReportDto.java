@@ -38,6 +38,9 @@ public class ReportDto {
     private Long rp_amount;
     //回款状态
     private Integer loan_status;
+    //回款状态1
+    private Integer received_status;
+    private String received_status_name;
     //汇款状态中文名称
     private String loan_status_name;
     //还款状态
