@@ -125,8 +125,11 @@ public class FileUtils {
             HSSFRow dataRow = sheet.createRow(sheet.getLastRowNum() + 1);
             Map<String, Object> map = convertToMap(customer);
             for (int i = 0; i < list2.size(); i++) {
-                dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString());
-                sheet.autoSizeColumn((short)i); //调整第n列宽度
+                dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString()); if(map.get(list2.get(i))!=null){
+                    dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString());
+                }else {
+                    dataRow.createCell(i).setCellValue("");
+                }sheet.autoSizeColumn((short)i); //调整第n列宽度
             }
             dataRow.setRowStyle(cellStyle);
         }
@@ -208,7 +211,11 @@ public class FileUtils {
             HSSFRow dataRow = sheet.createRow(sheet.getLastRowNum() + 1);
             Map<String, Object> map = convertToMap(customer);
             for (int i = 0; i < list2.size(); i++) {
-                dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString());
+                if(map.get(list2.get(i))!=null){
+                    dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString());
+                }else {
+                    dataRow.createCell(i).setCellValue("");
+                }
                 sheet.autoSizeColumn((short)i); //调整第n列宽度
             }
             dataRow.setRowStyle(cellStyle);
@@ -232,7 +239,7 @@ public class FileUtils {
         cellStyle.setFont(font);
         cellStyle.setAlignment(HorizontalAlignment.CENTER); //水平布局：居中
         cellStyle.setWrapText(true);
-        // 添加单元格注释
+        // 添加单元格注释ZA
         // 创建HSSFPatriarch对象,HSSFPatriarch是所有注释的容器.
         HSSFPatriarch patr = sheet.createDrawingPatriarch();
         // 定义注释的大小和位置,详见文档
@@ -247,7 +254,11 @@ public class FileUtils {
             HSSFRow dataRow = sheet.createRow(sheet.getLastRowNum() + 1);
             Map<String, Object> map = convertToMap(customer);
             for (int i = 0; i < list2.size(); i++) {
-                dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString());
+                if(map.get(list2.get(i))!=null){
+                    dataRow.createCell(i).setCellValue(map.get(list2.get(i)).toString());
+                }else {
+                    dataRow.createCell(i).setCellValue("");
+                }
                 sheet.autoSizeColumn((short)i); //调整第n列宽度
             }
             dataRow.setRowStyle(cellStyle);

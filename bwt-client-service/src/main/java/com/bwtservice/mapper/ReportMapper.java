@@ -20,7 +20,7 @@ public interface ReportMapper {
             " select * from (SELECT a.assetside_id ," +
             " a.name , " +
             " b.order_no , " +
-            " b.createtime , " +
+            "  DATE_FORMAT(b.createtime,'%Y-%m-%d %H:%i:%S') createtime , " +
             " b.loan_sum , " +
             " CASE " +
             "  b.status  " +
@@ -39,7 +39,7 @@ public interface ReportMapper {
             " END status_name,b.status, " +
             " b.interest_start , " +
             " b.interst_end , " +
-            " c.signdate , " +
+            "  DATE_FORMAT(c.signdate,'%Y-%m-%d %H:%i:%S') signdate , " +
             " d.rp_capital , " +
             " d.rp_interest , " +
             " d.rp_amount , " +
