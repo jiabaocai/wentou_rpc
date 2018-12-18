@@ -117,31 +117,31 @@ public interface ContractMapper {
             "    AND e.id = #{id}" +
             "  </if> " +
             "  <if test=\"client_address !=null and client_address !=''\">" +
-            "    AND b.client_address like CONCAT('%', #{client_address}, '%')" +
+            "    AND e.client_address like CONCAT('%', #{client_address}, '%')" +
             "  </if> " +
             "  <if test=\"client_idno !=null and client_idno !=''\">" +
-            "    AND b.client_idno =#{client_idno}" +
+            "    AND e.client_idno =#{client_idno}" +
             "  </if> " +
             "  <if test=\"client_mobile !=null and client_mobile !=''\">" +
-            "    AND b.client_mobile =#{client_mobile}" +
+            "    AND e.client_mobile =#{client_mobile}" +
             "  </if> " +
             "  <if test=\"phone_band !=null and phone_band !=''\">" +
-            "    AND b.phone_band =#{phone_band}" +
+            "    AND e.phone_band =#{phone_band}" +
             "  </if> " +
             "  <if test=\"phone_model !=null and phone_model !=''\">" +
-            "    AND b.phone_model =#{phone_model}" +
+            "    AND e.phone_model =#{phone_model}" +
             "  </if> " +
             "  <if test=\"phone_color !=null and phone_color !=''\">" +
-            "    AND b.phone_color =#{phone_color}" +
+            "    AND e.phone_color =#{phone_color}" +
             "  </if> " +
             "  <if test=\"phone_memory !=null and phone_memory !=''\">" +
-            "    AND b.phone_memory =#{phone_memory}" +
+            "    AND e.phone_memory =#{phone_memory}" +
             "  </if> " +
             "  <if test=\"phone_size !=null and phone_size !=''\">" +
-            "    AND b.phone_size =#{phone_size}" +
+            "    AND e.phone_size =#{phone_size}" +
             "  </if> " +
             "  <if test=\"phone_storage !=null and phone_storage !=''\">" +
-            "    AND b.phone_storage =#{phone_storage}" +
+            "    AND e.phone_storage =#{phone_storage}" +
             "  </if> " +
             "       ORDER BY e.id desc " +
             "</script>"})
