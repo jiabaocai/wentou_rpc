@@ -83,7 +83,10 @@ public interface ContractMapper {
             " d.rp_capital current_period_capital, " +
             " d.rp_interest current_period_interest, " +
             " b.credit_score, " +
-            " b.assetside_score " +
+            " b.assetside_score, " +
+            "  d.interest_end  " +
+            " END, " +
+            " d.interest_start START " +
             "FROM " +
             "product_order b " +
             " LEFT JOIN contract AS a ON a.order_id = b.id " +
@@ -95,7 +98,7 @@ public interface ContractMapper {
             " ) as e" +
             "      WHERE  1=1" +
             "  <if test=\"contract_no !=null and contract_no !=''\">" +
-            "    AND e.contract_no = like CONCAT('%', #{contract_no}, '%')" +
+            "    AND e.contract_no  like CONCAT('%', #{contract_no}, '%')" +
             "  </if> " +
             "  <if test=\"contract_start !=null and contract_start !=''\">" +
             "    AND e.signdate between #{contract_start} and #{contract_end}" +
@@ -108,7 +111,7 @@ public interface ContractMapper {
             "    AND e.assetside_id = #{assetside_id}" +
             "  </if> " +
             "  <if test=\"order_no !=null and order_no !=''\">" +
-            "    AND e.order_no =  = like CONCAT('%', #{order_no}, '%')" +
+            "    AND e.order_no =   like CONCAT('%', #{order_no}, '%')" +
             "  </if> " +
             "  <if test=\"id !=null and id !=''\">" +
             "    AND e.id = #{id}" +
