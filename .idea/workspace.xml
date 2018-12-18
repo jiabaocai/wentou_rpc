@@ -8,8 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="75ba47d8-2296-44e1-b000-f5aee6f98d38" name="Default" comment="修改逻辑">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -168,7 +167,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="24" />
-          <entry key="java" value="141" />
+          <entry key="java" value="143" />
           <entry key="md" value="4" />
           <entry key="xml" value="11" />
           <entry key="yml" value="14" />
@@ -177,7 +176,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="24" />
-          <entry key="JAVA" value="141" />
+          <entry key="JAVA" value="143" />
           <entry key="Markdown" value="4" />
           <entry key="XML" value="11" />
           <entry key="YAML" value="14" />
@@ -199,7 +198,7 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="ft" value="2" />
-          <entry key="java" value="3618" />
+          <entry key="java" value="3619" />
           <entry key="txt" value="86" />
           <entry key="xml" value="29" />
           <entry key="yml" value="18" />
@@ -208,7 +207,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="3618" />
+          <entry key="JAVA" value="3619" />
           <entry key="PLAIN_TEXT" value="86" />
           <entry key="VTL" value="2" />
           <entry key="XML" value="29" />
@@ -224,15 +223,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="256">
               <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/generator/generatorConfig.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -272,11 +262,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ReportController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="93" column="87" selection-start-line="93" selection-start-column="87" selection-end-line="93" selection-end-column="87" />
+            <state relative-caret-position="182">
+              <caret line="93" column="93" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -286,6 +288,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="373">
               <caret line="110" column="25" lean-forward="true" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="80" column="44" lean-forward="true" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -308,15 +319,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/OrderPlanController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -331,7 +333,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selectProductOrderByExampleOrLike</find>
       <find>contract_no</find>
       <find>received_status</find>
       <find>getClientByExample</find>
@@ -361,6 +362,7 @@
       <find>order_no</find>
       <find>\n</find>
       <find>\t</find>
+      <find>loanStateMentList</find>
     </findStrings>
     <replaceStrings>
       <replace>220000</replace>
@@ -444,7 +446,6 @@
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ReportDto.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ReportController.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/Excel/FileUtils.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ContractTplController.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTpl.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTplDto.java" />
@@ -457,6 +458,7 @@
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Product.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java" />
       </list>
     </option>
   </component>
@@ -489,9 +491,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="399" />
-    <option name="y" value="84" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="889" />
+    <option name="y" value="171" />
     <option name="width" value="1321" />
     <option name="height" value="930" />
   </component>
@@ -536,83 +538,6 @@
               <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
               <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bwtservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bwtservice" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -631,7 +556,7 @@
     <property name="SearchEverywhereHistoryKey" value="Product&#9;FILE&#9;file:///Users/caijiabao/IdeaProjects/wentou_rpc/bwt-client-service/src/main/java/com/bwtservice/entity/Product.java&#10;product&#9;PSI&#9;JAVA://com.bwtservice.entity.Product&#10;ContractMapper&#9;FILE&#9;file:///Users/caijiabao/IdeaProjects/wentou_rpc/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java&#10;Client&#9;FILE&#9;file:///Users/caijiabao/IdeaProjects/wentou_rpc/bwt-client-service/src/main/java/com/bwtservice/entity/Client.java&#10;dou&#9;PSI&#9;JAVA://freemarker.core.BuiltInsForNumbers.doubleBI&#10;AssetsideMapper&#9;FILE&#9;file:///Users/caijiabao/Downloads/vms-cloud-master/bwtzz-manage/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideMapper.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545153307873" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545153631507" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -883,7 +808,7 @@
       <workItem from="1544760290136" duration="1316000" />
       <workItem from="1545034859725" duration="22000" />
       <workItem from="1545128025090" duration="1837000" />
-      <workItem from="1545144398296" duration="4001000" />
+      <workItem from="1545144398296" duration="4452000" />
     </task>
     <task id="LOCAL-00001" summary="新项目">
       <created>1542593474921</created>
@@ -1123,14 +1048,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545129830937</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="修改逻辑">
+      <created>1545153378933</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1545153378933</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="322795000" />
+    <option name="totallyTimeSpent" value="323246000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="323" y="83" width="1321" height="930" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" show_stripe_button="false" weight="0.24969475" />
@@ -1139,19 +1071,19 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info x="698" y="46" width="283" height="957" id="Project" order="6" visible="true" weight="0.2931978" />
+      <window_info active="true" x="698" y="46" width="283" height="957" id="Project" order="6" visible="true" weight="0.22893773" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3814002" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.33465347" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.8193902" visible="true" weight="0.30306748" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.8193902" weight="0.30306748" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49960908" weight="0.38650307" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.18060985" side_tool="true" visible="true" weight="0.30306748" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.498779" visible="true" weight="0.3291536" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501221" side_tool="true" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.33168316" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32962137" />
@@ -1240,7 +1172,8 @@
     <MESSAGE value="新增接口" />
     <MESSAGE value="修改时间格式返回带0的问题" />
     <MESSAGE value="注释不要的代码，修改字段类型" />
-    <option name="LAST_COMMIT_MESSAGE" value="注释不要的代码，修改字段类型" />
+    <MESSAGE value="修改逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1691,16 +1624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ReportController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/Excel/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3090">
@@ -1715,13 +1638,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1880,10 +1796,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ReportController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="93" column="87" selection-start-line="93" selection-start-column="87" selection-end-line="93" selection-end-column="87" />
+        <state relative-caret-position="182">
+          <caret line="93" column="93" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="80" column="44" lean-forward="true" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
         </state>
       </provider>
     </entry>

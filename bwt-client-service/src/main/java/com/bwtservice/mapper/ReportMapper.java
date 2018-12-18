@@ -72,7 +72,7 @@ public interface ReportMapper {
             " assetside a " +
             " LEFT JOIN product_order b ON a.assetside_id = b.assetside_id " +
             " LEFT JOIN contract c ON b.id = c.order_id " +
-            " LEFT JOIN order_plan d ON b.id = d.order_id) as e" +
+            " LEFT JOIN order_plan d ON b.id = d.order_id and d.interest_start &lt;= NOW() and d.interest_end &gt;=NOW()) as e" +
             " where 1=1 " +
             "  <if test=\"assetside_id !=null and assetside_id !=''\">" +
             "    AND e.assetside_id = #{assetside_id}" +
