@@ -30,7 +30,7 @@ public class ProductSqlProvider {
         }
 
         if (record.getContract_id() != null) {
-            sql.VALUES("contract_id", "#{contract_id,jdbcType=INTEGER}");
+            sql.VALUES("contract_id", "#{contract_id,jdbcType=VARCHAR}");
         }
 
         if (record.getTc() != null) {
@@ -108,7 +108,7 @@ public class ProductSqlProvider {
         }
 
         if (record.getContract_id() != null) {
-            sql.SET("contract_id = #{contract_id,jdbcType=INTEGER}");
+            sql.SET("contract_id = #{contract_id,jdbcType=VARCHAR}");
         }
 
         if (record.getTc() != null) {
