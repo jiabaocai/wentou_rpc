@@ -16,90 +16,90 @@ public interface ContractMapper {
     int deleteByPrimaryKey(Integer id);
 
     @Select({"<script> " +
-            " SELECT * from (SELECT   " +
-            "            a.id,a.contract_no, a.order_id,  " +
-            "            a.contract_start,   " +
-            "            a.contract_end,   " +
-            "            a.assetside_id,   " +
-            "            a.client_name,   " +
-            "            a.signdate,   " +
-            "            b.product_id,   " +
-            "            b.interest_start,   " +
-            "            b.interst_end,   " +
-            "            b.loan_sum,   " +
-            "            b.contract_sum,   " +
-            "            b.total_period,   " +
-            "            b.received_period,  " +
-            "     CASE b.received_status  " +
-            "         WHEN '1' THEN '未放款'  " +
-            "         WHEN '2' THEN '回款正常'  " +
-            "         WHEN '3' THEN '逾期'  " +
-            "         WHEN '4' THEN '结束'  " +
-            "    ELSE '未知' END received_status, " +
-//            "            b.received_status,   " +
-            "            b.overdue_day,   " +
-            "            b.dp_sum,   " +
-            "            b.unique_code,   " +
-            "            b.express_no,   " +
-            "            b.client_id,   " +
-            "            b.client_mobile,   " +
-            "            b.client_idno,   " +
-            "            b.client_address,   " +
-            "            b.phone_band,   " +
-            "            b.phone_model,   " +
-            "            b.phone_color,   " +
-            "            b.phone_memory,   " +
-            "            b.phone_size,   " +
-            "            b.phone_storage,   " +
-            "            b.`status` product_order_status,   " +
-            "            c.`name`,   " +
-            "            c.corp_name,   " +
-            "            c.corp_no,   " +
-            "            c.corp_img,   " +
-            "            c.reg_cap,   " +
-            "            c.foundingtime,   " +
-            "            c.legal_rep,   " +
-            "            c.partner,   " +
-            "            c.team,   " +
-            "            c.address,   " +
-            "            c.qualification,   " +
-            "            c.bankname,   " +
-            "            c.contactinfo,   " +
-            "            c.bankaccount,   " +
-            "            c.createtime,   " +
-            "            c.`status` AS assetside_status,   " +
-            "            a.id AS contract_id,   " +
-            "            b.order_no,   " +
-            "            b.id AS product_order_id  , " +
-            "      d.period current_period, " +
-            "      d.rp_amount current_period_amount, " +
-            "      d.rp_capital current_period_capital, " +
-            "      d.rp_interest current_period_interest, " +
-            "      b.credit_score, " +
-            "      b.assetside_score, " +
-            "      d.interest_end end, " +
-            "      d.interest_start start " +
-            "            FROM   " +
-            "            contract AS a   " +
-            "            LEFT JOIN product_order as b   " +
-            "            ON a.order_id = b.id " +
-            "            LEFT JOIN assetside AS c   " +
-            "            ON a.assetside_id = c.assetside_id   " +
-            "      left JOIN " +
-            "      order_plan d " +
-            "      on " +
-            "      a.assetside_id=d.assetside_id " +
-            "      and a.order_id=d.order_id)as e  " +
-            "      WHERE  " +
-            "       e.`start`  &lt;=  NOW() and NOW() &gt;=e.`end` "+
+            "SELECT * from ( " +
+            " SELECT " +
+            "  a.id, " +
+            "  a.contract_no, " +
+            "  b.id order_id, " +
+            "  a.contract_start, " +
+            "  a.contract_end, " +
+            "  b.assetside_id, " +
+            "  a.client_name, " +
+            "  a.signdate, " +
+            "  b.product_id, " +
+            "  b.interest_start, " +
+            "  b.interst_end, " +
+            "  b.loan_sum, " +
+            "  b.contract_sum, " +
+            "  b.total_period, " +
+            "  b.received_period, " +
+            " CASE " +
+            "   b.received_status  " +
+            "   WHEN '1' THEN " +
+            "   '未放款'  " +
+            "   WHEN '2' THEN " +
+            "   '回款正常'  " +
+            "   WHEN '3' THEN " +
+            "   '逾期'  " +
+            "   WHEN '4' THEN " +
+            "   '结束' ELSE '未知'  " +
+            "  END received_status, " +
+            " b.overdue_day, " +
+            " b.dp_sum, " +
+            " b.unique_code, " +
+            " b.express_no, " +
+            " b.client_id, " +
+            " b.client_mobile, " +
+            " b.client_idno, " +
+            " b.client_address, " +
+            " b.phone_band, " +
+            " b.phone_model, " +
+            " b.phone_color, " +
+            " b.phone_memory, " +
+            " b.phone_size, " +
+            " b.phone_storage, " +
+            " b.`status` product_order_status, " +
+            " c.`name`, " +
+            " c.corp_name, " +
+            " c.corp_no, " +
+            " c.corp_img, " +
+            " c.reg_cap, " +
+            " c.foundingtime, " +
+            " c.legal_rep, " +
+            " c.partner, " +
+            " c.team, " +
+            " c.address, " +
+            " c.qualification, " +
+            " c.bankname, " +
+            " c.contactinfo, " +
+            " c.bankaccount, " +
+            " c.createtime, " +
+            " c.`status` AS assetside_status, " +
+            " a.id AS contract_id, " +
+            " b.order_no, " +
+            " b.id AS product_order_id, " +
+            " d.period current_period, " +
+            " d.rp_amount current_period_amount, " +
+            " d.rp_capital current_period_capital, " +
+            " d.rp_interest current_period_interest, " +
+            " b.credit_score, " +
+            " b.assetside_score " +
+            "FROM " +
+            "product_order b " +
+            " LEFT JOIN contract AS a ON a.order_id = b.id " +
+            " LEFT JOIN assetside AS c ON b.assetside_id = c.assetside_id " +
+            " LEFT JOIN order_plan d ON " +
+            " d.assetside_id = b.assetside_id  " +
+            " AND  " +
+            " d.order_id =b.id and d.interest_start &lt;= NOW() and d.interest_end &gt;=NOW() " +
+            " ) as e" +
+            "      WHERE  1=1" +
             "  <if test=\"contract_no !=null and contract_no !=''\">" +
             "    AND e.contract_no = like CONCAT('%', #{contract_no}, '%')" +
             "  </if> " +
             "  <if test=\"contract_start !=null and contract_start !=''\">" +
-            "    AND e.contract_start = #{contract_start}" +
-            "  </if> " +
-            "  <if test=\"contract_end !=null and contract_end !=''\">" +
-            "    AND e.contract_end = #{contract_end}" +
+            "    AND e.signdate between #{contract_start} and #{contract_end}" +
+            "    and   e.`start`  &lt;=  e.signdate and e.signdate &lt;=e.`end` "+
             "  </if> " +
             "  <if test=\"client_name !=null and client_name !=''\">" +
             "    AND e.client_name like CONCAT('%', #{client_name}, '%')" +
@@ -125,7 +125,6 @@ public interface ContractMapper {
             "  <if test=\"phone_band !=null and phone_band !=''\">" +
             "    AND b.phone_band =#{phone_band}" +
             "  </if> " +
-
             "  <if test=\"phone_model !=null and phone_model !=''\">" +
             "    AND b.phone_model =#{phone_model}" +
             "  </if> " +

@@ -26,9 +26,12 @@ spring:
       max-request-size: 20Mb   # Max request size，默认10M
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://jddb-cn-north-1-14dd1a97d8154327.jcloud.com:3306/wentou
     url: jdbc:mysql://39.105.75.109:3306/wentou
 #    url: jdbc:mysql://10.40.2.90:3306/order_center
+#    username: wenzu
     username: dev
+#    password: zrZR1234
     password: Q9tBXVbI
 #  jpa:
 #    hibernate:
