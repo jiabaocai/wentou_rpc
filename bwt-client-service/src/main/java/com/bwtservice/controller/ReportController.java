@@ -94,6 +94,9 @@ public class ReportController {
         if (rp_status1 == null) {
             rp_status = null;
         }
+//        current_interest_start、current_interest_end
+        String current_interest_start=request.getParameter("current_interest_start");
+        String current_interest_end=request.getParameter("current_interest_end");
         String contract_start = request.getParameter("contract_start");
         String contract_end = request.getParameter("contract_end");
         Integer type = 0;
@@ -129,6 +132,8 @@ public class ReportController {
         list2.add("loan_status_name");
         list2.add("rp_status");
         list2.add("rp_status_name");
+        list2.add("current_interest_start");
+        list2.add("current_interest_end");
         System.out.println(list2);
 //        这个list使数据库生成的
         List<ReportDto> list = reportMapper.getReportListByExample(assetside_id, status, startDate, endDate,

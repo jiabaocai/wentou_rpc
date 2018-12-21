@@ -18,7 +18,7 @@ public interface ReportMapper {
 
     @Select({"<script>" +
             " select * from (SELECT a.assetside_id ," +
-            " a.name , " +
+            " a.name , d.interest_start current_interest_start,d.interest_end current_interest_end," +
             " b.order_no , " +
             "  DATE_FORMAT(b.createtime,'%Y-%m-%d %H:%i:%S') createtime , " +
             " b.loan_sum , " +

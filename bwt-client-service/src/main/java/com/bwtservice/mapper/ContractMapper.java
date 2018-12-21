@@ -73,7 +73,7 @@ public interface ContractMapper {
             " c.bankname, " +
             " c.contactinfo, " +
             " c.bankaccount, " +
-            " c.createtime, " +
+            " b.createtime, " +
             " c.`status` AS assetside_status, " +
             " a.id AS contract_id, " +
             " b.order_no, " +

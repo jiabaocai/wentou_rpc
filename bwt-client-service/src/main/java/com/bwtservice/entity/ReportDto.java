@@ -47,6 +47,10 @@ public class ReportDto {
     private Integer rp_status;
     //还款状态中文名称
     private String rp_status_name;
+
+    private String current_interest_start;
+
+    private String current_interest_end;
 }
 
 
