@@ -266,12 +266,13 @@ if (record.getCreatetime() != null) {
             SELECT(" id, product_id, order_no, assetside_id, interest_start, interst_end, loan_sum, " +
                     "contract_sum, total_period, received_period, received_status, overdue_day, contract_id, " +
                     "dp_sum, unique_code, express_no, client_id, client_name, client_mobile, client_idno, " +
-                    "client_address, phone_band, phone_model, phone_color, phone_memory, phone_size, phone_storage, status,createtime,credit_score,assetside_score ");
+                    "client_address, phone_band, phone_model, phone_color, phone_memory, phone_size, phone_storage, status,DATE_FORMAT(createtime,'%Y-%m-%d %H:%i:%S') createtime,credit_score,assetside_score ");
             FROM("product_order");
             if (ass.getAssetside_id() != null) {
                 WHERE("assetside_id = #{assetside_id}");
             }
             if (ass.getOrder_no() != null) {
+                WHERE("order_no like CONCAT('%',#{order_no},'%')");
                 WHERE("order_no like CONCAT('%',#{order_no},'%')");
             }
             if (ass.getEndLoanSum() != null && ass.getStartLoanSum() != null) {
