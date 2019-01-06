@@ -18,9 +18,11 @@ public interface ReportMapper {
 
     @Select({"<script>" +
             " select * from (SELECT a.assetside_id ," +
-            " a.name , d.interest_start current_interest_start,d.interest_end current_interest_end," +
+            " a.name ," +
+            " DATE_FORMAT(d.interest_start,'%Y-%m-%d')  current_interest_start," +
+            " DATE_FORMAT(d.interest_end,'%Y-%m-%d') current_interest_end," +
             " b.order_no , " +
-            "  DATE_FORMAT(b.createtime,'%Y-%m-%d %H:%i:%S') createtime , " +
+            "  DATE_FORMAT(b.createtime,'%Y-%m-%d') createtime , " +
             " b.loan_sum , " +
             " CASE " +
             "  b.status  " +
@@ -39,7 +41,7 @@ public interface ReportMapper {
             " END status_name,b.status, " +
             " b.interest_start , " +
             " b.interst_end , " +
-            "  DATE_FORMAT(c.signdate,'%Y-%m-%d %H:%i:%S') signdate , " +
+            "  DATE_FORMAT(c.signdate,'%Y-%m-%d') signdate , " +
             " d.rp_capital , " +
             " d.rp_interest , " +
             " d.rp_amount , " +
@@ -64,10 +66,10 @@ public interface ReportMapper {
             " CASE " +
             "  d.rp_status  " +
             "  WHEN '1' THEN " +
-            "  '未放款'  " +
+            "  '未导入'  " +
             "  WHEN '2' THEN " +
-            "  '已还款' ELSE '未知'  " +
-            " END  rp_status_name, d.rp_status " +
+            "  '已导入确认' ELSE '未知'  " +
+            " END  rp_status_name, d.rp_status ,d.id plan_id,b.id product_order_id " +
             " FROM " +
             " assetside a " +
             " LEFT JOIN product_order b ON a.assetside_id = b.assetside_id " +

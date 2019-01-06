@@ -51,6 +51,8 @@ public class ReportDto {
     private String current_interest_start;
 
     private String current_interest_end;
+    private Integer product_order_id;
+    private Integer plan_id;
 }
 
 
