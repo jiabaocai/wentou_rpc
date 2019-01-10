@@ -21,14 +21,14 @@ public interface ContractMapper {
             "  a.id, " +
             "  a.contract_no, " +
             "  b.id order_id, " +
-            "  a.contract_start, " +
-            "  a.contract_end, " +
+            "  DATE_FORMAT(a.contract_start,'%Y-%m-%d') contract_start, " +
+            "  DATE_FORMAT(a.contract_end,'%Y-%m-%d') contract_end, " +
             "  b.assetside_id, " +
             "  a.client_name, " +
-            "  a.signdate, " +
+            "  DATE_FORMAT(a.signdate,'%Y-%m-%d') signdate, " +
             "  b.product_id, " +
-            "  b.interest_start, " +
-            "  b.interst_end, " +
+            "  DATE_FORMAT(b.interest_start,'%Y-%m-%d') interest_start, " +
+            "  DATE_FORMAT(b.interst_end,'%Y-%m-%d') interst_end, " +
             "  b.loan_sum, " +
             "  b.contract_sum, " +
             "  b.total_period, " +
@@ -64,7 +64,7 @@ public interface ContractMapper {
             " c.corp_no, " +
             " c.corp_img, " +
             " c.reg_cap, " +
-            " c.foundingtime, " +
+            " DATE_FORMAT(c.foundingtime,'%Y-%m-%d %H:%i:%S') foundingtime, " +
             " c.legal_rep, " +
             " c.partner, " +
             " c.team, " +
@@ -73,7 +73,7 @@ public interface ContractMapper {
             " c.bankname, " +
             " c.contactinfo, " +
             " c.bankaccount, " +
-            " b.createtime, " +
+            " DATE_FORMAT(b.createtime,'%Y-%m-%d %H:%i:%S') createtime, " +
             " c.`status` AS assetside_status, " +
             " a.id AS contract_id, " +
             " b.order_no, " +

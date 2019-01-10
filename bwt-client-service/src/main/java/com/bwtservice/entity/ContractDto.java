@@ -12,13 +12,13 @@ public class ContractDto  {
 
     private String contract_no;
 
-    private Date contract_start;
+    private String contract_start;
 
-    private Date contract_end;
+    private String contract_end;
 
     private Integer order_id;
 
-    private Date signdate;
+    private String signdate;
 
     private Integer assetside_id;
 
@@ -32,7 +32,7 @@ public class ContractDto  {
 
     private String reg_cap;
 
-    private Date foundingtime;
+    private String foundingtime;
 
     private String legal_rep;
 
@@ -44,7 +44,7 @@ public class ContractDto  {
 
     private String bankaccount;
 
-    private Date createtime;
+    private String createtime;
 
     private Integer assetside_status;
 
@@ -54,9 +54,9 @@ public class ContractDto  {
 
     private String order_no;
 
-    private Date interest_start;
+    private String interest_start;
 
-    private Date interst_end;
+    private String interst_end;
 
     private BigDecimal loan_sum;
 

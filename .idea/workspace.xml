@@ -7,10 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75ba47d8-2296-44e1-b000-f5aee6f98d38" name="Default" comment="修改时间戳末尾有0的bug">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ReportDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ReportDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractTplMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractTplMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractTplSqlProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractTplSqlProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vms-cloud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vms-cloud.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -169,51 +176,57 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="24" />
-          <entry key="java" value="159" />
+          <entry key="java" value="242" />
+          <entry key="log" value="2" />
           <entry key="md" value="4" />
+          <entry key="out" value="1" />
           <entry key="xml" value="11" />
-          <entry key="yml" value="20" />
+          <entry key="yml" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="24" />
-          <entry key="JAVA" value="159" />
+          <entry key="JAVA" value="242" />
           <entry key="Markdown" value="4" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="11" />
-          <entry key="YAML" value="20" />
+          <entry key="YAML" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="30" />
-          <entry key="project.open.time.1" value="17" />
+          <entry key="project.closed" value="38" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="18" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.2" value="7" />
+          <entry key="project.open.time.2" value="8" />
           <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
           <entry key="ft" value="2" />
-          <entry key="java" value="3805" />
+          <entry key="java" value="3849" />
           <entry key="txt" value="108" />
           <entry key="xml" value="29" />
-          <entry key="yml" value="35" />
+          <entry key="yml" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="3805" />
+          <entry key="JAVA" value="3849" />
           <entry key="PLAIN_TEXT" value="108" />
           <entry key="VTL" value="2" />
           <entry key="XML" value="29" />
-          <entry key="YAML" value="35" />
+          <entry key="YAML" value="36" />
         </counts>
       </usages-collector>
     </session>
@@ -221,81 +234,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ReportDto.java">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+            <state relative-caret-position="461">
+              <caret line="66" column="62" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ExcelController.java">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/CategoryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#2121#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/UploadDownloadController.java">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ClientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ReportController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="739">
+              <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ProductOrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/util/BaseResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+            <state relative-caret-position="338">
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -303,11 +272,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ContractController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="750">
+              <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -326,7 +304,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>phone_band</find>
       <find>phone_memory</find>
       <find>betw</find>
       <find>select</find>
@@ -346,7 +323,6 @@
       <find>\n</find>
       <find>\t</find>
       <find>getProductById</find>
-      <find>getContractByExample</find>
       <find>createtime</find>
       <find>current_interest_start</find>
       <find>DATE_FORMAT</find>
@@ -356,6 +332,8 @@
       <find>report/loanStateMen</find>
       <find>/loanState</find>
       <find>loanStateMentList</find>
+      <find>getContractByExample</find>
+      <find>START</find>
     </findStrings>
     <replaceStrings>
       <replace>220000</replace>
@@ -401,18 +379,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ProductDto 1.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/CategorySqlProvider.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/CategoryMapper.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/OrderPlan.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/OrderPlanMapper.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/util/JsonListUtil.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ProductOrderReq.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/util/ApiUtil.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/resources/generator/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/COntractDto2.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/COntractDto1.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Contract.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ClientDto.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/OrderPlanController.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/util/PageInfoUtil.java" />
@@ -423,8 +392,6 @@
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ExcelController.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Client.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ClientSqlProvider.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ProductOrder.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractDto.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/GoodsPhoneController.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ClientMapper.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ClientController.java" />
@@ -435,7 +402,6 @@
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/CommController.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/Excel/FileUtils.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ContractTplController.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTpl.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTplDto.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTplResp.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractTplMapper.java" />
@@ -443,15 +409,27 @@
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ProductOrderMapper.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ProductMapper.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ProductSqlProvider.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Product.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/target/classes/application.yml" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ProductController.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ReportController.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ProductOrderSqlProvider.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ReportDto.java" />
-        <option value="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractDto.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideMapper.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsidePropertyMapper.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/WtIpFilter.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Assetside.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/AssetsideProperty.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Config.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Contract.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTpl.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/LoanOrder.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Product.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/OrderPlan.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ProductOrder.java" />
         <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java" />
+        <option value="$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -470,23 +448,14 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="bwt-client-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="bwt-client-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="x" value="1680" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -494,18 +463,12 @@
         <expanded-state>
           <State />
           <State>
-            <id>CodeSpring CoreSpring</id>
-          </State>
-          <State>
             <id>Spring</id>
-          </State>
-          <State>
-            <id>Spring CoreSpring</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>SpringJavaInjectionPointsAutowiringInspection</id>
+            <id>ContextJavaBeanUnresolvedMethodsInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -521,6 +484,8 @@
       <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -579,26 +544,7 @@
               <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bwtservice" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wentou_rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="bwt-client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wentou_rpc" type="b2602c69:ProjectViewProjectNode" />
@@ -610,8 +556,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -625,13 +569,13 @@
     <property name="SearchEverywhereHistoryKey" value="Product&#9;FILE&#9;file:///Users/caijiabao/IdeaProjects/wentou_rpc/bwt-client-service/src/main/java/com/bwtservice/entity/Product.java&#10;product&#9;PSI&#9;JAVA://com.bwtservice.entity.Product&#10;ContractMapper&#9;FILE&#9;file:///Users/caijiabao/IdeaProjects/wentou_rpc/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java&#10;Client&#9;FILE&#9;file:///Users/caijiabao/IdeaProjects/wentou_rpc/bwt-client-service/src/main/java/com/bwtservice/entity/Client.java&#10;dou&#9;PSI&#9;JAVA://freemarker.core.BuiltInsForNumbers.doubleBI&#10;AssetsideMapper&#9;FILE&#9;file:///Users/caijiabao/Downloads/vms-cloud-master/bwtzz-manage/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideMapper.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545971279201" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547017064984" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39010358" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -885,7 +829,14 @@
       <workItem from="1545391698150" duration="2819000" />
       <workItem from="1545970343355" duration="828000" />
       <workItem from="1546426961913" duration="462000" />
-      <workItem from="1546763652849" duration="659000" />
+      <workItem from="1546763652849" duration="1037000" />
+      <workItem from="1546768339262" duration="1420000" />
+      <workItem from="1547014239173" duration="502000" />
+      <workItem from="1547015769873" duration="1192000" />
+      <workItem from="1547030412099" duration="595000" />
+      <workItem from="1547031117654" duration="993000" />
+      <workItem from="1547032129301" duration="5331000" />
+      <workItem from="1547087560908" duration="1908000" />
     </task>
     <task id="LOCAL-00001" summary="新项目">
       <created>1542593474921</created>
@@ -1167,14 +1118,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545444105868</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="修改时间戳末尾有0的bug">
+      <created>1546764324442</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1546764324442</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330492000" />
+    <option name="totallyTimeSpent" value="342811000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <frame x="1680" y="23" width="1920" height="1021" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" show_stripe_button="false" weight="0.24969475" />
@@ -1183,19 +1141,19 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info x="698" y="46" width="283" height="957" id="Project" order="6" visible="true" weight="0.21062271" />
+      <window_info active="true" x="698" y="46" width="283" height="957" id="Project" order="6" visible="true" weight="0.23801917" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3814002" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.33465347" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.8168498" visible="true" weight="0.30198538" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49966148" weight="0.3344749" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.8162393" weight="0.3014862" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.491453" weight="0.3322884" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.18315019" side_tool="true" visible="true" weight="0.30198538" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.489011" visible="true" weight="0.34216335" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.18376069" side_tool="true" weight="0.30198538" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.33168316" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32962137" />
@@ -1204,7 +1162,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.21367522" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.185836" />
       <window_info anchor="right" id="Database" order="6" weight="0.32962668" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -1441,12 +1399,6 @@
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ReportController.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/CommController.java</url>
           <line>162</line>
           <properties />
@@ -1469,12 +1421,6 @@
           <line>376</line>
           <properties />
           <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ReportController.java</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -1552,287 +1498,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/cn/hutool/hutool-all/4.1.19/hutool-all-4.1.19.jar!/cn/hutool/crypto/asymmetric/RSA.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/cn/hutool/hutool-all/4.1.19/hutool-all-4.1.19.jar!/cn/hutool/crypto/SecureUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="372" column="21" selection-start-line="372" selection-start-column="21" selection-end-line="372" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/cn/hutool/hutool-all/4.1.19/hutool-all-4.1.19.jar!/cn/hutool/crypto/asymmetric/KeyType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/util/RSAUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5970">
-          <caret line="398" column="37" selection-start-line="398" selection-start-column="37" selection-end-line="398" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="91" column="47" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/CommController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsidePropertySqlProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsidePropertyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1752">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-882">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ClientMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ConfigMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ConfigSqlProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractSqlProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/GoodsGroupMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="39" column="69" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/remark.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="1080">
-            <caret line="72" column="844" selection-start-line="72" selection-end-line="72" selection-end-column="844" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/GoodsPhoneMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/OrderPlanMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/config/Excel/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3090">
-          <caret line="218" column="57" selection-start-line="218" selection-start-column="57" selection-end-line="218" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/GoodsPhoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="95" column="35" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="34" column="31" lean-forward="true" selection-start-column="2" selection-end-line="117" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTplDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTplResp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ProductSqlProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="89" column="50" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractTplMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="117" column="11" selection-start-column="2" selection-end-line="129" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractTplSqlProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/service/impl/ClientServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/OrderPlanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/generator/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ContractTplController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="113" column="3" selection-start-line="113" selection-start-column="3" selection-end-line="113" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#4455#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/target/classes/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ProductMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="70" column="49" lean-forward="true" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-eureka-server/src/main/resources/application-prod.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="60" column="32" lean-forward="true" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -1854,12 +1519,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ReportDto.java">
+    <entry file="file://$PROJECT_DIR$/nohup.out">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LOG_HOME_IS_UNDEFINED/vms-eureka-server/eureka-server-log.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/vms-eureka-server/eureka-server-log.log">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ExcelController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1877,6 +1548,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/BwtApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ProductOrderController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -1887,34 +1565,234 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ContractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/util/BaseResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTplDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTplResp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="9" lean-forward="true" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/AssetsidePropertyWithBLOBs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/CategoryDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ClientDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/GoodsGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/GoodsPhone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/LoanOrderWithBLOBs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ProductDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ProductOrderReq.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ReportDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/UserToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/CategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/AssetsideWithBLOBs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsideMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="108" column="31" lean-forward="true" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/AssetsidePropertyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/WtIpFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Contract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/AssetsideProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Assetside.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractTpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/LoanOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/OrderPlan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ProductOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/ContractDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-758">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractTplSqlProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractTplMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ReportController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="362">
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1923,8 +1801,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ReportMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+        <state relative-caret-position="269">
+          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/entity/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ClientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/AssetsideController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/controller/ContractController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/java/com/bwtservice/mapper/ContractMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="66" column="62" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bwt-client-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
         </state>
       </provider>
     </entry>

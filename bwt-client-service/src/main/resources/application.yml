@@ -26,13 +26,12 @@ spring:
       max-request-size: 20Mb   # Max request size，默认10M
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://mysql-cn-north-1-5e75680027584170.public.jcloud.com:3306/wenzu
-    url: jdbc:mysql://39.105.75.109:3306/wentou
-#    url: jdbc:mysql://10.40.2.90:3306/order_center
-#    username: wenzu
-    username: dev
-#    password: zrZR1234
-    password: Q9tBXVbI
+    url: jdbc:mysql://mysql-cn-north-1-5e75680027584170.public.jcloud.com:3306/wenzu
+#    url: jdbc:mysql://39.105.75.109:3306/wentou
+    username: wenzu
+#    username: dev
+    password: zrZR1234
+#    password: Q9tBXVbI
 #  jpa:
 #    hibernate:
 #      #ddl-auto: create #ddl-auto:设为create表示每次都重新建表

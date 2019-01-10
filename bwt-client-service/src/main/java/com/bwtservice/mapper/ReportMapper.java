@@ -22,7 +22,7 @@ public interface ReportMapper {
             " DATE_FORMAT(d.interest_start,'%Y-%m-%d')  current_interest_start," +
             " DATE_FORMAT(d.interest_end,'%Y-%m-%d') current_interest_end," +
             " b.order_no , " +
-            "  DATE_FORMAT(b.createtime,'%Y-%m-%d') createtime , " +
+            "  DATE_FORMAT(b.createtime,'%Y-%m-%d %H:%i:%S') createtime , " +
             " b.loan_sum , " +
             " CASE " +
             "  b.status  " +
@@ -68,7 +68,7 @@ public interface ReportMapper {
             "  WHEN '1' THEN " +
             "  '未导入'  " +
             "  WHEN '2' THEN " +
-            "  '已导入确认' ELSE '未知'  " +
+            "  '已导入确认' ELSE '未签收'  " +
             " END  rp_status_name, d.rp_status ,d.id plan_id,b.id product_order_id " +
             " FROM " +
             " assetside a " +
