@@ -1,7 +1,8 @@
 package com.bwtservice.controller;
 
 
-import com.bwtservice.config.Excel.FileUtils;
+import cn.hutool.json.JSONArray;
+import com.bwtservice.config.Excel.ExcelUtil;
 import com.bwtservice.entity.Client;
 import com.bwtservice.entity.ClientDto;
 import com.bwtservice.entity.GoodsPhone;
@@ -20,8 +21,13 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -124,7 +130,7 @@ public class ClientController {
 
     @ApiOperation(value = "excelDownloads")
     @RequestMapping(value = "/excelDownloads", method = RequestMethod.GET)
-    public void downloadAllClassmate(HttpServletResponse response, HttpServletRequest request) throws IllegalAccessException {
+    public void downloadAllClassmate(HttpServletResponse response, HttpServletRequest request) throws IllegalAccessException, IOException {
         String idnumber = request.getParameter("idnumber");
         String name = request.getParameter("name");
         String mobile = request.getParameter("mobile");
@@ -144,8 +150,7 @@ public class ClientController {
         List<Client> list = clientMapper.getClientByExample1(client);
         List<String> headers = Arrays.asList(headerList.split(","));
         List<String> parameters = Arrays.asList(parameterList.split(","));
-        FileUtils.byExcelExport2(response, request, headers, parameters, list);
+        ExcelUtil.fileDowm3(request,response,list, headers, parameters);
     }
-
 
 }

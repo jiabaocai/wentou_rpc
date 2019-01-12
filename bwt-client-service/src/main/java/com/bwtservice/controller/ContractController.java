@@ -1,8 +1,10 @@
 package com.bwtservice.controller;
 
-import com.bwtservice.config.Excel.FileUtils;
+import cn.hutool.json.JSONArray;
+import com.bwtservice.config.Excel.ExcelUtil;
 import com.bwtservice.entity.Contract;
 import com.bwtservice.entity.ContractDto;
+import com.bwtservice.entity.GoodsPhone;
 import com.bwtservice.mapper.ContractMapper;
 import com.bwtservice.util.BaseResult;
 import com.github.pagehelper.PageHelper;
@@ -16,7 +18,13 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -33,11 +41,11 @@ public class ContractController {
 
     @ApiOperation(value = "模糊查询")
     @GetMapping("/getContractByExample")
-    public BaseResult getContractByExample(String client_address,String client_idno,String client_mobile,String phone_band,String phone_model,String phone_color,String phone_memory ,String phone_size,String phone_storage,String contract_no, String contract_start, String contract_end, Integer assetside_id, String client_name, Integer order_no, int pageNum, int pageSize) {
+    public BaseResult getContractByExample(String client_address, String client_idno, String client_mobile, String phone_band, String phone_model, String phone_color, String phone_memory, String phone_size, String phone_storage, String contract_no, String contract_start, String contract_end, Integer assetside_id, String client_name, Integer order_no, int pageNum, int pageSize) {
         Contract contract = new Contract();
         try {
             PageHelper.startPage(pageNum, pageSize);
-            List<ContractDto> list = contractMapper.list(contract_no, contract_start, contract_end, assetside_id, client_name, order_no, null,client_address,client_idno,client_mobile,phone_band,phone_model,phone_color,phone_memory,phone_size,phone_storage);
+            List<ContractDto> list = contractMapper.list(contract_no, contract_start, contract_end, assetside_id, client_name, order_no, null, client_address, client_idno, client_mobile, phone_band, phone_model, phone_color, phone_memory, phone_size, phone_storage);
             PageInfo<ContractDto> pageInfo = new PageInfo<>(list);
             return BaseResult.success(pageInfo);
         } catch (Exception e) {
@@ -50,44 +58,27 @@ public class ContractController {
 
     @ApiOperation(value = "excelDownloads")
     @RequestMapping(value = "/excelDownloads", method = RequestMethod.GET)
-    public void downloadAllClassmate(HttpServletResponse response, HttpServletRequest request) throws IllegalAccessException {
+    public void downloadAllClassmate(HttpServletResponse response, HttpServletRequest request) throws IllegalAccessException, IOException {
         String contract_no = request.getParameter("contract_no");
         String contract_start = request.getParameter("contract_start");
         String contract_end = request.getParameter("contract_end");
-        Integer assetside_id=null;
-        Integer order_no=null;
+        Integer assetside_id = null;
+        Integer order_no = null;
         if (request.getParameter("assetside_id") != null) {
             assetside_id = Integer.valueOf(request.getParameter("assetside_id"));
         }
-//        Integer assetside_id = Integer.valueOf(request.getParameter("assetside_id"));
         String client_name = request.getParameter("client_name");
-        if(request.getParameter("order_no")!=null){
+        if (request.getParameter("order_no") != null) {
             order_no = Integer.valueOf(request.getParameter("order_no"));
         }
-//        Integer order_no = Integer.valueOf(request.getParameter("order_no"));
         String headerList = request.getParameter("headerList");
         String parameterList = request.getParameter("dataList");
-//
         List<String> headers = Arrays.asList(headerList.split(","));
         List<String> parameters = Arrays.asList(parameterList.split(","));
-//        List<String> list1 = new ArrayList<>();
-//        list1.add("编号");
-//        list1.add("品牌");
-//        list1.add("机型");
-//        list1.add("颜色");
-//        list1.add("容量");
-//        list1.add("唯一识别码（IMEI）");
-//        List<String> list2 = new ArrayList<>();
-//        list2.add("id");
-//        list2.add("band");
-//        list2.add("model");
-//        list2.add("color");
-//        list2.add("storage");
-//        list2.add("unique_code");
-//        这个list使数据库生成的
-        List<ContractDto> list = contractMapper.list(contract_no, contract_start, contract_end, assetside_id, client_name, order_no, null,null,null,null,null,null,null,null,null,null);
-        FileUtils.byExcelExport1(response, request, headers, parameters, list);
+        List<ContractDto> list = contractMapper.list(contract_no, contract_start, contract_end, assetside_id, client_name, order_no, null, null, null, null, null, null, null, null, null, null);
+        ExcelUtil.fileDowm(request,response,list, headers, parameters);
     }
+
 
     @ApiOperation(value = "新增合同")
     @PostMapping("/addContract")
@@ -105,7 +96,7 @@ public class ContractController {
     @PostMapping("/getContractById")
     public BaseResult getContractById(int id) {
         try {
-            List<ContractDto> list = contractMapper.list(null, null, null, null, null, null, id,null,null,null,null,null,null,null,null,null);
+            List<ContractDto> list = contractMapper.list(null, null, null, null, null, null, id, null, null, null, null, null, null, null, null, null);
             if (list.size() > 0) {
                 return BaseResult.success(list.get(0));
             }
@@ -115,4 +106,5 @@ public class ContractController {
             return BaseResult.error(e.getMessage());
         }
     }
+
 }

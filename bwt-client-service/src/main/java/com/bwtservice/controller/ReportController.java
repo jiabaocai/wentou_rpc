@@ -1,7 +1,7 @@
 package com.bwtservice.controller;
 
-import com.bwtservice.config.Excel.FileUtils;
-import com.bwtservice.entity.GoodsPhone;
+import cn.hutool.json.JSONArray;
+import com.bwtservice.config.Excel.ExcelUtil;
 import com.bwtservice.entity.ReportDto;
 import com.bwtservice.mapper.ReportMapper;
 import com.bwtservice.util.BaseResult;
@@ -17,8 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -71,7 +76,7 @@ public class ReportController {
 
     @ApiOperation(value = "excelDownloads")
     @RequestMapping(value = "/excelDownloads", method = RequestMethod.GET)
-    public void downloadAllClassmate(HttpServletResponse response, HttpServletRequest request) throws IllegalAccessException {
+    public void downloadAllClassmate(HttpServletResponse response, HttpServletRequest request) throws IllegalAccessException, IOException {
         String assetside_id1 = request.getParameter("assetside_id");
         Integer assetside_id = null;
         Integer status = null;
@@ -94,9 +99,8 @@ public class ReportController {
         if (rp_status1 == null) {
             rp_status = null;
         }
-//        current_interest_start、current_interest_end
-        String current_interest_start=request.getParameter("current_interest_start");
-        String current_interest_end=request.getParameter("current_interest_end");
+        String current_interest_start = request.getParameter("current_interest_start");
+        String current_interest_end = request.getParameter("current_interest_end");
         String contract_start = request.getParameter("contract_start");
         String contract_end = request.getParameter("contract_end");
         Integer type = 0;
@@ -115,32 +119,10 @@ public class ReportController {
         String parameterList = request.getParameter("dataList");
         List<String> headers = Arrays.asList(headerList.split(","));
         List<String> parameters = Arrays.asList(parameterList.split(","));
-        List<String> list2 = new ArrayList<>();
-        list2.add("name");
-        list2.add("order_no");
-        list2.add("createtime");
-        list2.add("loan_sum");
-        list2.add("status");
-        list2.add("status_name");
-        list2.add("interest_start");
-        list2.add("interst_end");
-        list2.add("signdate");
-        list2.add("rp_capital");
-        list2.add("rp_interest");
-        list2.add("rp_amount");
-        list2.add("loan_status");
-        list2.add("loan_status_name");
-        list2.add("rp_status");
-        list2.add("rp_status_name");
-        list2.add("current_interest_start");
-        list2.add("current_interest_end");
-        System.out.println(list2);
 //        这个list使数据库生成的
         List<ReportDto> list = reportMapper.getReportListByExample(assetside_id, status, startDate, endDate,
                 loan_status, rp_status, contract_start, contract_end, type);
-
-//        List<GoodsPhone> list = goodsPhoneMapper.getGoodsPhoneByAssetsideId(assetside_id, unique_code);
-        FileUtils.byExcelExport3(response, request, headers, parameters, list);
+        ExcelUtil.fileDowm1(request, response, list, headers, parameters);
     }
 
 }
