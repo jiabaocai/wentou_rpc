@@ -1,67 +1,68 @@
-#指定注册中心地址
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-      #配置Swagger相关信息
-      instance:
-        prefer-ip-address: true
-        instanceId: ${spring.cloud.client.ipAddress}:${server.port}
-        status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
-        # ${server.port}为该服务的端口号
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
-    status-page-url: http://localhost:${server.port}/swagger-ui.html
+##指定注册中心地址
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#      #配置Swagger相关信息
+#      instance:
+#        prefer-ip-address: true
+#        instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+#        status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
+#        # ${server.port}为该服务的端口号
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
 #    status-page-url: http://localhost:${server.port}/swagger-ui.html
-
-server:
-  port: 8080
-spring:
-  application:
-    name: billhand-service  #全部小写
-  http:
-    multipart:
-      max-file-size: 20Mb # Max file size，默认1M
-      max-request-size: 20Mb   # Max request size，默认10M
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://mysql-cn-north-1-5e75680027584170.public.jcloud.com:3306/wenzu
-    url: jdbc:mysql://39.105.75.109:3306/wentou
-#    username: wenzu
-    username: dev
-#    password: zrZR1234
-    password: Q9tBXVbI
+##    status-page-url: http://localhost:${server.port}/swagger-ui.html
+#
+#server:
+#  port: 8080
+#spring:
+#  application:
+#    name: billhand-service  #全部小写
+#    http:
+#      multipart:
+#        max-file-size: 20Mb # Max file size，默认1M
+#        max-request-size: 20Mb   # Max request size，默认10M
+#  datasource:
+#    #    driver-class-name: com.mysql.jdbc.Driver
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    #          url: jdbc:mysql://mysql-cn-north-1-5e75680027584170.public.jcloud.com:3306/wenzu
+#    url: jdbc:mysql://39.105.75.109:3306/wentou
+#    #      username: wenzu
+#    username: dev
+#    #      password: zrZR1234
+#    password: Q9tBXVbI
 #  jpa:
 #    hibernate:
 #      #ddl-auto: create #ddl-auto:设为create表示每次都重新建表
 #      ddl-auto: update #ddl-auto:设为update表示每次都不会重新建表
 #    show-sql: true
-
-pagehelper:
-  helper-dialect: mysql
-  reasonable: false
-  support-methods-arguments: true
-  params: count=countSql
-
-
-#####################################################################################################
-# 打印日志
-logging:
-  level:
-    root: DEBUG
-    com.springms: DEBUG
-    com.netflix: debug
-#####################################################################################################
-##自定义配置  上传图片地址
-upload:
-#  uploadDir: /data/wwwroot/default/public/upload/
-  uploadDir: /data/wwwroot/wentou/public/upload/
-#  uploadDir: /Users/caijiabao/Downloads/vms-cloud-master/bwtzz-manage/log/
-
-appid:
-  priKey: MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKuJI5tzB4elxqY2g/IQNJ9Thewqwu6aUimn6JvpCi7nuQlcds0FAC/5Z2bcJVy7ZgK/ZOiYR9grflyhvXO6zXo5LE8/5ZEk75Qk2gJXuEWxT5sq5BD3qYTg3XdVj3o/73miw1SgHb0Q2HQQAoHbDU9AMPbEgVRn5hLbW9kswR0hAgMBAAECgYAhVcVVsEUGV3EDXBTINd4EGHcuLiEzvUm6TqclpWQVOXL8Hrv3m8EtkYpGswGPw9tPLWKu0OklWU51MflfRC4p/25DeNNNDwuHG25TyYOQ0wDNGhwws6tAmu17gUkPBVFBgjr2rFtDY/1wxnEd2G6KFmZmDkh8M87WLvXs5RgUAQJBAP7n7VY/pD6G3HypzMqJWfGU5jzMySYamZ3YwvgeNs/FwaUZalYdQ1yG7rPtF0A+9yyshCfwHlq9G32whoyG6F0CQQCsRZxNiDgb8eueG/auKT7p08pCKlwVLWLGmDF+zEW41z/2BBuraQDLdR+nTUpAgcAtjs92U0Bq2QGzneYFwWuVAkADydKfK4b3Xu279JIUmIH7syjQ0oJSzKZn0CblpR1PbTL5jy0jZn/vyhmWFvn3fHgT8+Rq64in9JOKBKubPw4JAkB5pw6hkbhNw6Dnnkes5WOQLAeAgflU2yANrhwFtqrlxNteF7iSaywsgSFBO8tbkkTr5xWKMXAkA+q3tKFjHxuhAkEA1bv0GJtJariX2QDa1NQTR7TIkMLp41w9imLGYC22ga4tgWNparCGxkqD4RC2iCOr63ctBkGwoYO5Z8thnRQhpA==
-  pubKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCriSObcweHpcamNoPyEDSfU4XsKsLumlIpp+ib6Qou57kJXHbNBQAv+Wdm3CVcu2YCv2TomEfYK35cob1zus16OSxPP+WRJO+UJNoCV7hFsU+bKuQQ96mE4N13VY96P+95osNUoB29ENh0EAKB2w1PQDD2xIFUZ+YS21vZLMEdIQIDAQAB
-
-environment:
-  active: dev
+#
+#pagehelper:
+#  helper-dialect: mysql
+#  reasonable: false
+#  support-methods-arguments: true
+#  params: count=countSql
+#
+#
+######################################################################################################
+## 打印日志
+#logging:
+#  level:
+#    root: DEBUG
+#    com.springms: DEBUG
+#    com.netflix: debug
+######################################################################################################
+###自定义配置  上传图片地址
+#upload:
+#  #  uploadDir: /data/wwwroot/default/public/upload/
+#  uploadDir: /data/wwwroot/wentou/public/upload/
+##  uploadDir: /Users/caijiabao/Downloads/vms-cloud-master/bwtzz-manage/log/
+#
+#appid:
+#  priKey: MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKuJI5tzB4elxqY2g/IQNJ9Thewqwu6aUimn6JvpCi7nuQlcds0FAC/5Z2bcJVy7ZgK/ZOiYR9grflyhvXO6zXo5LE8/5ZEk75Qk2gJXuEWxT5sq5BD3qYTg3XdVj3o/73miw1SgHb0Q2HQQAoHbDU9AMPbEgVRn5hLbW9kswR0hAgMBAAECgYAhVcVVsEUGV3EDXBTINd4EGHcuLiEzvUm6TqclpWQVOXL8Hrv3m8EtkYpGswGPw9tPLWKu0OklWU51MflfRC4p/25DeNNNDwuHG25TyYOQ0wDNGhwws6tAmu17gUkPBVFBgjr2rFtDY/1wxnEd2G6KFmZmDkh8M87WLvXs5RgUAQJBAP7n7VY/pD6G3HypzMqJWfGU5jzMySYamZ3YwvgeNs/FwaUZalYdQ1yG7rPtF0A+9yyshCfwHlq9G32whoyG6F0CQQCsRZxNiDgb8eueG/auKT7p08pCKlwVLWLGmDF+zEW41z/2BBuraQDLdR+nTUpAgcAtjs92U0Bq2QGzneYFwWuVAkADydKfK4b3Xu279JIUmIH7syjQ0oJSzKZn0CblpR1PbTL5jy0jZn/vyhmWFvn3fHgT8+Rq64in9JOKBKubPw4JAkB5pw6hkbhNw6Dnnkes5WOQLAeAgflU2yANrhwFtqrlxNteF7iSaywsgSFBO8tbkkTr5xWKMXAkA+q3tKFjHxuhAkEA1bv0GJtJariX2QDa1NQTR7TIkMLp41w9imLGYC22ga4tgWNparCGxkqD4RC2iCOr63ctBkGwoYO5Z8thnRQhpA==
+#  pubKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCriSObcweHpcamNoPyEDSfU4XsKsLumlIpp+ib6Qou57kJXHbNBQAv+Wdm3CVcu2YCv2TomEfYK35cob1zus16OSxPP+WRJO+UJNoCV7hFsU+bKuQQ96mE4N13VY96P+95osNUoB29ENh0EAKB2w1PQDD2xIFUZ+YS21vZLMEdIQIDAQAB
+#
+#environment:
+#  active: dev

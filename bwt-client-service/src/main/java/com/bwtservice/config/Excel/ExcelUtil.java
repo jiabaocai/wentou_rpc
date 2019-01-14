@@ -6,29 +6,24 @@ import com.bwtservice.entity.Client;
 import com.bwtservice.entity.ContractDto;
 import com.bwtservice.entity.GoodsPhone;
 import com.bwtservice.entity.ReportDto;
-import org.apache.poi.common.usermodel.Hyperlink;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.ss.formula.functions.T;
 import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.CreationHelper;
 import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.streaming.SXSSFCell;
 import org.apache.poi.xssf.streaming.SXSSFRow;
 import org.apache.poi.xssf.streaming.SXSSFSheet;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
-import org.apache.poi.xssf.usermodel.XSSFHyperlink;
 import sun.misc.BASE64Encoder;
 
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.math.BigDecimal;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -121,15 +116,12 @@ public class ExcelUtil {
         cellStyle.setFont(cellFont);
 
 
-        String title1 = (String) titleList.get(0).get("title1");
-        String title2 = (String) titleList.get(0).get("title2");
-        LinkedHashMap<String, String> headMap = titleList.get(1);
+        LinkedHashMap<String, String> headMap = titleList.get(0);
 
         /**
          * 生成一个(带名称)表格
          */
-        SXSSFSheet sheet = (SXSSFSheet) workbook.createSheet(title1);
-        sheet.createFreezePane(0, 3, 0, 3);// (单独)冻结前三行
+        SXSSFSheet sheet = (SXSSFSheet) workbook.createSheet();
 
         /**
          * 生成head相关信息+设置每列宽度
@@ -156,28 +148,12 @@ public class ExcelUtil {
         for (Object obj : dataArray) {
             // 生成title+head信息
             if (rowIndex == 0) {
-                SXSSFRow title1Row = (SXSSFRow) sheet.createRow(0);// title1行
-                title1Row.createCell(0).setCellValue(title1);
-                title1Row.getCell(0).setCellStyle(title1Style);
-                sheet.addMergedRegion(new CellRangeAddress(0, 0, 0, headMap.size() - 1));// 合并单元格
-
-                SXSSFRow title2Row = (SXSSFRow) sheet.createRow(1);// title2行
-                title2Row.createCell(0).setCellValue(title2);
-
-                CreationHelper createHelper = workbook.getCreationHelper();
-                XSSFHyperlink hyperLink = (XSSFHyperlink) createHelper.createHyperlink(Hyperlink.LINK_URL);
-                hyperLink.setAddress(title2);
-                title2Row.getCell(0).setHyperlink(hyperLink);// 添加超链接
-
-                title2Row.getCell(0).setCellStyle(title2Style);
-                sheet.addMergedRegion(new CellRangeAddress(1, 1, 0, headMap.size() - 1));// 合并单元格
-
-                SXSSFRow headerRow = (SXSSFRow) sheet.createRow(2);// head行
+                SXSSFRow headerRow = (SXSSFRow) sheet.createRow(0);// head行
                 for (int j = 0; j < headValArr.length; j++) {
                     headerRow.createCell(j).setCellValue(headValArr[j]);
                     headerRow.getCell(j).setCellStyle(headerStyle);
                 }
-                rowIndex = 3;
+                rowIndex = 1;
             }
 
             JSONObject jo = (JSONObject) JSONObject.toJSON(obj);
@@ -256,16 +232,11 @@ public class ExcelUtil {
             studentArray.add(list.get(i));
         }
         ArrayList<LinkedHashMap> titleList = new ArrayList<LinkedHashMap>();
-        // 1.titleMap存放了该excel的头信息
-        LinkedHashMap<String, String> titleMap = new LinkedHashMap<String, String>();
-        titleMap.put("title1", "合同订单报表");
-        titleMap.put("title2", "本内容只限内部使用，禁止传阅");
         LinkedHashMap<String, String> headMap = new LinkedHashMap<String, String>();
-        headMap.put("id", "ID");
+//        headMap.put("id", "ID");
         for (int i = 0; i < headers.size(); i++) {
             headMap.put(parameters.get(i), headers.get(i));
         }
-        titleList.add(titleMap);
         titleList.add(headMap);
 
         File file = new File("");
@@ -304,16 +275,11 @@ public class ExcelUtil {
             studentArray.add(list.get(i));
         }
         ArrayList<LinkedHashMap> titleList = new ArrayList<LinkedHashMap>();
-        // 1.titleMap存放了该excel的头信息
-        LinkedHashMap<String, String> titleMap = new LinkedHashMap<String, String>();
-        titleMap.put("title1", "统计报表");
-        titleMap.put("title2", "本内容只限内部使用，禁止传阅");
         LinkedHashMap<String, String> headMap = new LinkedHashMap<String, String>();
-        headMap.put("id", "ID");
+//        headMap.put("id", "ID");
         for (int i = 0; i < headers.size(); i++) {
             headMap.put(parameters.get(i), headers.get(i));
         }
-        titleList.add(titleMap);
         titleList.add(headMap);
 
         File file = new File("");
@@ -342,16 +308,11 @@ public class ExcelUtil {
             studentArray.add(list.get(i));
         }
         ArrayList<LinkedHashMap> titleList = new ArrayList<LinkedHashMap>();
-        // 1.titleMap存放了该excel的头信息
-        LinkedHashMap<String, String> titleMap = new LinkedHashMap<String, String>();
-        titleMap.put("title1", "商品报表");
-        titleMap.put("title2", "本内容只限内部使用，禁止传阅");
         LinkedHashMap<String, String> headMap = new LinkedHashMap<String, String>();
-        headMap.put("id", "ID");
+//        headMap.put("id", "ID");
         for (int i = 0; i < headers.size(); i++) {
             headMap.put(parameters.get(i), headers.get(i));
         }
-        titleList.add(titleMap);
         titleList.add(headMap);
 
         File file = new File("");
@@ -381,16 +342,11 @@ public class ExcelUtil {
             studentArray.add(list.get(i));
         }
         ArrayList<LinkedHashMap> titleList = new ArrayList<LinkedHashMap>();
-        // 1.titleMap存放了该excel的头信息
-        LinkedHashMap<String, String> titleMap = new LinkedHashMap<String, String>();
-        titleMap.put("title1", "用户报表");
-        titleMap.put("title2", "本内容只限内部使用，禁止传阅");
         LinkedHashMap<String, String> headMap = new LinkedHashMap<String, String>();
-        headMap.put("id", "ID");
+//        headMap.put("id", "ID");
         for (int i = 0; i < headers.size(); i++) {
             headMap.put(parameters.get(i), headers.get(i));
         }
-        titleList.add(titleMap);
         titleList.add(headMap);
 
         File file = new File("");
