@@ -27,8 +27,8 @@
 #  datasource:
 #    #    driver-class-name: com.mysql.jdbc.Driver
 #    driver-class-name: com.mysql.cj.jdbc.Driver
-#    #          url: jdbc:mysql://mysql-cn-north-1-5e75680027584170.public.jcloud.com:3306/wenzu
-#    url: jdbc:mysql://39.105.75.109:3306/wentou
+#    #          url: jdbc:mysql://xxxxxxxxx:3306/wenzu
+#    url: jdbc:mysql://xxxxxxx:3306/wentou
 #    #      username: wenzu
 #    username: dev
 #    #      password: zrZR1234
